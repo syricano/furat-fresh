@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Sign In" %}{% endblock %}
+{% block content %}
+  <section>
+    <h1>{% trans "Sign In" %}</h1>
+    <form method="post" action="{% url 'account_login' %}">
+      {% csrf_token %}
+      {{ form.non_field_errors }}
+      <p>
+        <label for="id_login">{% trans "Username or Email" %}</label>
+        <input id="id_login" name="login" type="text" autocomplete="username" required>
+      </p>
+      <p>
+        <label for="id_password">{% trans "Password" %}</label>
+        <input id="id_password" name="password" type="password" autocomplete="current-password" required>
+      </p>
+      {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
+      {% endif %}
+      <button type="submit">{% trans "Sign In" %}</button>
+    </form>
+    <p>
+      {% trans "No account?" %} <a href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
+    </p>
+  </section>
+{% endblock %}

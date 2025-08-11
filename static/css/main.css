@@ -1,0 +1,5 @@
+html,body{margin:0;padding:0}
+header,footer{padding:1rem;border-bottom:1px solid #eee}
+footer{border:0;border-top:1px solid #eee}
+main{padding:1rem}
+nav a{text-decoration:none;margin-right:.75rem}

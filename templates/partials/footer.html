@@ -1,3 +1,12 @@
-<footer>
-  <small>&copy; {% now "Y" %} Site</small>
+{% load i18n %}
+<footer class="bg-white">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+    <p class="m-0 text-muted">&copy; {{ now|date:"Y" }} Flomarkt.Shop — {% trans "All rights reserved" %}</p>
+    <nav class="nav gap-3">
+      <a class="nav-link p-0 text-muted" href="{% url 'core_app:about' %}">{% trans "About" %}</a>
+      <a class="nav-link p-0 text-muted" href="{% url 'core_app:contact' %}">{% trans "Contact" %}</a>
+      <a class="nav-link p-0 text-muted" href="#">{% trans "Privacy" %}</a>
+      <a class="nav-link p-0 text-muted" href="#">{% trans "Terms" %}</a>
+    </nav>
+  </div>
 </footer>

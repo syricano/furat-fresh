@@ -85,6 +85,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'allauth.account.middleware.AccountMiddleware',
+    "django.middleware.locale.LocaleMiddleware",
 ]
 
 # Socialaccount provider settings (Google; wired in step 2)
@@ -145,6 +146,17 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
+
+LANGUAGES = [
+    ("en", "English"),
+    ("de", "Deutsch"),
+    ("ar", "العربية"),
+]
+
+LOCALE_PATHS = [BASE_DIR / "locale"]
+
+
+LANGUAGE_COOKIE_NAME = "django_language"
 
 # Static files
 STATIC_URL = "/static/"

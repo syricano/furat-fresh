@@ -1,5 +1,7 @@
 {% extends "base.html" %}
+{% load allauth i18n %}
 {% block title %}Home{% endblock %}
 {% block content %}
-  <h1>Welcome</h1>
+  <h1 class="h3 mb-3">{% trans "Home" %}</h1>
+  <p>{% trans "We are a community-driven online flea market." %}</p>
 {% endblock %}

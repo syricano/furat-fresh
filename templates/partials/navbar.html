@@ -1,12 +1,15 @@
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
 <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm" data-bs-theme="light">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center gap-2" href="{% url 'core_app:home' %}">
-      <i class="bi bi-bag-heart-fill text-primary"></i> Flomarkt.Shop
+      <i class="bi bi-bag-heart-fill text-primary"></i>{% trans "Flomarkt.Shop" %}
     </a>
 
     <!-- Mobile burger -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            aria-controls="mainNav" aria-expanded="false" aria-label="{% trans 'Toggle navigation' %}">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -14,9 +17,9 @@
     <div class="collapse navbar-collapse" id="mainNav">
       <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="{% url 'core_app:home' %}">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'core_app:about' %}">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'core_app:contact' %}">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'core_app:home' %}">{% trans "Home" %}</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'core_app:about' %}">{% trans "About" %}</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'core_app:contact' %}">{% trans "Contact" %}</a></li>
       </ul>
 
       <!-- Right auth/cart -->
@@ -40,7 +43,7 @@
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
               <li>
                 <a class="dropdown-item d-flex align-items-center" href="{% url 'core_app:profile' %}">
-                  <i class="bi bi-person me-2"></i> Profile
+                  <i class="bi bi-person me-2"></i> {% trans "Profile" %}
                 </a>
               </li>
               <li><hr class="dropdown-divider"></li>
@@ -48,16 +51,31 @@
                 <form action="{% url 'account_logout' %}" method="post" class="m-0">
                   {% csrf_token %}
                   <button class="btn btn-outline-danger w-100" type="submit">
-                    <i class="bi bi-box-arrow-right me-2"></i> Logout
+                    <i class="bi bi-box-arrow-right me-2"></i> {% trans "Logout" %}
                   </button>
                 </form>
               </li>
             </ul>
           </li>
         {% else %}
-          <li class="nav-item"><a class="btn btn-outline-primary" href="{% url 'account_login' %}">Sign in</a></li>
-          <li class="nav-item"><a class="btn btn-primary ms-lg-2 mt-2 mt-lg-0" href="{% url 'account_signup' %}">Sign up</a></li>
+          <li class="nav-item"><a class="btn btn-outline-primary" href="{% url 'account_login' %}">{% trans "Sign in" %}</a></li>
+          <li class="nav-item"><a class="btn btn-primary ms-lg-2 mt-2 mt-lg-0" href="{% url 'account_signup' %}">{% trans "Sign up" %}</a></li>
         {% endif %}
+
+        <!-- Language switcher: cookie-based, keeps current page -->
+        <li class="nav-item">
+          <form action="{% url 'set_language' %}" method="post" class="d-flex align-items-center ms-lg-2">
+            {% csrf_token %}
+            <input type="hidden" name="next" id="lang-next" value="">
+            <label for="lang-select" class="visually-hidden">{% trans "Language" %}</label>
+            <select id="lang-select" name="language" class="form-select form-select-sm" onchange="this.form.submit()">
+              <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
+              <option value="de" {% if LANGUAGE_CODE == 'de' %}selected{% endif %}>Deutsch</option>
+              <option value="ar" {% if LANGUAGE_CODE == 'ar' %}selected{% endif %}>العربية</option>
+            </select>
+            <script>document.getElementById('lang-next').value = location.pathname + location.search;</script>
+          </form>
+        </li>
       </ul>
     </div>
   </div>

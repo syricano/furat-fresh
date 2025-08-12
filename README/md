@@ -1,0 +1,105 @@
+# Flomarkt E-Commerce Plan
+
+Multilingual shop built with Django, django-allauth, PostgreSQL, Bootstrap 5, and Toastr.
+
+## 0. Non-Goals
+- No headless architecture or single-page application.
+- Payments out of scope for MVP.
+
+## 1. Functional Scope
+### 1.1 Auth and Accounts
+- Sign up, sign in, log out.
+- Basic profile page and password reset.
+
+### 1.2 Catalog
+- Hierarchical categories and translated products.
+- Images with one primary per product.
+- Listing with search, category filter, and sorting.
+- Detail page with gallery.
+
+### 1.3 Cart
+- Session-based cart with add, update, remove, and clear.
+- Quantity limits and stock checks.
+
+### 1.4 Checkout and Orders
+- Guest checkout capturing contact and address.
+- Order records with line-item snapshots.
+- Order statuses (`new`, `paid`, `shipped`, `canceled`; MVP uses `new`).
+
+### 1.5 Content and Pages
+- Home, About, Contact pages.
+- Toastr for flash messages and responsive layout.
+
+### 1.6 Internationalization
+- English, German, and Arabic interfaces.
+- Model translations, per-language slugs, RTL support for Arabic.
+
+## 2. Non-Functional Requirements
+### Security
+- CSRF protection and sensible defaults for production.
+
+### Performance
+- Efficient queries and indexes on key fields.
+
+### Accessibility
+- Semantic markup, focus visibility, and toast live region.
+
+### SEO
+- Titles, meta descriptions, canonical links, and hreflang tags.
+
+## 3. Data Model Overview
+- **Category**: translated name and slug, optional parent, active flag.
+- **Product**: belongs to category, translated title/slug/description, price, stock, active flag, creation timestamp.
+- **Product Image**: image file, alt text, primary flag.
+- **Order**: customer info, address, total, status, creation timestamp.
+- **Order Item**: link to order and product, snapshot of title, unit price, and quantity.
+
+## 4. Internationalization
+- Interfaces in English, German, and Arabic.
+- Translation files maintained with Django's standard tooling.
+- Templates set `lang` and `dir` attributes with RTL support for Arabic.
+
+## 5. Site Structure
+- Home and static pages.
+- Catalog listing and product detail.
+- Cart and checkout flow.
+- Authentication and profile pages.
+
+## 6. Admin
+- Manage categories, products, and images with translation support.
+
+## 7. Views and Query Guidelines
+- Use `select_related` and `prefetch_related` where appropriate.
+
+## 8. Cart Rules
+- Session cart maps product IDs to quantity and price at add time.
+- Quantities limited to available stock with a max per item.
+
+## 9. Checkout Rules
+- Validate address data, verify stock, and create order atomically.
+
+## 10. Messages and Toastr
+- Map Django message tags to Toastr notifications.
+
+## 11. Configuration
+- Environment variables for secret key, database URL, debug flag, and allowed hosts.
+- Console email backend for development.
+- Django-allauth configured for username/email authentication without email verification.
+
+## 12. Testing
+- Unit tests for catalog, cart, and orders.
+- Integration tests for localized views and checkout.
+
+## 13. Deployment Checklist
+- Debug disabled, hosts configured, migrations applied, static files collected, superuser created, language settings verified.
+
+## 14. Milestones and Acceptance Criteria
+- **M1 Auth & Base**: auth flows and localized basic pages.
+- **M2 Catalog**: translated product list/detail with search and sorting.
+- **M3 Cart**: add/update/remove with stock limits.
+- **M4 Checkout**: order creation and thank-you page.
+- **M5 Polish**: accessibility checks and SEO basics.
+
+## 15. Future Work
+- Payments, product variants, coupons, wishlist, reviews, search enhancements, sitemaps, email integration, image optimization, and potential Tailwind migration.
+

@@ -15,6 +15,9 @@
         <label for="id_password">{% trans "Password" %}</label>
         <input id="id_password" name="password" type="password" autocomplete="current-password" required>
       </p>
+      <p class="small">
+        <a href="{% url 'account_reset_password' %}">{% trans "Forgot your password?" %}</a>
+      </p>
       {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
       {% endif %}

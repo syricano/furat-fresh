@@ -1,80 +1,115 @@
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm" data-bs-theme="light">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="{% url 'core_app:home' %}">
-      <i class="bi bi-bag-heart-fill text-primary"></i>{% trans "Flomarkt.Shop" %}
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-xxl">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="{% url 'home:home' %}">
+      <i class="bi bi-bag-heart-fill"></i>
+      <span class="fw-semibold">{% trans 'Flomarkt.Shop' %}</span>
     </a>
 
-    <!-- Mobile burger -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-            aria-controls="mainNav" aria-expanded="false" aria-label="{% trans 'Toggle navigation' %}">
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false"
+            aria-label="{% trans 'Toggle navigation' %}">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Collapsible area -->
     <div class="collapse navbar-collapse" id="mainNav">
-      <!-- Left links -->
+      {# Left links #}
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="{% url 'core_app:home' %}">{% trans "Home" %}</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'core_app:about' %}">{% trans "About" %}</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'core_app:contact' %}">{% trans "Contact" %}</a></li>
-      </ul>
-
-      <!-- Right auth/cart -->
-      <ul class="navbar-nav align-items-lg-center gap-lg-2">
         <li class="nav-item">
-          <a class="nav-link position-relative" href="#">
-            <i class="bi bi-cart3 fs-5"></i>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              {% if cart_count %}{{ cart_count }}{% else %}0{% endif %}
-            </span>
+          <a class="nav-link {% if match.app_name == 'home' and match.url_name == 'home' %}active{% endif %}"
+              href="{% url 'home:home' %}"
+              aria-current="{% if match.app_name == 'home' and match.url_name == 'home' %}page{% endif %}">
+            {% trans 'Home' %}
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link {% if match.app_name == 'home' and match.url_name == 'about' %}active{% endif %}"
+              href="{% url 'home:about' %}">
+            {% trans 'About' %}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if match.app_name == 'home' and match.url_name == 'contact' %}active{% endif %}"
+              href="{% url 'home:contact' %}">
+            {% trans 'Contact' %}
+          </a>
+        </li>
+      </ul>
 
-        {% if user.is_authenticated %}
-          <!-- User dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" id="userMenu"
-               role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="bi bi-person-circle fs-5"></i> {{ user.username }}
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
+      {# Search #}
+      <form class="d-flex me-lg-3 mb-3 mb-lg-0" method="get" action="">
+        <div class="input-group">
+          <input class="form-control" type="text" name="q" placeholder="{% trans 'Search our site' %}">
+          <button class="btn btn-outline-secondary" type="submit">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </form>
+
+      {# Right: language, account, cart #}
+      <ul class="navbar-nav align-items-lg-center gap-lg-2">
+        {# Language switcher #}
+        {% get_available_languages as LANGUAGES %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle d-flex align-items-center gap-1" href="#" id="langMenu"
+              role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-translate"></i> {{ LANGUAGE_CODE|upper }}
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langMenu">
+            {% for code, name in LANGUAGES %}
               <li>
-                <a class="dropdown-item d-flex align-items-center" href="{% url 'core_app:profile' %}">
-                  <i class="bi bi-person me-2"></i> {% trans "Profile" %}
-                </a>
-              </li>
-              <li><hr class="dropdown-divider"></li>
-              <li class="px-3 py-2">
-                <form action="{% url 'account_logout' %}" method="post" class="m-0">
+                <form action="{% url 'set_language' %}" method="post" class="px-3 py-1">
                   {% csrf_token %}
-                  <button class="btn btn-outline-danger w-100" type="submit">
-                    <i class="bi bi-box-arrow-right me-2"></i> {% trans "Logout" %}
+                  <input type="hidden" name="next" value="{{ request.get_full_path }}">
+                  <input type="hidden" name="language" value="{{ code }}">
+                  <button type="submit"
+                          class="dropdown-item d-flex justify-content-between align-items-center{% if code == LANGUAGE_CODE %} active{% endif %}">
+                    {{ name }} <span class="ms-2 small text-muted">{{ code|upper }}</span>
                   </button>
                 </form>
               </li>
-            </ul>
-          </li>
-        {% else %}
-          <li class="nav-item"><a class="btn btn-outline-primary" href="{% url 'account_login' %}">{% trans "Sign in" %}</a></li>
-          <li class="nav-item"><a class="btn btn-primary ms-lg-2 mt-2 mt-lg-0" href="{% url 'account_signup' %}">{% trans "Sign up" %}</a></li>
-        {% endif %}
+            {% endfor %}
+          </ul>
+        </li>
 
-        <!-- Language switcher: cookie-based, keeps current page -->
+        {# Account menu #}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" id="userOptions"
+              role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-person-circle fs-5"></i>
+            {% if request.user.is_authenticated %}{{ request.user.username }}{% else %}{% trans 'My Account' %}{% endif %}
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userOptions">
+            {% if request.user.is_authenticated %}
+              {% if request.user.is_superuser %}
+                <li><a class="dropdown-item" href="#">{% trans 'Product Management' %}</a></li>
+                <li><hr class="dropdown-divider"></li>
+              {% endif %}
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="{% url 'home:profile' %}">
+                  <i class="bi bi-person me-2"></i> {% trans 'My Profile' %}
+                </a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item" href="{% url 'account_logout' %}">{% trans 'Logout' %}</a>
+              </li>
+            {% else %}
+              <li><a class="dropdown-item" href="{% url 'account_login' %}">{% trans 'Login' %}</a></li>
+              <li><a class="dropdown-item" href="{% url 'account_signup' %}">{% trans 'Register' %}</a></li>
+            {% endif %}
+          </ul>
+        </li>
+
+        {# Cart #}
         <li class="nav-item">
-          <form action="{% url 'set_language' %}" method="post" class="d-flex align-items-center ms-lg-2">
-            {% csrf_token %}
-            <input type="hidden" name="next" id="lang-next" value="">
-            <label for="lang-select" class="visually-hidden">{% trans "Language" %}</label>
-            <select id="lang-select" name="language" class="form-select form-select-sm" onchange="this.form.submit()">
-              <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
-              <option value="de" {% if LANGUAGE_CODE == 'de' %}selected{% endif %}>Deutsch</option>
-              <option value="ar" {% if LANGUAGE_CODE == 'ar' %}selected{% endif %}>العربية</option>
-            </select>
-            <script>document.getElementById('lang-next').value = location.pathname + location.search;</script>
-          </form>
+          <a class="nav-link{% if grand_total %} text-info fw-bold{% endif %}" href="#">
+            <i class="bi bi-bag"></i>
+            {% if grand_total %}${{ grand_total|floatformat:2 }}{% else %}$0.00{% endif %}
+          </a>
         </li>
       </ul>
     </div>

@@ -13,7 +13,7 @@
 
   <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
 
-  <!-- Bootstrap CSS (RTL for Arabic) + Icons -->
+  {# Bootstrap CSS (RTL for Arabic) + Icons #}
   {% if LANGUAGE_CODE == 'ar' %}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
   {% else %}
@@ -21,58 +21,51 @@
   {% endif %}
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
-  <!-- Toastr CSS -->
+  {# Toastr CSS #}
   <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
 
   {% block extra_css %}{% endblock %}
 
-  <title>{% block title %}Flomarkt.Shop{% endblock %}</title>
-
-  <style>
-    html,body{margin:0;padding:0}
-    header,footer{padding:1rem;border-bottom:1px solid #eee}
-    footer{border:0;border-top:1px solid #eee}
-    main{padding:1rem}
-    .navbar-brand { letter-spacing:.5px; font-weight:700; }
-    .nav-link { font-weight:500; }
-    .card-hover:hover { transform: translateY(-2px); transition:.2s ease; box-shadow:0 .5rem 1rem rgba(0,0,0,.08); }
-  </style>
+  <title>Flomarkt.Shop{% block extra_title %}{% endblock %}</title>
 </head>
 <body class="bg-light">
 
-  <header class="bg-white">
+  {# Header / Navbar #}
+  {% with request.resolver_match as match %}
+  <header class="sticky-top bg-white border-bottom shadow-sm">
     {% include "partials/navbar.html" %}
-    {% block page_header %}{% endblock %}
   </header>
+  {% endwith %}
 
-  <!-- Live region for toasts -->
+  {# Toast live region #}
   <aside aria-live="polite" aria-atomic="true"></aside>
 
-  <main>
+  <main class="pt-4 pt-lg-5">
     {% block content %}{% endblock %}
   </main>
 
   {% include "partials/footer.html" %}
 
-  <!-- Bootstrap Bundle (with Popper) -->
+  {# Bootstrap Bundle #}
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
           crossorigin="anonymous"></script>
 
-  <!-- jQuery (required for toastr) -->
+  {# jQuery (for Toastr) #}
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
 
-  <!-- Toastr -->
+  {# Toastr #}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-  <!-- Django messages -> Toastr (safe JSON approach) -->
+  {# Django messages -> Toastr #}
   <script id="django-messages" type="application/json">
   [
   {% if messages %}
-  {% for message in messages %}
-    {"text":"{{ message|escapejs }}","level":"{{ message.tags|default:'info' }}"}{% if not forloop.last %},{% endif %}
-  {% endfor %}
+    {% for message in messages %}
+      {"text":"{{ message|escapejs }}","level":"{{ message.tags|default:'info' }}"}{% if not forloop.last %},{% endif %}
+    {% endfor %}
   {% endif %}
   ]
   </script>

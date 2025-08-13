@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-12 22:52+0200\n"
+"POT-Creation-Date: 2025-08-13 04:05+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: .\core_app\views.py:21
+#: .\home\templates\home\index.html:17
+msgid "Start shopping here"
+msgstr ""
+
+#: .\home\templates\home\index.html:20
+msgid "Shop Now"
+msgstr ""
+
+#: .\home\views.py:21
 msgid "Profile updated successfully"
 msgstr ""
 
@@ -565,7 +573,7 @@ msgstr ""
 msgid "Your phone number is still pending verification."
 msgstr ""
 
-#: .\templates\account\profile.html:3 .\templates\partials\navbar.html:46
+#: .\templates\account\profile.html:3
 msgid "Profile"
 msgstr "الملف الشخصي"
 
@@ -696,11 +704,17 @@ msgid ""
 msgstr ""
 
 #: .\templates\account\verified_email_required.html:13
+#, fuzzy
+#| msgid ""
+#| "يتطلب تأكيد البريد الاكترونيThis part of the site requires us to verify "
+#| "that\n"
+#| "you are who you claim to be. For this purpose, we require that you\n"
+#| "verify ownership of your email address. "
 msgid ""
 "This part of the site requires us to verify that\n"
 "you are who you claim to be. For this purpose, we require that you\n"
 "verify ownership of your email address. "
-msgstr ""
+msgstr "هذا القسم للتحقق من الشخصية لذلك يتوجب تأكيد البريد الالكرتوني"
 
 #: .\templates\account\verified_email_required.html:18
 msgid ""
@@ -710,33 +724,35 @@ msgid ""
 "Otherwise\n"
 "contact us if you do not receive it within a few minutes."
 msgstr ""
+"لقد قمنا بارسال بريد الكتروني لك، يرجى الضغط على الرابط للتأكيد. اذا لم تعثر "
+"على البريد في صندوق الوارد انظر في البريد الغير مرغوب. او تواصل معنا اذا لم "
+"تحصل على البريد الاكتروني"
 
 #: .\templates\account\verified_email_required.html:23
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "يتوجب تأكيد البريد<strong>Note:</strong> you can still <a "
+#| "href=\"%(email_url)s\">change your email address</a>."
 msgid ""
 "<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your "
 "email address</a>."
-msgstr ""
+msgstr "مازال بامكانك تغيير بريدك الالكتروني"
 
 #: .\templates\base.html:10
 msgid "Your online flea market"
-msgstr ""
-
-#: .\templates\core_app\home.html:5 .\templates\partials\navbar.html:20
-msgid "Home"
-msgstr ""
-
-#: .\templates\core_app\home.html:6 .\templates\pages\about.html:5
-msgid "We are a community-driven online flea market."
-msgstr "نحن سوق إلكتروني للسلع المستعملة يقوده المجتمع."
+msgstr "سوقك الحر"
 
 #: .\templates\pages\about.html:2 .\templates\pages\about.html:4
-#: .\templates\partials\footer.html:6 .\templates\partials\navbar.html:21
+#: .\templates\partials\footer.html:6 .\templates\partials\navbar.html:31
 msgid "About"
 msgstr "من نحن"
 
+#: .\templates\pages\about.html:5
+msgid "We are a community-driven online flea market."
+msgstr "نحن سوق إلكتروني للسلع المستعملة يقوده المجتمع."
+
 #: .\templates\pages\contact.html:2 .\templates\pages\contact.html:4
-#: .\templates\partials\footer.html:7 .\templates\partials\navbar.html:22
+#: .\templates\partials\footer.html:7 .\templates\partials\navbar.html:37
 msgid "Contact"
 msgstr "اتصل بنا"
 
@@ -750,34 +766,52 @@ msgstr "جميع الحقوق محفوظة"
 
 #: .\templates\partials\footer.html:8
 msgid "Privacy"
-msgstr ""
+msgstr "الخصوصية"
 
 #: .\templates\partials\footer.html:9
 msgid "Terms"
-msgstr ""
+msgstr "الشروط"
 
-#: .\templates\partials\navbar.html:7
+#: .\templates\partials\navbar.html:8
 msgid "Flomarkt.Shop"
-msgstr ""
+msgstr "سوق فلوماركيت"
 
-#: .\templates\partials\navbar.html:12
+#: .\templates\partials\navbar.html:14
 msgid "Toggle navigation"
+msgstr "تبديل"
+
+#: .\templates\partials\navbar.html:25
+msgid "Home"
+msgstr "الصفحة الرئيسية"
+
+#: .\templates\partials\navbar.html:45
+msgid "Search our site"
+msgstr "ابحث في الموقع"
+
+#: .\templates\partials\navbar.html:83
+msgid "My Account"
+msgstr "حسابي"
+
+#: .\templates\partials\navbar.html:88
+msgid "Product Management"
 msgstr ""
 
-#: .\templates\partials\navbar.html:54
+#: .\templates\partials\navbar.html:93
+#, fuzzy
+#| msgid "Profile"
+msgid "My Profile"
+msgstr "الملف الشخصي"
+
+#: .\templates\partials\navbar.html:98
 msgid "Logout"
 msgstr ""
 
-#: .\templates\partials\navbar.html:61
-msgid "Sign in"
+#: .\templates\partials\navbar.html:101
+msgid "Login"
 msgstr ""
 
-#: .\templates\partials\navbar.html:62
-msgid "Sign up"
-msgstr ""
-
-#: .\templates\partials\navbar.html:70
-msgid "Language"
+#: .\templates\partials\navbar.html:102
+msgid "Register"
 msgstr ""
 
 #: .\templates\socialaccount\authentication_error.html:5

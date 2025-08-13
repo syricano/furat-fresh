@@ -3,8 +3,8 @@ from django.contrib.auth.decorators import login_required
 from django.utils.translation import gettext as _
 from django.contrib import messages
 
-def home(request):
-    return render(request, "core_app/home.html")
+def index(request):
+    return render(request, "home/index.html")
 
 def about(request):
     return render(request, "pages/about.html")

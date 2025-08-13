@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-12 22:52+0200\n"
+"POT-Creation-Date: 2025-08-13 03:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\core_app\views.py:21
+#: .\home\templates\home\index.html:17
+msgid "Start shopping here"
+msgstr ""
+
+#: .\home\templates\home\index.html:20
+msgid "Shop Now"
+msgstr ""
+
+#: .\home\views.py:21
 msgid "Profile updated successfully"
 msgstr ""
 
@@ -564,7 +572,7 @@ msgstr ""
 msgid "Your phone number is still pending verification."
 msgstr ""
 
-#: .\templates\account\profile.html:3 .\templates\partials\navbar.html:46
+#: .\templates\account\profile.html:3
 msgid "Profile"
 msgstr "Profil"
 
@@ -721,21 +729,17 @@ msgstr ""
 msgid "Your online flea market"
 msgstr ""
 
-#: .\templates\core_app\home.html:5 .\templates\partials\navbar.html:20
-msgid "Home"
-msgstr ""
-
-#: .\templates\core_app\home.html:6 .\templates\pages\about.html:5
-msgid "We are a community-driven online flea market."
-msgstr "Wir sind ein gemeinschaftsgetriebener Online‑Flohmarkt."
-
 #: .\templates\pages\about.html:2 .\templates\pages\about.html:4
-#: .\templates\partials\footer.html:6 .\templates\partials\navbar.html:21
+#: .\templates\partials\footer.html:6 .\templates\partials\navbar.html:31
 msgid "About"
 msgstr "Über uns"
 
+#: .\templates\pages\about.html:5
+msgid "We are a community-driven online flea market."
+msgstr "Wir sind ein gemeinschaftsgetriebener Online‑Flohmarkt."
+
 #: .\templates\pages\contact.html:2 .\templates\pages\contact.html:4
-#: .\templates\partials\footer.html:7 .\templates\partials\navbar.html:22
+#: .\templates\partials\footer.html:7 .\templates\partials\navbar.html:37
 msgid "Contact"
 msgstr "Kontakt"
 
@@ -755,29 +759,47 @@ msgstr ""
 msgid "Terms"
 msgstr ""
 
-#: .\templates\partials\navbar.html:7
+#: .\templates\partials\navbar.html:8
 msgid "Flomarkt.Shop"
 msgstr ""
 
-#: .\templates\partials\navbar.html:12
+#: .\templates\partials\navbar.html:14
 msgid "Toggle navigation"
 msgstr ""
 
-#: .\templates\partials\navbar.html:54
+#: .\templates\partials\navbar.html:25
+msgid "Home"
+msgstr ""
+
+#: .\templates\partials\navbar.html:45
+msgid "Search our site"
+msgstr ""
+
+#: .\templates\partials\navbar.html:83
+msgid "My Account"
+msgstr "Mein Konto"
+
+#: .\templates\partials\navbar.html:88
+msgid "Product Management"
+msgstr "Produktmanagement"
+
+#: .\templates\partials\navbar.html:93
+#, fuzzy
+#| msgid "Profile"
+msgid "My Profile"
+msgstr "Profil"
+
+#: .\templates\partials\navbar.html:98
 msgid "Logout"
-msgstr ""
+msgstr "Abmelden"
 
-#: .\templates\partials\navbar.html:61
-msgid "Sign in"
-msgstr ""
+#: .\templates\partials\navbar.html:101
+msgid "Login"
+msgstr "Anmelden"
 
-#: .\templates\partials\navbar.html:62
-msgid "Sign up"
-msgstr ""
-
-#: .\templates\partials\navbar.html:70
-msgid "Language"
-msgstr ""
+#: .\templates\partials\navbar.html:102
+msgid "Register"
+msgstr "Registrieren"
 
 #: .\templates\socialaccount\authentication_error.html:5
 #: .\templates\socialaccount\authentication_error.html:9

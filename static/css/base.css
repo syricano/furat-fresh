@@ -93,3 +93,5 @@ body {
     .username-mobile { font-size: .85rem; }
 }
 
+/* fixed footer support */
+.has-fixed-footer main { padding-bottom: 100px; } /* adjust if footer height changes */

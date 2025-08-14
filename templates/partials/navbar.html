@@ -1,81 +1,29 @@
-{# navbar.html (mobile: burger on left, account center, language on right) #}
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
 
 <nav class="navbar navbar-light border-bottom w-100">
   <div class="container-fluid px-3">
 
-    <!-- ROW 1: Brand | Search(center desktop) | Utilities(right desktop) | Cart(right mobile) -->
+    <!-- ROW 1 -->
     <div class="row align-items-center g-2 py-2 w-100">
 
-      <!-- Brand (left) -->
+      <!-- Brand -->
       <div class="col-6 col-lg-3">
         <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="{% url 'home:home' %}">
           <i class="bi bi-bag-heart-fill"></i>
-          <h1 class="fw-semibold m-0 brand-title">{% trans 'Flomarkt.Shop' %}</h1>
+          <h1 class="fw-semibold m-0 brand-title"><strong>{% trans 'Flomarkt24' %}</strong></h1>
         </a>
       </div>
 
       <!-- Search (desktop center) -->
       <div class="d-none d-lg-flex col-lg-6 justify-content-center">
-        <form class="d-flex w-100" style="max-width:460px" method="get" action="">
-          <div class="input-group w-100">
-            <input class="form-control" type="text" name="q" placeholder="{% trans 'Search our site' %}">
-            <button class="btn btn-outline-secondary" type="submit"><i class="bi bi-search"></i></button>
-          </div>
-        </form>
+        {% include "partials/navbar/search.html" %}
       </div>
 
       <!-- Desktop utilities (right): Lang | Account | Cart -->
       <div class="d-none d-lg-flex col-lg-3 justify-content-end align-items-center gap-3">
-        <!-- Language -->
-        <div class="dropdown">
-          {% get_available_languages as LANGUAGES %}
-          <a class="nav-link dropdown-toggle d-flex align-items-center gap-1" href="#" id="langMenu-lg"
-             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-translate"></i> {{ LANGUAGE_CODE|upper }}
-          </a>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="langMenu-lg">
-            {% for code, name in LANGUAGES %}
-              <form class="px-3 py-1" action="{% url 'set_language' %}" method="post">
-                {% csrf_token %}
-                <input type="hidden" name="next" value="{{ request.get_full_path }}">
-                <input type="hidden" name="language" value="{{ code }}">
-                <button type="submit"
-                        class="dropdown-item d-flex justify-content-between align-items-center{% if code == LANGUAGE_CODE %} active{% endif %}">
-                  {{ name }} <span class="ms-2 small text-muted">{{ code|upper }}</span>
-                </button>
-              </form>
-            {% endfor %}
-          </div>
-        </div>
-
-        <!-- Account -->
-        <div class="dropdown">
-          <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" id="userOptions-lg"
-             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-person-circle fs-5"></i>
-            {% if request.user.is_authenticated %}{{ request.user.username }}{% else %}{% trans 'My Account' %}{% endif %}
-          </a>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userOptions-lg">
-            {% if request.user.is_authenticated %}
-              {% if request.user.is_superuser %}
-                <a class="dropdown-item" href="#">{% trans 'Product Management' %}</a>
-                <hr class="dropdown-divider">
-              {% endif %}
-              <a class="dropdown-item d-flex align-items-center" href="{% url 'home:profile' %}">
-                <i class="bi bi-person me-2"></i> {% trans 'My Profile' %}
-              </a>
-              <hr class="dropdown-divider">
-              <a class="dropdown-item" href="{% url 'account_logout' %}">{% trans 'Logout' %}</a>
-            {% else %}
-              <a class="dropdown-item" href="{% url 'account_login' %}">{% trans 'Login' %}</a>
-              <a class="dropdown-item" href="{% url 'account_signup' %}">{% trans 'Register' %}</a>
-            {% endif %}
-          </div>
-        </div>
-
-        <!-- Cart -->
+        {% include "partials/navbar/lang.html" %}
+        {% include "partials/navbar/account.html" %}
         <a class="nav-link{% if grand_total %} text-info fw-bold{% endif %}" href="#">
           <i class="bi bi-bag"></i>
           {% if grand_total %}${{ grand_total|floatformat:2 }}{% else %}$0.00{% endif %}
@@ -88,6 +36,13 @@
           <i class="bi bi-bag"></i>
           {% if grand_total %}${{ grand_total|floatformat:2 }}{% else %}$0.00{% endif %}
         </a>
+      </div>
+    </div>
+
+    <!-- ROW 1B: Mobile search -->
+    <div class="row d-lg-none py-1 w-100">
+      <div class="col-12">
+        {% include "partials/navbar/search.html" %}
       </div>
     </div>
 
@@ -104,72 +59,22 @@
         </button>
       </div>
 
-      <!-- Mobile: Account (center) with username shown -->
+      <!-- Mobile: Account (center) -->
       <div class="col-4 d-lg-none text-center">
-        <div class="dropdown d-inline-block">
-          <a class="nav-link dropdown-toggle d-flex justify-content-center align-items-center gap-1"
-             href="#" id="userOptions-sm" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-person-circle"></i>
-            {% if request.user.is_authenticated %}
-              <span class="d-inline username-mobile">{{ request.user.username }}</span>
-            {% else %}
-              <span class="d-inline">{% trans 'My Account' %}</span>
-            {% endif %}
-          </a>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userOptions-sm">
-            {% if request.user.is_authenticated %}
-              {% if request.user.is_superuser %}
-                <a class="dropdown-item" href="#">{% trans 'Product Management' %}</a>
-                <hr class="dropdown-divider">
-              {% endif %}
-              <a class="dropdown-item d-flex align-items-center" href="{% url 'home:profile' %}">
-                <i class="bi bi-person me-2"></i> {% trans 'My Profile' %}
-              </a>
-              <hr class="dropdown-divider">
-              <a class="dropdown-item" href="{% url 'account_logout' %}">{% trans 'Logout' %}</a>
-            {% else %}
-              <a class="dropdown-item" href="{% url 'account_login' %}">{% trans 'Login' %}</a>
-              <a class="dropdown-item" href="{% url 'account_signup' %}">{% trans 'Register' %}</a>
-            {% endif %}
-          </div>
+        <div class="d-inline-block">
+          {% include "partials/navbar/account.html" %}
         </div>
       </div>
 
       <!-- Mobile: Language (right) -->
       <div class="col-4 d-lg-none text-end">
-        <div class="dropdown">
-          {% get_available_languages as LANGUAGES %}
-          <a class="nav-link dropdown-toggle d-inline-flex align-items-center gap-1" href="#" id="langMenu-sm"
-             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-translate"></i> {{ LANGUAGE_CODE|upper }}
-          </a>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="langMenu-sm">
-            {% for code, name in LANGUAGES %}
-              <form class="px-3 py-1" action="{% url 'set_language' %}" method="post">
-                {% csrf_token %}
-                <input type="hidden" name="next" value="{{ request.get_full_path }}">
-                <input type="hidden" name="language" value="{{ code }}">
-                <button type="submit"
-                        class="dropdown-item d-flex justify-content-between align-items-center{% if code == LANGUAGE_CODE %} active{% endif %}">
-                  {{ name }} <span class="ms-2 small text-muted">{{ code|upper }}</span>
-                </button>
-              </form>
-            {% endfor %}
-          </div>
-        </div>
+        {% include "partials/navbar/lang.html" %}
       </div>
 
       <!-- Desktop: Primary links (left) + spacer -->
       <div class="col-12 col-lg-6 d-none d-lg-block">
         <div id="primaryNav" class="collapse d-lg-block">
-          <div class="d-flex flex-column flex-lg-row">
-            <a class="nav-link px-0 me-lg-3 {% if match.app_name == 'home' and match.url_name == 'home' %}active{% endif %}"
-               href="{% url 'home:home' %}">{% trans 'Home' %}</a>
-            <a class="nav-link px-0 me-lg-3 {% if match.app_name == 'home' and match.url_name == 'about' %}active{% endif %}"
-               href="{% url 'home:about' %}">{% trans 'About' %}</a>
-            <a class="nav-link px-0 me-lg-3 {% if match.app_name == 'home' and match.url_name == 'contact' %}active{% endif %}"
-               href="{% url 'home:contact' %}">{% trans 'Contact' %}</a>
-          </div>
+          {% include "partials/navbar/links.html" %}
         </div>
       </div>
       <div class="d-none d-lg-block col-lg-6"></div>
@@ -177,10 +82,8 @@
       <!-- Mobile: Collapsed primary links full width -->
       <div class="col-12 d-lg-none">
         <div id="primaryNav" class="collapse">
-          <div class="d-flex flex-column py-1">
-            <a class="nav-link px-0" href="{% url 'home:home' %}">{% trans 'Home' %}</a>
-            <a class="nav-link px-0" href="{% url 'home:about' %}">{% trans 'About' %}</a>
-            <a class="nav-link px-0" href="{% url 'home:contact' %}">{% trans 'Contact' %}</a>
+          <div class="py-1">
+            {% include "partials/navbar/links.html" %}
           </div>
         </div>
       </div>

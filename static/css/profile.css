@@ -1,0 +1,105 @@
+/* ---- Profile page polish ---- */
+
+/* Theme tokens */
+:root{
+  --ink:#1f2937;          /* text */
+  --muted:#6b7280;        /* secondary text */
+  --surface:#ffffff;      /* cards */
+  --border:#e5e7eb;       /* borders */
+  --ring:#0d6efd;         /* focus ring */
+}
+
+/* Subtle background glow behind page */
+.overlay{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(900px 520px at 10% 10%, rgba(13,110,253,.10) 0%, transparent 60%),
+    radial-gradient(720px 460px at 90% 20%, rgba(32,201,151,.10) 0%, transparent 55%);
+  z-index:0;
+}
+.container{ position:relative; z-index:1; }
+
+/* Header spacing */
+.header-container{ min-height:48px; }
+
+/* Section headings */
+.logo-font{ letter-spacing:.4px; }
+h2.logo-font{ color:var(--ink); }
+
+/* Card-like form wrapper */
+#profile-update-form{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:1rem;
+}
+
+/* Fieldsets */
+#profile-update-form fieldset{
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:1rem;
+  background:#fff;
+  margin-bottom:1rem;
+}
+#profile-update-form legend{
+  font-size:.95rem;
+  font-weight:700;
+  color:var(--ink);
+  padding:0 .35rem;
+}
+
+/* Labels, help, errors */
+#profile-update-form label{ font-weight:600; color:var(--ink); }
+#profile-update-form .helptext{ font-size:.875rem; color:var(--muted); }
+#profile-update-form .asteriskField{ color:#dc3545; margin-left:.25rem; }
+#profile-update-form .errorlist{
+  margin:.25rem 0 0;
+  padding:.5rem .75rem;
+  list-style:none;
+  background:#fff5f5;
+  border:1px solid #f1b0b7;
+  color:#842029;
+  border-radius:.5rem;
+}
+
+/* Inputs */
+#profile-update-form .form-control,
+#profile-update-form .form-select{
+  border-radius:10px;
+  border-color:var(--border);
+}
+#profile-update-form .form-control:focus,
+#profile-update-form .form-select:focus{
+  border-color:#86b7fe;
+  box-shadow:0 0 0 .2rem rgba(13,110,253,.15);
+  outline:0;
+}
+
+/* Buttons */
+.btn-black{
+  background:#111;
+  border-color:#111;
+  color:#fff;
+}
+.btn-black:hover,
+.btn-black:focus{
+  background:#000;
+  border-color:#000;
+  box-shadow:0 6px 18px rgba(0,0,0,.18);
+}
+
+/* Order history placeholder */
+.text-muted{ color:var(--muted) !important; }
+
+/* Responsive tweaks */
+@media (max-width: 992px){
+  #profile-update-form{ padding:.75rem; border-radius:12px; }
+  #profile-update-form fieldset{ padding:.75rem; }
+}
+
+/* RTL niceties */
+[dir="rtl"] #profile-update-form legend{ text-align:right; }
+[dir="rtl"] #profile-update-form .errorlist{ text-align:right; }

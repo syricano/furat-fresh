@@ -1,0 +1,9 @@
+{% load i18n %}
+<div class="d-flex flex-column flex-lg-row">
+  <a class="nav-link px-0 me-lg-3 {% if match.app_name == 'home' and match.url_name == 'index' %}active{% endif %}"
+     href="{% url 'home:index' %}">{% trans 'Home' %}</a>
+  <a class="nav-link px-0 me-lg-3 {% if match.app_name == 'home' and match.url_name == 'about' %}active{% endif %}"
+     href="{% url 'home:about' %}">{% trans 'About' %}</a>
+  <a class="nav-link px-0 me-lg-3 {% if match.app_name == 'home' and match.url_name == 'contact' %}active{% endif %}"
+     href="{% url 'home:contact' %}">{% trans 'Contact' %}</a>
+</div>

@@ -760,7 +760,7 @@ msgid "Terms"
 msgstr ""
 
 #: .\templates\partials\navbar.html:8
-msgid "Flomarkt.Shop"
+msgid "FloMarkt24"
 msgstr ""
 
 #: .\templates\partials\navbar.html:14

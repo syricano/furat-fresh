@@ -1,0 +1,134 @@
+/* =========================
+   components.css
+   ========================= */
+
+/* Buttons: primary never as background */
+.btn-primary{
+  background: transparent;
+  color: var(--c-primary);
+  border: 2px solid var(--c-primary);
+}
+.btn-primary:hover,
+.btn-primary:focus{
+  background: var(--c-muted);
+  color: var(--c-primary);
+  border-color: var(--c-primary);
+}
+
+/* Navbar links: thin underline on hover/current */
+.navbar .nav-link{
+  position: relative;
+  transition: color .15s ease;
+}
+.navbar .nav-link::after{
+  content:"";
+  position:absolute; left:0; bottom:-2px;
+  height:1px; width:0;
+  background: var(--c-ink);
+  transition: width .2s ease;
+}
+.navbar .nav-link[aria-current="page"]::after,
+.navbar .nav-link:hover::after{ width:100%; }
+/* No underline on dropdown toggles */
+.navbar .nav-link.dropdown-toggle::after{ display:none; }
+/* Ignore accidental .active */
+.navbar .nav-link.active:not([aria-current="page"]){ color:inherit; }
+.navbar .nav-link.active:not([aria-current="page"])::after{ width:0; }
+
+/* Ensure navbar allows overlaying dropdowns */
+.navbar,
+.navbar .container-fluid,
+.navbar .row{ overflow: visible; }
+
+/* Dropdown base look + unified shadow for ALL menus */
+.navbar .dropdown,
+.navbar .nav-item.dropdown{ position: relative; }
+.navbar .dropdown-menu{
+  background: var(--c-bg);
+  border: 1px solid var(--c-muted);
+  border-radius: .5rem;
+  min-width: 12rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+
+/* Hover bridge: prevents flicker between toggle and menu */
+.navbar .dropdown::before{
+  content:"";
+  position:absolute;
+  left:0; right:0; top:100%;
+  height: 10px;                      /* safe zone */
+}
+
+/* Slide-down + absolute positioning to avoid header growth */
+.navbar .dropdown-menu{
+  position: absolute !important;
+  left: 0; top: calc(100% + 10px);   /* sits below bridge */
+  margin-top: 0;
+
+  display: block;                    /* enable animation */
+  opacity: 0;
+  transform: translateY(-8px);
+  transform-origin: top center;
+  visibility: hidden;
+  pointer-events: none;
+  will-change: transform, opacity;
+  transition: transform .18s ease .25s, opacity .18s ease .25s, visibility 0s linear .25s; /* close delay */
+  z-index: 2050;
+}
+/* End-aligned menus */
+.navbar .dropdown-menu.dropdown-menu-end{ right:0; left:auto; }
+
+/* Click/JS show state */
+.navbar .dropdown.show > .dropdown-menu,
+.navbar .dropdown-menu.show{
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+  transition: transform .18s ease 0s, opacity .18s ease 0s, visibility 0s; /* open instantly */
+}
+
+/* Hover-open on desktop (keeps open while over toggle OR menu) */
+@media (hover: hover) and (pointer: fine){
+  .navbar .dropdown:hover > .dropdown-menu{
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+    transition: transform .18s ease 0s, opacity .18s ease 0s, visibility 0s;
+  }
+}
+
+/* Dropdown items: neutral active/current, hover only */
+.navbar .dropdown-menu .dropdown-item{ color: var(--c-ink); }
+.navbar .dropdown-menu .dropdown-item:hover,
+.navbar .dropdown-menu .dropdown-item:focus{
+  background: var(--c-muted);
+  color: var(--c-primary);
+}
+.navbar .dropdown-menu .dropdown-item.active,
+.navbar .dropdown-menu .dropdown-item:active,
+.navbar .dropdown-menu .dropdown-item[aria-current="true"]{
+  background: transparent !important;
+  color: var(--c-ink) !important;
+}
+/* Optional current-language checkmark */
+.navbar .dropdown-menu .dropdown-item[aria-current="true"]::after{
+  content:"✓"; float:right; opacity:.6; font-size:.9em;
+}
+
+/* Elevate interacting items */
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.dropdown-menu.show,
+.dropdown-item:hover,
+.dropdown-item:focus,
+.btn:hover,
+.btn:focus{
+  position: relative;
+  z-index: 2100 !important;
+}
+
+/* Reasonable component sizes */
+.modal-dialog{ max-width: 30rem; }
+.offcanvas{ --bs-offcanvas-width: 30rem; }

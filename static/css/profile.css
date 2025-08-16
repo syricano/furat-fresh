@@ -1,13 +1,9 @@
-/* ---- Profile page (uses base background) ---- */
-
-/* Do NOT set body background here. Base controls it. */
-
-/* Optional glow overlay that sits above base bg but below content */
+/* Overlay aligned to theme */
 .overlay{
   position:fixed; inset:0; pointer-events:none; z-index:0;
   background:
-    radial-gradient(900px 520px at 10% 10%, rgba(13,110,253,.10) 0%, transparent 60%),
-    radial-gradient(720px 460px at 90% 20%, rgba(32,201,151,.10) 0%, transparent 55%);
+    radial-gradient(900px 520px at 10% 10%, rgba(3,3,3,.06) 0%, transparent 60%),
+    radial-gradient(720px 460px at 90% 20%, rgba(212,201,190,.20) 0%, transparent 55%);
 }
 .container{ position:relative; z-index:1; }
 
@@ -35,7 +31,7 @@
   border-color:#86b7fe; box-shadow:0 0 0 .18rem rgba(13,110,253,.18); outline:0;
 }
 
-/* Tight gutters */
+/* Gutters */
 #profile-update-form .row.g-3{ --bs-gutter-y:.5rem; --bs-gutter-x:.6rem; }
 
 /* Submit */
@@ -46,7 +42,6 @@
 }
 .btn-black:hover{ background:#000; border-color:#000; transform:translateY(-1px); box-shadow:0 10px 26px rgba(0,0,0,.18); }
 
-/* Responsive */
-@media (max-width: 992px){
+@media (max-width:992px){
   #profile-update-form{ padding:.75rem; border-radius:12px; }
 }

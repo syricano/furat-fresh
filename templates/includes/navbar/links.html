@@ -1,9 +1,56 @@
 {% load i18n %}
-<div class="d-flex flex-column flex-lg-row">
-  <a class="nav-link px-0 me-lg-3 {% if match.app_name == 'home' and match.url_name == 'index' %}active{% endif %}"
-     href="{% url 'home:index' %}">{% trans 'Home' %}</a>
-  <a class="nav-link px-0 me-lg-3 {% if match.app_name == 'home' and match.url_name == 'about' %}active{% endif %}"
-     href="{% url 'home:about' %}">{% trans 'About' %}</a>
-  <a class="nav-link px-0 me-lg-3 {% if match.app_name == 'home' and match.url_name == 'contact' %}active{% endif %}"
-     href="{% url 'home:contact' %}">{% trans 'Contact' %}</a>
-</div>
+
+<ul class="nav align-items-center ms-lg-3 gap-3">
+  <li class="nav-item">
+   <a class="nav-link px-0"
+      href="{% url 'home:index' %}"
+      {% if match.app_name == 'home' and match.url_name == 'index' %}aria-current="page"{% endif %}>
+      {% trans "Home" %}
+   </a>
+   </li>
+   <li class="nav-item">
+   <a class="nav-link px-0"
+      href="{% url 'home:about' %}"
+      {% if match.app_name == 'home' and match.url_name == 'about' %}aria-current="page"{% endif %}>
+      {% trans "About" %}
+   </a>
+   </li>
+   <li class="nav-item">
+   <a class="nav-link px-0"
+      href="{% url 'home:contact' %}"
+      {% if match.app_name == 'home' and match.url_name == 'contact' %}aria-current="page"{% endif %}>
+      {% trans "Contact" %}
+   </a>
+   </li>
+
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle px-0"
+       href="#"
+       id="allProductsDropdown"
+       role="button"
+       data-bs-toggle="dropdown"
+       aria-expanded="false">
+      {% trans "All Products" %}
+    </a>
+
+    <ul class="dropdown-menu shadow" aria-labelledby="allProductsDropdown" style="min-width:18rem;">
+      <li><a class="dropdown-item" href="#">{% trans "Automotive" %}</a></li>
+      <li><a class="dropdown-item" href="#">{% trans "Home &amp; Tools" %}</a></li>
+      <li><a class="dropdown-item" href="#">{% trans "Garden &amp; Outdoors" %}</a></li>
+      <li><a class="dropdown-item" href="#">{% trans "Electronics" %}</a></li>
+      <li><a class="dropdown-item" href="#">{% trans "Computers" %}</a></li>
+      <li><a class="dropdown-item" href="#">{% trans "Phones &amp; Accessories" %}</a></li>
+      <li><a class="dropdown-item" href="#">{% trans "Fashion" %}</a></li>
+      <li><a class="dropdown-item" href="#">{% trans "Beauty &amp; Personal Care" %}</a></li>
+      <li><a class="dropdown-item" href="#">{% trans "Health" %}</a></li>
+      <li><a class="dropdown-item" href="#">{% trans "Sports &amp; Outdoors" %}</a></li>
+      <li><a class="dropdown-item" href="#">{% trans "Toys &amp; Games" %}</a></li>
+      <li><a class="dropdown-item" href="#">{% trans "Baby" %}</a></li>
+      <li><a class="dropdown-item" href="#">{% trans "Pet Supplies" %}</a></li>
+      <li><a class="dropdown-item" href="#">{% trans "Books" %}</a></li>
+      <li><a class="dropdown-item" href="#">{% trans "Music" %}</a></li>
+      <li><a class="dropdown-item" href="#">{% trans "Grocery" %}</a></li>
+      <li><a class="dropdown-item" href="#">{% trans "Office Products" %}</a></li>
+    </ul>
+  </li>
+</ul>

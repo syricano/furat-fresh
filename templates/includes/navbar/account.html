@@ -1,0 +1,28 @@
+{% load i18n %}
+<div class="dropdown">
+  <a class="nav-link dropdown-toggle d-flex align-items-center gap-2"
+     href="#" id="userOptions" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-person-circle fs-5"></i>
+    {% if request.user.is_authenticated %}
+      <span class="username-mobile">{{ request.user.username }}</span>
+    {% else %}
+      {% trans 'My Account' %}
+    {% endif %}
+  </a>
+  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userOptions">
+    {% if request.user.is_authenticated %}
+      {% if request.user.is_superuser %}
+        <a class="dropdown-item" href="#">{% trans 'Product Management' %}</a>
+        <hr class="dropdown-divider">
+      {% endif %}
+      <a class="dropdown-item d-flex align-items-center" href="{% url 'profiles:profile' %}">
+        <i class="bi bi-person me-2"></i> {% trans 'My Profile' %}
+      </a>
+      <hr class="dropdown-divider">
+      <a class="dropdown-item" href="{% url 'account_logout' %}">{% trans 'Logout' %}</a>
+    {% else %}
+      <a class="dropdown-item" href="{% url 'account_login' %}">{% trans 'Login' %}</a>
+      <a class="dropdown-item" href="{% url 'account_signup' %}">{% trans 'Register' %}</a>
+    {% endif %}
+  </div>
+</div>

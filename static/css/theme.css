@@ -1,0 +1,22 @@
+:root{
+  --c-bg:#F1EFEC;
+  --c-muted:#D4C9BE;
+  --c-primary:#123458;
+  --c-primary-600:#0f2d46;
+  --c-ink:#030303;
+  --c-ink-600:#111;
+}
+:root{
+  --bs-body-bg:var(--c-bg);
+  --bs-body-color:var(--c-ink);
+  --bs-border-color:var(--c-muted);
+  --bs-link-color:var(--c-ink);
+  --bs-link-hover-color:var(--c-primary);
+  --bs-primary:var(--c-primary);
+  --bs-primary-rgb:18,52,88;
+  --bs-emphasis-color:var(--c-ink);
+}
+.bg-app{background:var(--c-bg)!important;}
+.text-ink{color:var(--c-ink)!important;}
+.text-primary-ink{color:var(--c-primary)!important;}
+.border-muted{border-color:var(--c-muted)!important;}

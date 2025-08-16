@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load allauth i18n static %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block extra_js %}
+  <script src="{% static 'js/index.js' %}"></script>
+{% endblock %}
+
+{% block page_header %}
+  <div class="container header-container">
+    <div class="row"><div class="col"></div></div>
+  </div>
+{% endblock %}
+
+{% block content %}
+<div class="container h-100">
+  <div class="row h-100 align-items-center">
+    <div class="col-12 col-md-8 col-lg-6">
+      <h1 class="display-4 logo-font text-black mb-3">{% trans "Start shopping here" %}</h1>
+      <a href="#" class="shop-now-button btn btn-lg rounded-0 text-uppercase text-white py-3">{% trans "Shop Now" %}</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

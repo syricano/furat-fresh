@@ -773,8 +773,8 @@ msgid "Terms"
 msgstr "الشروط"
 
 #: .\templates\partials\navbar.html:8
-msgid "Flomarkt.Shop"
-msgstr "سوق فلوماركيت"
+msgid "FuratFresh"
+msgstr "سوق فرات"
 
 #: .\templates\partials\navbar.html:14
 msgid "Toggle navigation"

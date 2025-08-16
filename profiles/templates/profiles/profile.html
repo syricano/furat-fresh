@@ -2,9 +2,13 @@
 {% load i18n %}
 {% load static %}
 {% load crispy_forms_tags %}
+{% load crispy_forms_filters %}
 
 {% block extra_css %}
-  <link rel="stylesheet" href="{% static '/css/profile.css' %}">
+  <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
+{% block extra_js %}
+  <script src="{% static 'js/profile.js' %}"></script>
 {% endblock %}
 
 {% block page_header %}
@@ -15,17 +19,17 @@
 
 {% block content %}
 <div class="overlay"></div>
+
 <div class="container">
   <div class="row">
-    <div class="col">      
-      <h2 class="logo-font mb-4 py-5">{% trans "My Profile" %}</h2>     
+    <div class="col">
+      <h2 class="logo-font mb-4 py-5">{% trans "My Profile" %}</h2>
     </div>
   </div>
 
   <div class="row g-4">
-    <div class="col-12 col-lg-7">
-      <p class="text-muted">{% trans "Default Delivery Information" %}</p>
-
+    <!-- LEFT: Profile form (1/3) -->
+    <div class="col-12 col-lg-4">
       <form class="mt-2" action="{% url 'profiles:profile' %}" method="post" id="profile-update-form">
         {% csrf_token %}
 
@@ -33,15 +37,9 @@
         <fieldset class="mb-3">
           <legend class="h6 mb-3">{% trans "Account" %}</legend>
           <div class="row g-3">
-            <div class="col-md-6">
-              {{ user_form.first_name|as_crispy_field }}
-            </div>
-            <div class="col-md-6">
-              {{ user_form.last_name|as_crispy_field }}
-            </div>
-            <div class="col-12">
-              {{ user_form.email|as_crispy_field }}
-            </div>
+            <div class="col-12 col-lg-6">{{ user_form.first_name|as_crispy_field }}</div>
+            <div class="col-12 col-lg-6">{{ user_form.last_name|as_crispy_field }}</div>
+            <div class="col-12">{{ user_form.email|as_crispy_field }}</div>
           </div>
         </fieldset>
 
@@ -49,30 +47,13 @@
         <fieldset>
           <legend class="h6 mb-3">{% trans "Default Delivery Information" %}</legend>
           <div class="row g-3">
-            <div class="col-md-6">
-              {{ form.default_phone_number|as_crispy_field }}
-            </div>
-            <div class="col-md-6">
-              {{ form.default_postcode|as_crispy_field }}
-            </div>
-
-            <div class="col-12">
-              {{ form.default_street_address1|as_crispy_field }}
-            </div>
-            <div class="col-12">
-              {{ form.default_street_address2|as_crispy_field }}
-            </div>
-
-            <div class="col-md-6">
-              {{ form.default_town_or_city|as_crispy_field }}
-            </div>
-            <div class="col-md-6">
-              {{ form.default_county|as_crispy_field }}
-            </div>
-
-            <div class="col-12">
-              {{ form.default_country|as_crispy_field }}
-            </div>
+            <div class="col-12 col-lg-6">{{ form.phone_number|as_crispy_field }}</div>
+            <div class="col-12 col-lg-6">{{ form.postcode|as_crispy_field }}</div>
+            <div class="col-12 col-lg-6">{{ form.town_or_city|as_crispy_field }}</div>
+            <div class="col-12 col-lg-6">{{ form.county|as_crispy_field }}</div>
+            <div class="col-12">{{ form.street_address1|as_crispy_field }}</div>
+            <div class="col-12">{{ form.street_address2|as_crispy_field }}</div>
+            <div class="col-12 col-lg-6">{{ form.country|as_crispy_field }}</div>
           </div>
         </fieldset>
 
@@ -84,9 +65,16 @@
       </form>
     </div>
 
-    <div class="col-12 col-lg-5">
-      <p class="text-muted">{% trans "Order History" %}</p>
-      {{ orders }}
+    <!-- RIGHT: Order history (2/3) -->
+    <div class="col-12 col-lg-8">
+      <div class="profile-orders">
+        <div class="orders-header">
+          <span>{% trans "Order History" %}</span>
+        </div>
+        <div class="orders-body">
+          {{ orders }}
+        </div>
+      </div>
     </div>
   </div>
 </div>

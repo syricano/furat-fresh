@@ -1,0 +1,69 @@
+/* ---- Home / index hero polish ---- */
+
+/* Vertically center hero inside the existing structure */
+main > .container.h-100 {
+  min-height: calc(100vh - 164px); /* matches your base header offset */
+  display: flex;
+  align-items: center;
+}
+
+/* Glass panel behind the left column content */
+main > .container.h-100 .col-7.col-md-6.my-auto {
+  position: relative;
+  padding: 1.25rem 1.25rem 1.5rem;
+  border-radius: 16px;
+}
+main > .container.h-100 .col-7.col-md-6.my-auto::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: rgba(255,255,255,.62);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,.5);
+  box-shadow: 0 10px 30px rgba(0,0,0,.10);
+  z-index: 0;
+}
+main > .container.h-100 .col-7.col-md-6.my-auto > * { position: relative; z-index: 1; }
+
+/* Title animation */
+.display-4.logo-font {
+  letter-spacing: .5px;
+  text-shadow: 0 1px 0 rgba(255,255,255,.6);
+  animation: rise .5s ease-out both;
+}
+
+/* Call-to-action button with sheen */
+.shop-now-button {
+  position: relative;
+  background: linear-gradient(90deg,#111,#000);
+  border: none;
+  transition: transform .15s ease, box-shadow .25s ease, background-position .4s ease;
+  background-size: 200% 100%;
+  overflow: hidden;
+}
+.shop-now-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.22);
+  background-position: 100% 0;
+}
+.shop-now-button:active { transform: translateY(0); }
+.shop-now-button::after {
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(120deg, rgba(255,255,255,.22), rgba(255,255,255,0) 30%);
+  transform: translateX(-100%);
+  transition: transform .6s ease;
+  pointer-events:none;
+}
+.shop-now-button:hover::after { transform: translateX(100%); }
+
+/* Subtle float-in */
+@keyframes rise { from {opacity:0; transform:translateY(6px);} to {opacity:1; transform:translateY(0);} }
+
+/* Mobile tweaks */
+@media (max-width: 767.98px){
+  main > .container.h-100 .col-7.col-md-6.my-auto { padding: .9rem; border-radius: 12px; }
+  main > .container.h-100 .col-7.col-md-6.my-auto::before { border-radius: 12px; }
+}

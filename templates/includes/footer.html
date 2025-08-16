@@ -1,31 +1,30 @@
 {% load i18n %}
-
-<div class="container-xxl py-4">
-  <div class="bg-white border-top fixed-bottom ">
-    <!-- Row 1: brand + nav + social -->
+<div class="footer-panel">
+  <div class="container-xxl py-3">
+    <!-- Row 1 -->
     <div class="row gy-3 align-items-center">
       <!-- Brand -->
       <div class="col-12 col-md-4">
-        <a href="{% url 'home:index' %}" class="d-inline-flex align-items-center gap-2 text-decoration-none">
-          <i class="bi bi-bag-heart-fill fs-5"></i>
-          <span class="fw-semibold"><strong>{% trans "Flomarkt24" %}</strong></span>
+        <a href="{% url 'home:index' %}" class="d-inline-flex align-items-center gap-2 text-decoration-none footer-brand">
+          <img src="/media/flomarkt24-logo-bg.png" alt="" class="logo-light border-radios-50" width="50" height="50"/>
+          <span class="fw-semibold">{% trans "Flomarkt24" %}</span>
         </a>
         <p class="m-0 small text-muted">{% trans "Your online flea market" %}</p>
       </div>
 
-      <!-- Footer navigation -->
+      <!-- Footer nav -->
       <div class="col-12 col-md-4">
         <nav class="nav justify-content-center gap-3" aria-label="{% trans 'Footer navigation' %}">
-          <a class="nav-link p-0 text-muted" href="{% url 'home:about' %}">{% trans "About" %}</a>
-          <a class="nav-link p-0 text-muted" href="{% url 'home:contact' %}">{% trans "Contact" %}</a>
-          <a class="nav-link p-0 text-muted" href="#">{% trans "Privacy" %}</a>
-          <a class="nav-link p-0 text-muted" href="#">{% trans "Terms" %}</a>
+          <a class="nav-link p-0 footer-link" href="{% url 'home:about' %}">{% trans "About" %}</a>
+          <a class="nav-link p-0 footer-link" href="{% url 'home:contact' %}">{% trans "Contact" %}</a>
+          <a class="nav-link p-0 footer-link" href="#privacy">{% trans "Privacy" %}</a>
+          <a class="nav-link p-0 footer-link" href="#terms">{% trans "Terms" %}</a>
         </nav>
       </div>
 
       <!-- Social -->
       <div class="col-12 col-md-4">
-        <div class="d-flex justify-content-md-end justify-content-start gap-3">
+        <div class="d-flex justify-content-md-end justify-content-start gap-3 footer-social">
           <a class="text-muted" href="#" aria-label="X / Twitter"><i class="bi bi-twitter-x"></i></a>
           <a class="text-muted" href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
           <a class="text-muted" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
@@ -34,12 +33,12 @@
       </div>
     </div>
 
-    <!-- Row 2: legal + back to top -->
-    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-muted">
-      <p class="m-0 align-items-center">&copy; {{ now|date:"Y" }} Flomarkt24 — {% trans "All rights reserved" %}</p>
-      <a href="#" class="d-inline-flex align-items-center gap-1 text-muted text-decoration-none">
+    <!-- Row 2 -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-muted pt-3">
+      <p class="m-0">&copy; {% now "Y" %} Flomarkt24 — {% trans "All rights reserved" %}</p>
+      <button type="button" class="btn btn-outline-secondary btn-sm back-to-top" data-scroll-top>
         <i class="bi bi-arrow-up"></i> <span>{% trans "Back to top" %}</span>
-      </a>
+      </button>
     </div>
   </div>
 </div>

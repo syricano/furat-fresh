@@ -1,0 +1,40 @@
+/* Not fixed footer container */
+.footer-panel{
+  background:#fff;
+  border-top:1px solid rgba(0,0,0,.06);
+  box-shadow:0 -4px 16px rgba(0,0,0,.04);
+}
+
+/* Footer links with hover shadow */
+.footer-link{
+  color:#6b7280;
+  border-radius:8px;
+  transition: color .15s ease, box-shadow .2s ease, transform .1s ease, background-color .15s ease;
+}
+.footer-link:hover{
+  color:#0d6efd;
+  background:#fff;
+  box-shadow:0 8px 20px rgba(13,110,253,.18);
+  transform: translateY(-1px);
+}
+
+/* Brand */
+.footer-brand{ color:#111; transition: color .15s ease; }
+.footer-brand:hover{ color:#0d6efd; }
+
+/* Social icons hover shadow */
+.footer-social a{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:36px; height:36px; border-radius:50%;
+  transition: color .15s ease, background-color .15s ease, box-shadow .2s ease, transform .1s ease;
+}
+.footer-social a:hover{
+  color:#0d6efd !important; background:#fff;
+  box-shadow:0 8px 20px rgba(13,110,253,.22);
+  transform: translateY(-1px);
+}
+
+/* Back-to-top button */
+.back-to-top{ transition: transform .12s ease, box-shadow .2s ease; }
+.back-to-top:hover{ transform: translateY(-1px); box-shadow:0 8px 20px rgba(0,0,0,.08); }
+.back-to-top[hidden]{ display:none !important; }

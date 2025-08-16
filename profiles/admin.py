@@ -4,18 +4,19 @@ from django.contrib.auth.models import User
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from .models import UserProfile
 
+
 class UserProfileInline(admin.StackedInline):
     model = UserProfile
     fk_name = "user"
     can_delete = False
     extra = 0
     fields = (
-        "default_first_name", "default_last_name", "default_email",
-        "default_phone_number",
-        "default_street_address1", "default_street_address2",
-        "default_town_or_city", "default_county",
-        "default_postcode", "default_country",
+        "first_name", "last_name", "email", "phone_number",
+        "street_address1", "street_address2",
+        "town_or_city", "county",
+        "postcode", "country",
     )
+
 
 class UserAdmin(BaseUserAdmin):
     inlines = (UserProfileInline,)
@@ -25,48 +26,54 @@ class UserAdmin(BaseUserAdmin):
     )
     search_fields = (
         "username", "email", "first_name", "last_name",
-        "userprofile__default_phone_number",
-        "userprofile__default_town_or_city",
+        "userprofile__phone_number",
+        "userprofile__town_or_city",
     )
 
     @admin.display(description="Phone")
     def profile_phone(self, obj):
-        return getattr(obj.userprofile, "default_phone_number", "")
+        up = getattr(obj, "userprofile", None)
+        return up.phone_number if up and up.phone_number else ""
 
     @admin.display(description="City")
     def profile_city(self, obj):
-        return getattr(obj.userprofile, "default_town_or_city", "")
+        up = getattr(obj, "userprofile", None)
+        return up.town_or_city if up and up.town_or_city else ""
 
     @admin.display(description="Country")
     def profile_country(self, obj):
-        return getattr(obj.userprofile, "default_country", "")
+        up = getattr(obj, "userprofile", None)
+        if not up or not up.country:
+            return ""
+        return getattr(up.country, "name", str(up.country))
 
-# Replace default User admin with one that includes the inline
+
 admin.site.unregister(User)
 admin.site.register(User, UserAdmin)
+
 
 @admin.register(UserProfile)
 class UserProfileAdmin(admin.ModelAdmin):
     list_display = (
-        "user", "default_first_name", "default_last_name",
-        "default_phone_number", "default_town_or_city", "default_country",
+        "user", "first_name", "last_name",
+        "phone_number", "town_or_city", "country",
     )
     list_select_related = ("user",)
     search_fields = (
         "user__username", "user__email",
-        "default_first_name", "default_last_name",
-        "default_phone_number", "default_town_or_city",
+        "first_name", "last_name",
+        "phone_number", "town_or_city",
     )
-    list_filter = ("default_country",)
+    list_filter = ("country",)
     fieldsets = (
         (None, {"fields": ("user",)}),
-        ("Defaults", {"fields": (
-            "default_first_name", "default_last_name",
-            "default_email", "default_phone_number",
+        ("Contact", {"fields": (
+            "first_name", "last_name",
+            "email", "phone_number",
         )}),
         ("Address", {"fields": (
-            "default_street_address1", "default_street_address2",
-            "default_town_or_city", "default_county",
-            "default_postcode", "default_country",
+            "street_address1", "street_address2",
+            "town_or_city", "county",
+            "postcode", "country",
         )}),
     )

@@ -17,8 +17,8 @@
         <nav class="nav justify-content-center gap-3" aria-label="{% trans 'Footer navigation' %}">
           <a class="nav-link p-0 footer-link" href="{% url 'home:about' %}">{% trans "About" %}</a>
           <a class="nav-link p-0 footer-link" href="{% url 'home:contact' %}">{% trans "Contact" %}</a>
-          <a class="nav-link p-0 footer-link" href="#privacy">{% trans "Privacy" %}</a>
-          <a class="nav-link p-0 footer-link" href="#terms">{% trans "Terms" %}</a>
+          <a class="nav-link p-0 footer-link" href="{% url 'home:privacy' %}">{% trans "Privacy" %}</a>
+          <a class="nav-link p-0 footer-link" href="{% url 'home:terms' %}">{% trans "Terms" %}</a>
         </nav>
       </div>
 

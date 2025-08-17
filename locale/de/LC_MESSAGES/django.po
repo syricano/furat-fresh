@@ -903,6 +903,3 @@ msgid ""
 "%(site_name)s. As a final step, please complete the following form:"
 msgstr ""
 
-#: .\templates\socialaccount\snippets\login.html:10
-msgid "Or use a third-party"
-msgstr ""

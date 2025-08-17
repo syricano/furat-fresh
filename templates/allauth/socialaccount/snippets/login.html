@@ -1,15 +1,9 @@
-{% load i18n %}
-{% load allauth %}
-{% load socialaccount %}
+{% load i18n allauth socialaccount %}
 {% get_providers as socialaccount_providers %}
 {% if socialaccount_providers %}
-    {% if not SOCIALACCOUNT_ONLY %}
-        {% element hr %}
-        {% endelement %}
-        {% element h2 %}
-            {% translate "Login with" %}
-        {% endelement %}
-    {% endif %}
-    {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-    {% include "socialaccount/snippets/login_extra.html" %}
+  {% if not SOCIALACCOUNT_ONLY %}
+    {% element hr %}{% endelement %}
+  {% endif %}
+  {% include "socialaccount/snippets/provider_list.html" with process=process %}
+  {% include "socialaccount/snippets/login_extra.html" %}
 {% endif %}

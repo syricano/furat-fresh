@@ -1,80 +1,53 @@
-{% extends "account/base_entrance.html" %}
-{% load i18n allauth %}
-{% load crispy_forms_tags crispy_forms_field %}
+{% extends "allauth/base.html" %}
+{% load i18n account crispy_forms_tags %}
 
-{% block head_title %}{% trans "Sign Up" %}{% endblock head_title %}
+{% block auth_page_title %}{% trans "Sign Up" %}{% endblock %}
+{% block auth_title %}{% trans "Create your account" %}{% endblock %}
+{% block auth_description %}{% endblock %}
 
-{# NOTE: Custom signup template using crispy-bootstrap5. #}
-{% block content %}
-<div class="container py-5 auth-wrap">
-  <div class="row justify-content-center">
-    <div class="col-12 col-sm-10 col-md-8 col-lg-5">
-      <div class="card shadow-sm border-0">
-        <div class="card-body p-4 p-md-5">
+{% block auth_body %}
+<form method="post" action="{% url 'account_signup' %}" novalidate class="text-start auth-wrap">
+  {% csrf_token %}
+  {{ form|crispy }}
 
-          <h1 class="h3 text-center mb-3">{% trans "Sign Up" %}</h1>
-
-          {% url 'account_login' as login_url %}
-          {% setvar link %}<a href="{{ login_url }}">{% endsetvar %}
-          {% setvar end_link %}</a>{% endsetvar %}
-          <p class="text-secondary text-center mb-4">
-            {% blocktranslate %}Already have an account? Then please {{ link }}sign in{{ end_link }}.{% endblocktranslate %}
-          </p>
-
-          {% if not SOCIALACCOUNT_ONLY %}
-            {% url 'account_signup' as action_url %}
-            <form method="post" action="{{ action_url }}" class="vstack gap-3" novalidate>
-              {% csrf_token %}
-              {{ form|as_crispy_errors }}
-              {% for hidden in form.hidden_fields %}{{ hidden }}{% endfor %}
-              {{ redirect_field }}
-
-              {# Render all visible fields consistently #}
-              {% for field in form.visible_fields %}
-                <div>
-                  <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
-                  {% crispy_field field %}
-                  {% if field.help_text %}<div class="form-text">{{ field.help_text|safe }}</div>{% endif %}
-                </div>
-              {% endfor %}
-
-              <div class="d-grid mt-2">
-                <button type="submit" class="btn btn-primary btn-auth">
-                  {% trans "Sign Up" %}
-                </button>
-              </div>
-            </form>
-          {% endif %}
-
-          {% if PASSKEY_SIGNUP_ENABLED %}
-            <hr class="my-4">
-            <a href="{{ signup_by_passkey_url }}" class="btn btn-outline-primary btn-auth w-100">
-              {% trans "Sign up using a passkey" %}
-            </a>
-          {% endif %}
-
-          {% if SOCIALACCOUNT_ENABLED %}
-            <div class="social-separator my-4 text-center position-relative">
-              <hr>
-              <span class="small text-secondary bg-body px-2">
-                {% trans "Or continue with" %}
-              </span>
-            </div>
-            {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
-          {% endif %}
-
-        </div>
+  {# Password rules toggle #}
+  <div class="mt-2">
+    <button class="btn btn-link p-0 small" type="button"
+            data-bs-toggle="collapse" data-bs-target="#password-rules"
+            aria-expanded="false" aria-controls="password-rules">
+      {% trans "Show password rules" %}
+    </button>
+    <div class="collapse mt-2" id="password-rules">
+      <div class="card card-body bg-app border-muted text-ink small">
+        <ul class="m-0 ps-3">
+          <li>{% trans "Your password can’t be too similar to your other personal information." %}</li>
+          <li>{% trans "Your password must contain at least 8 characters." %}</li>
+          <li>{% trans "Your password can’t be a commonly used password." %}</li>
+          <li>{% trans "Your password can’t be entirely numeric." %}</li>
+        </ul>
       </div>
-
-      <p class="text-center mt-3">
-        <a href="/" class="link-secondary small">{% trans "Back to home" %}</a>
-      </p>
     </div>
   </div>
-</div>
-{% endblock content %}
-{# NOTE END: Content block finished. #}
 
-{% block extra_body %}
-  {{ block.super }}
+  <div class="d-grid gap-2 mt-3">
+    <button class="btn btn-primary btn-auth" type="submit">{% trans "Sign Up" %}</button>
+  </div>
+
+  <p class="small mt-3 mb-0">
+    {% trans "Already have an account?" %}
+    <a href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
+  </p>
+</form>
 {% endblock %}
+
+{% block auth_social %}
+  {% if SOCIALACCOUNT_ENABLED %}
+    <div class="social-separator my-3 position-relative">
+      <p class="bg-app text-muted small px-2">{% trans "or sign up with" %}</p>
+    </div>
+    {% include "socialaccount/snippets/login.html" with page_layout="entrance" process="signup" %}
+  {% endif %}
+{% endblock %}
+
+{# Hide default Django/Allauth helptexts for password fields #}
+

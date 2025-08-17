@@ -1,29 +1,47 @@
-{% extends "socialaccount/base_entrance.html" %}
-{% load i18n %}
-{% load allauth %}
-{% block head_title %}
-    {% trans "Signup" %}
-{% endblock head_title %}
-{% block content %}
-    {% element h1 %}
-        {% trans "Sign Up" %}
-    {% endelement %}
-    {% element p %}
-        {% blocktrans with provider_name=account.get_provider.name site_name=site.name %}You are about to use your {{provider_name}} account to login to
-{{site_name}}. As a final step, please complete the following form:{% endblocktrans %}
-    {% endelement %}
-    {% url 'socialaccount_signup' as action_url %}
-    {% element form form=form method="post" action=action_url %}
-        {% slot body %}
-            {% csrf_token %}
-            {% element fields form=form unlabeled=True %}
-            {% endelement %}
-            {{ redirect_field }}
-        {% endslot %}
-        {% slot actions %}
-            {% element button type="submit" %}
-                {% trans "Sign Up" %}
-            {% endelement %}
-        {% endslot %}
-    {% endelement %}
-{% endblock content %}
+{% extends "allauth/base.html" %}
+{% load i18n allauth crispy_forms_tags %}
+
+{% block auth_page_title %}{% trans "Signup" %}{% endblock %}
+{% block auth_title %}{% trans "Complete your profile" %}{% endblock %}
+{% block auth_description %}{% endblock %}
+
+{% block auth_body %}
+  {% element p %}
+    {% blocktrans with provider_name=account.get_provider.name site_name=site.name %}
+      You are about to use your {{provider_name}} account to login to {{site_name}}.
+      As a final step, please complete the following form:
+    {% endblocktrans %}
+  {% endelement %}
+
+  {% url 'socialaccount_signup' as action_url %}
+  <form method="post" action="{{ action_url }}" novalidate class="text-start auth-wrap">
+    {% csrf_token %}
+    {{ form|crispy }}
+
+    {# Password rules toggle (only shows if password fields exist) #}
+    <div class="mt-2">
+      <button class="btn btn-link p-0 small" type="button"
+              data-bs-toggle="collapse" data-bs-target="#password-rules-social"
+              aria-expanded="false" aria-controls="password-rules-social">
+        
+      </button>
+      <div class="collapse mt-2" id="password-rules-social">
+        <div class="card card-body bg-app border-muted text-ink small">
+          <ul class="m-0 ps-3">
+            <li>{% trans "Your password can’t be too similar to your other personal information." %}</li>
+            <li>{% trans "Your password must contain at least 8 characters." %}</li>
+            <li>{% trans "Your password can’t be a commonly used password." %}</li>
+            <li>{% trans "Your password can’t be entirely numeric." %}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-grid gap-2 mt-3">
+      <button class="btn btn-primary btn-auth" type="submit">{% trans "Continue" %}</button>
+    </div>
+
+    <p class="small mt-3 mb-0"><a href="{% url 'account_login' %}">{% trans "Back to Sign In" %}</a></p>
+  </form>
+{% endblock %}
+

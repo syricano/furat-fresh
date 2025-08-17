@@ -49,6 +49,16 @@ body{
 .auth-wrap .social-separator{ position:relative; }
 .auth-wrap .social-separator hr{ margin:1.5rem 0; }
 .auth-wrap .social-separator span{ position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); padding:0 .5rem; }
+.auth-wrap .card { border-color: var(--c-muted); }
+.auth-wrap .form-control,
+.auth-wrap .form-select { height:42px; font-size:.95rem; }
+.auth-wrap .btn-auth { height:42px; font-size:.95rem; }
+.auth-wrap .bi { font-size:1.5rem; }
+.social-separator hr { margin:1rem 0; }
+.auth-wrap .helptext,
+.auth-wrap #id_password1_helptext,
+.auth-wrap #id_password2_helptext { display: none !important; }
+
 
 /* Header elevation */
 header[data-elevated="true"]{

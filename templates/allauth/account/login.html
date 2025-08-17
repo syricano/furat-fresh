@@ -19,7 +19,6 @@
   </div>
 
   <div class="d-flex justify-content-between align-items-center mt-3">
-    <a href="{% url 'account_reset_password' %}" class="small">{% trans "Forgot Password?" %}</a>
     {% if ACCOUNT_ALLOW_REGISTRATION %}
       <a href="{% url 'account_signup' %}" class="small">{% trans "Create Account" %}</a>
     {% endif %}

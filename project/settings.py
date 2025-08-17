@@ -14,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Security
 SECRET_KEY = os.environ.get('SECRET_KEY')
-DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'false'
+DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
 
 ALLOWED_HOSTS = [
     'localhost',
@@ -72,7 +72,7 @@ INSTALLED_APPS = [
     "crispy_bootstrap5",
 ]
 
-SITE_ID = int(os.environ.get("SITE_ID", 1))
+SITE_ID = int(os.environ.get("SITE_ID", 2))
 
 # Middleware
 MIDDLEWARE = [
@@ -91,10 +91,10 @@ MIDDLEWARE = [
 # Socialaccount provider settings (Google; wired in step 2)
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
-        'APP': {
-            'client_id': os.environ.get('GOOGLE_CLIENT_ID', ''),
-            'secret': os.environ.get('GOOGLE_CLIENT_SECRET', ''),
-            'key': '',
+        "APP": {
+            "client_id": os.environ.get("GOOGLE_CLIENT_ID", ""),
+            "secret": os.environ.get("GOOGLE_CLIENT_SECRET", ""),
+            "key": "",
         }
     }
 }

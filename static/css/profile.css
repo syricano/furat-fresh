@@ -45,3 +45,22 @@
 @media (max-width:992px){
   #profile-update-form{ padding:.75rem; border-radius:12px; }
 }
+
+
+ :root { --box-min: 220px; --box-gap: .75rem; }
+    .profile-grid { display: grid; grid-template-columns: 1fr; gap: var(--box-gap); }
+    @media (min-width: 992px) {
+      .profile-grid { grid-template-columns: 1fr 2fr; align-items: stretch; }
+    }
+    .left-stack { display: grid; grid-auto-rows: minmax(var(--box-min), auto); gap: var(--box-gap); }
+    .card-compact .card-body { padding: .85rem 1rem; }
+    .card-compact .card-header { padding: .6rem 1rem; background: #f8f9fa; }
+    .orders-equal {
+      min-height: calc((var(--box-min) * 3) + (var(--box-gap) * 2));
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+    /* smaller typography spacing */
+    .logo-font.mb-4.py-5 { padding-top: 1.25rem !important; padding-bottom: 1.25rem !important; margin-bottom: .75rem !important; }
+    .form-row-compact .col-12, .form-row-compact .col-lg-6 { margin-bottom: .5rem; }
+    .btn-compact { padding: .4rem .85rem; font-size: .9rem; }

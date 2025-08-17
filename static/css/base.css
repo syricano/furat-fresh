@@ -60,6 +60,7 @@ body{
 .auth-wrap #id_password2_helptext { display: none !important; }
 
 
+
 /* Header elevation */
 header[data-elevated="true"]{
   background:#F1EFEC;

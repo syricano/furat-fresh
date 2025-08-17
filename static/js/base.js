@@ -5,16 +5,6 @@
   const setHdr = () => header?.toggleAttribute('data-elevated', window.scrollY > 2);
   setHdr(); window.addEventListener('scroll', setHdr, { passive: true });
 
-  // Auto-close mobile nav after clicking a link
-  const navCollapse = document.getElementById('primaryNav');
-  if (navCollapse) {
-    navCollapse.addEventListener('click', e => {
-      if (e.target.closest('a.nav-link')) {
-        const inst = bootstrap.Collapse.getInstance(navCollapse) || new bootstrap.Collapse(navCollapse, { toggle: false });
-        inst.hide();
-      }
-    });
-  }
 
   // Ripple for all .btn
   document.addEventListener('click', e => {

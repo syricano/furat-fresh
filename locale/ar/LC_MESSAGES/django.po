@@ -3,205 +3,340 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-13 04:05+0200\n"
+"POT-Creation-Date: 2025-08-18 01:06+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: .\home\templates\home\index.html:17
+#: .\home\templates\home\about.html:2 .\home\templates\home\about.html:4
+#: .\templates\includes\footer.html:18
+#: .\templates\includes\navbar\links.html:17
+msgid "About"
+msgstr "من نحن"
+
+#: .\home\templates\home\about.html:5
+msgid "We are a community-driven online flea market."
+msgstr "نحن سوق إلكتروني للسلع المستعملة يقوده المجتمع."
+
+#: .\home\templates\home\contact.html:2 .\home\templates\home\contact.html:4
+#: .\templates\includes\footer.html:19
+#: .\templates\includes\navbar\links.html:24
+msgid "Contact"
+msgstr "اتصل بنا"
+
+#: .\home\templates\home\contact.html:5
+msgid "Reach us via the form or email."
+msgstr "تواصل معنا عبر النموذج أو البريد الإلكتروني."
+
+#: .\home\templates\home\index.html:22
 msgid "Start shopping here"
-msgstr ""
+msgstr "ابدأ بالتسوق هنا"
 
-#: .\home\templates\home\index.html:20
+#: .\home\templates\home\index.html:23
 msgid "Shop Now"
-msgstr ""
+msgstr "تسوق الآن"
 
-#: .\home\views.py:21
-msgid "Profile updated successfully"
-msgstr ""
+#: .\home\templates\home\privacy.html:6 .\templates\allauth\base.html:31
+msgid "Privacy Policy"
+msgstr "الخصوصية"
 
-#: .\templates\account\_settings_nav.html:3
-#: .\templates\account\email_change.html:55
-msgid "Change Email"
-msgstr ""
+#: .\home\templates\home\privacy.html:7
+msgid ""
+"Your privacy is important to us. Please read our privacy policy carefully."
+msgstr "خصوصيتك مهمة بالنسبة لنا. يرجى قراءة سياسة الخصوصية الخاصة بنا بعناية."
 
-#: .\templates\account\_settings_nav.html:4
-#: .\templates\account\password_change.html:4
-#: .\templates\account\password_change.html:8
-#: .\templates\account\password_change.html:20
-#: .\templates\account\password_reset_from_key.html:5
-#: .\templates\account\password_reset_from_key.html:12
-#: .\templates\account\password_reset_from_key.html:30
-#: .\templates\account\password_reset_from_key_done.html:5
-#: .\templates\account\password_reset_from_key_done.html:9
-#: .\templates\account\profile.html:24
+#: .\home\templates\home\terms.html:7
+msgid "Terms and Conditions"
+msgstr "الشروط والأحكام"
+
+#: .\home\templates\home\terms.html:8
+msgid ""
+"Please read these terms and conditions carefully before using our service."
+msgstr "يرجى قراءة هذه الشروط والأحكام بعناية قبل استخدام خدمتنا."
+
+#: .\profiles\models.py:11
+#, fuzzy
+#| msgid "Username"
+msgid "User"
+msgstr "اسم المستخدم"
+
+#: .\profiles\models.py:12
+msgid "First name"
+msgstr "الاسم الأول"
+
+#: .\profiles\models.py:13
+#, fuzzy
+#| msgid "Last seen at"
+msgid "Last name"
+msgstr "آخر مرة في"
+
+#: .\profiles\models.py:14
+msgid "Phone number"
+msgstr "رقم التليفون"
+
+#: .\profiles\models.py:15
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: .\profiles\models.py:17
+msgid "Postcode"
+msgstr "الرمز البريدي"
+
+#: .\profiles\models.py:18
+msgid "Town or city"
+msgstr "المدينة"
+
+#: .\profiles\models.py:19
+msgid "Street address 1"
+msgstr "عنوان الشارع ١"
+
+#: .\profiles\models.py:20
+msgid "Street address 2"
+msgstr "عنوان الشارع ٢"
+
+#: .\profiles\models.py:21
+msgid "County"
+msgstr "المحافظة"
+
+#: .\profiles\models.py:22
+msgid "Country"
+msgstr "الدولة"
+
+#: .\profiles\models.py:22
+msgid "Country *"
+msgstr "الدولة *"
+
+#: .\profiles\templates\profiles\profile.html:26
+#: .\templates\includes\navbar\account.html:25
+msgid "My Profile"
+msgstr "الملف الشخصي"
+
+#: .\profiles\templates\profiles\profile.html:36
+msgid "Account Settings"
+msgstr "إعدادات الحساب"
+
+#: .\profiles\templates\profiles\profile.html:48
+msgid "Update Account"
+msgstr "تحديث بيانات الحساب"
+
+#: .\profiles\templates\profiles\profile.html:57
+msgid "Security"
+msgstr "حماية"
+
+#: .\profiles\templates\profiles\profile.html:59
+msgid "Manage your password and sign-in settings."
+msgstr "تم تعيين كلمة المرور الخاصة بك."
+
+#: .\profiles\templates\profiles\profile.html:63
+#: .\templates\allauth\account\password_change.html:4
+#: .\templates\allauth\account\password_change.html:8
+#: .\templates\allauth\account\password_change.html:20
+#: .\templates\allauth\account\password_reset_from_key.html:5
+#: .\templates\allauth\account\password_reset_from_key.html:12
+#: .\templates\allauth\account\password_reset_from_key.html:30
+#: .\templates\allauth\account\password_reset_from_key_done.html:5
+#: .\templates\allauth\account\password_reset_from_key_done.html:9
+#: .\templates\allauth\allauth\layouts\base.html:37
 msgid "Change Password"
-msgstr ""
+msgstr "تغيير كلمة المرور"
 
-#: .\templates\account\_settings_nav.html:5 .\templates\account\profile.html:25
-#: .\templates\socialaccount\connections.html:5
-#: .\templates\socialaccount\connections.html:9
-msgid "Account Connections"
-msgstr ""
+#: .\profiles\templates\profiles\profile.html:67
+msgid "Reset Password"
+msgstr "أعد تعيين كلمة المرور الخاصة بي"
 
-#: .\templates\account\_settings_nav.html:8 .\templates\account\logout.html:5
-#: .\templates\account\logout.html:9 .\templates\account\logout.html:22
-msgid "Sign Out"
-msgstr ""
+#: .\profiles\templates\profiles\profile.html:71
+msgid "Manage Email Addresses"
+msgstr "عناوين البريد الإلكتروني"
 
-#: .\templates\account\account_inactive.html:5
-#: .\templates\account\account_inactive.html:9
+#: .\profiles\templates\profiles\profile.html:79
+msgid "Address & Delivery"
+msgstr "العنوان والتسليم"
+
+#: .\profiles\templates\profiles\profile.html:85
+msgid "Default Delivery Information"
+msgstr "معلومات التسليم الافتراضية"
+
+#: .\profiles\templates\profiles\profile.html:98
+msgid "Update Address"
+msgstr "تحديث بيانات العنوان"
+
+#: .\profiles\templates\profiles\profile.html:110
+msgid "Order History"
+msgstr "الطلبات"
+
+#: .\templates\allauth\account\account_inactive.html:5
+#: .\templates\allauth\account\account_inactive.html:9
 msgid "Account Inactive"
-msgstr ""
+msgstr "حساب غير نشط"
 
-#: .\templates\account\account_inactive.html:12
+#: .\templates\allauth\account\account_inactive.html:12
 msgid "This account is inactive."
-msgstr ""
+msgstr "هذا الحساب غير نشط."
 
-#: .\templates\account\base_confirm_code.html:27
+#: .\templates\allauth\account\base_confirm_code.html:27
 #, python-format
 msgid ""
 "We've sent a code to %(recipient)s. The code expires shortly, so please "
 "enter it soon."
 msgstr ""
+"لقد أرسلنا رمزًا إلى%(recipient)s. ينتهي الرمز قريبًا ، لذا يرجى إدخاله قريبًا."
 
-#: .\templates\account\base_confirm_code.html:39
-#: .\templates\account\email_confirm.html:24
-#: .\templates\account\reauthenticate.html:18
+#: .\templates\allauth\account\base_confirm_code.html:39
+#: .\templates\allauth\account\email_confirm.html:24
+#: .\templates\allauth\account\reauthenticate.html:18
+#: .\templates\allauth\idp\oidc\device_authorization_confirm_form.html:26
+#: .\templates\allauth\mfa\reauthenticate.html:18
 msgid "Confirm"
-msgstr ""
+msgstr "تأكيد"
 
-#: .\templates\account\base_confirm_code.html:43
+#: .\templates\allauth\account\base_confirm_code.html:43
 msgid "Request new code"
-msgstr ""
+msgstr "طلب رمز جديد"
 
-#: .\templates\account\base_confirm_code.html:48
-#: .\templates\account\base_confirm_code.html:52
-#: .\templates\account\password_reset_from_key.html:33
+#: .\templates\allauth\account\base_confirm_code.html:48
+#: .\templates\allauth\account\base_confirm_code.html:52
+#: .\templates\allauth\account\password_reset_from_key.html:33
+#: .\templates\allauth\idp\oidc\authorization_form.html:26
+#: .\templates\allauth\mfa\authenticate.html:28
+#: .\templates\allauth\mfa\authenticate.html:44
+#: .\templates\allauth\mfa\trust.html:29
+#: .\templates\allauth\mfa\webauthn\signup_form.html:26
 msgid "Cancel"
-msgstr ""
+msgstr "الغاء"
 
-#: .\templates\account\base_reauthenticate.html:5
-#: .\templates\account\base_reauthenticate.html:9
+#: .\templates\allauth\account\base_reauthenticate.html:5
+#: .\templates\allauth\account\base_reauthenticate.html:9
 msgid "Confirm Access"
-msgstr ""
+msgstr "تأكيد الوصول"
 
-#: .\templates\account\base_reauthenticate.html:12
+#: .\templates\allauth\account\base_reauthenticate.html:12
 msgid "Please reauthenticate to safeguard your account."
-msgstr ""
+msgstr "يرجى إعادة صياغة حماية حسابك."
 
-#: .\templates\account\base_reauthenticate.html:19
+#: .\templates\allauth\account\base_reauthenticate.html:19
+#: .\templates\allauth\mfa\authenticate.html:37
 msgid "Alternative options"
-msgstr ""
+msgstr "خيارات بديلة"
 
-#: .\templates\account\confirm_email_verification_code.html:5
+#: .\templates\allauth\account\confirm_email_verification_code.html:5
 msgid "Email Verification"
-msgstr ""
+msgstr "التحقق من البريد الإلكتروني"
 
-#: .\templates\account\confirm_email_verification_code.html:8
+#: .\templates\allauth\account\confirm_email_verification_code.html:8
 msgid "Enter Email Verification Code"
-msgstr ""
+msgstr "أدخل رمز التحقق من البريد الإلكتروني"
 
-#: .\templates\account\confirm_email_verification_code.html:16
+#: .\templates\allauth\account\confirm_email_verification_code.html:16
 msgid "Use a different email address"
-msgstr ""
+msgstr "استخدم عنوان بريد إلكتروني مختلف"
 
-#: .\templates\account\confirm_login_code.html:5
-#: .\templates\account\login.html:5 .\templates\account\login.html:9
-#: .\templates\account\login.html:31
-#: .\templates\account\request_login_code.html:5
-#: .\templates\socialaccount\login.html:5
-#: .\templates\socialaccount\login_redirect.html:5
+#: .\templates\allauth\account\confirm_login_code.html:5
+#: .\templates\allauth\account\login.html:4
+#: .\templates\allauth\account\login.html:5
+#: .\templates\allauth\account\login.html:18
+#: .\templates\allauth\account\request_login_code.html:5
+#: .\templates\allauth\account\signup.html:38
+#: .\templates\allauth\allauth\layouts\base.html:68
+#: .\templates\allauth\mfa\authenticate.html:6
+#: .\templates\allauth\mfa\authenticate.html:24
+#: .\templates\allauth\openid\login.html:5
+#: .\templates\allauth\openid\login.html:9
+#: .\templates\allauth\openid\login.html:20
+#: .\templates\allauth\socialaccount\login.html:4
+#: .\templates\allauth\socialaccount\login_redirect.html:5
 msgid "Sign In"
-msgstr ""
+msgstr "تسجيل الدخول"
 
-#: .\templates\account\confirm_login_code.html:8
+#: .\templates\allauth\account\confirm_login_code.html:8
 msgid "Enter Sign-In Code"
-msgstr ""
+msgstr "أدخل رمز تسجيل الدخول"
 
-#: .\templates\account\confirm_password_reset_code.html:5
-#: .\templates\account\email\password_reset_subject.txt:3
-#: .\templates\account\password_reset.html:4
-#: .\templates\account\password_reset.html:8
-#: .\templates\account\password_reset_done.html:6
-#: .\templates\account\password_reset_done.html:10
+#: .\templates\allauth\account\confirm_password_reset_code.html:5
+#: .\templates\allauth\account\email\password_reset_subject.txt:3
+#: .\templates\allauth\account\password_reset.html:4
+#: .\templates\allauth\account\password_reset.html:8
+#: .\templates\allauth\account\password_reset_done.html:6
+#: .\templates\allauth\account\password_reset_done.html:10
 msgid "Password Reset"
-msgstr ""
+msgstr "إعادة تعيين كلمة المرور"
 
-#: .\templates\account\confirm_password_reset_code.html:8
+#: .\templates\allauth\account\confirm_password_reset_code.html:8
 msgid "Enter Password Reset Code"
-msgstr ""
+msgstr "أدخل رمز إعادة تعيين كلمة المرور"
 
-#: .\templates\account\confirm_phone_verification_code.html:5
+#: .\templates\allauth\account\confirm_phone_verification_code.html:5
 msgid "Phone Verification"
-msgstr ""
+msgstr "التحقق من الهاتف"
 
-#: .\templates\account\confirm_phone_verification_code.html:8
+#: .\templates\allauth\account\confirm_phone_verification_code.html:8
 msgid "Enter Phone Verification Code"
-msgstr ""
+msgstr "أدخل رمز التحقق من الهاتف"
 
-#: .\templates\account\confirm_phone_verification_code.html:15
+#: .\templates\allauth\account\confirm_phone_verification_code.html:15
 msgid "Use a different phone number"
-msgstr ""
+msgstr "استخدم رقم هاتف مختلف"
 
-#: .\templates\account\email.html:4 .\templates\account\email.html:8
+#: .\templates\allauth\account\email.html:4
+#: .\templates\allauth\account\email.html:8
 msgid "Email Addresses"
-msgstr ""
+msgstr "عناوين البريد الإلكتروني"
 
-#: .\templates\account\email.html:12
+#: .\templates\allauth\account\email.html:12
 msgid "The following email addresses are associated with your account:"
-msgstr ""
+msgstr "ترتبط عناوين البريد الإلكتروني التالية بحسابك:"
 
-#: .\templates\account\email.html:25
+#: .\templates\allauth\account\email.html:25
 msgid "Verified"
-msgstr ""
+msgstr "تم التحقق منها"
 
-#: .\templates\account\email.html:29
+#: .\templates\allauth\account\email.html:29
 msgid "Unverified"
-msgstr ""
+msgstr "لم يتم التحقق منه"
 
-#: .\templates\account\email.html:34
+#: .\templates\allauth\account\email.html:34
 msgid "Primary"
-msgstr ""
+msgstr "أساسي"
 
-#: .\templates\account\email.html:44
+#: .\templates\allauth\account\email.html:44
 msgid "Make Primary"
-msgstr ""
+msgstr "جعل الابتدائية"
 
-#: .\templates\account\email.html:47 .\templates\account\email_change.html:37
-#: .\templates\account\phone_change.html:24
+#: .\templates\allauth\account\email.html:47
+#: .\templates\allauth\account\email_change.html:37
+#: .\templates\allauth\account\phone_change.html:24
 msgid "Re-send Verification"
-msgstr ""
+msgstr "إعادة التحقق"
 
-#: .\templates\account\email.html:50
-#: .\templates\socialaccount\connections.html:40
+#: .\templates\allauth\account\email.html:50
+#: .\templates\allauth\mfa\webauthn\authenticator_confirm_delete.html:16
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:60
+#: .\templates\allauth\socialaccount\connections.html:40
 msgid "Remove"
-msgstr ""
+msgstr "يزيل"
 
-#: .\templates\account\email.html:59
+#: .\templates\allauth\account\email.html:59
 msgid "Add Email Address"
-msgstr ""
+msgstr "أضف عنوان البريد الإلكتروني"
 
-#: .\templates\account\email.html:70
+#: .\templates\allauth\account\email.html:70
 msgid "Add Email"
-msgstr ""
+msgstr "أضف البريد الإلكتروني"
 
-#: .\templates\account\email.html:80
+#: .\templates\allauth\account\email.html:80
 msgid "Do you really want to remove the selected email address?"
-msgstr ""
+msgstr "هل تريد حقًا إزالة عنوان البريد الإلكتروني المحدد؟"
 
-#: .\templates\account\email\account_already_exists_message.txt:4
+#: .\templates\allauth\account\email\account_already_exists_message.txt:4
 #, python-format
 msgid ""
 "You are receiving this email because you or someone else tried to signup for "
@@ -218,30 +353,41 @@ msgid ""
 "\n"
 "%(password_reset_url)s"
 msgstr ""
+"تتلقى هذا البريد الإلكتروني لأنك أو شخصًا آخر حاول التسجيل للحصول على حساب "
+"باستخدام عنوان البريد الإلكتروني:\n"
+"\n"
+"%(email)s\n"
+"\n"
+"ومع ذلك، يوجد حساب يستخدم هذا البريد الإلكتروني بالفعل. في حال كنت قد نسيت "
+"ذلك، يرجى استخدام إجراء استعادة كلمة المرور لاسترداد حسابك:\n"
+"\n"
+"%(password_reset_url)s"
 
-#: .\templates\account\email\account_already_exists_subject.txt:3
+#: .\templates\allauth\account\email\account_already_exists_subject.txt:3
 msgid "Account Already Exists"
-msgstr ""
+msgstr "الحساب موجود بالفعل"
 
-#: .\templates\account\email\base_message.txt:1
+#: .\templates\allauth\account\email\base_message.txt:1
 #, python-format
 msgid "Hello from %(site_name)s!"
-msgstr ""
+msgstr "مرحبا من%(site_name)s!"
 
-#: .\templates\account\email\base_message.txt:5
+#: .\templates\allauth\account\email\base_message.txt:5
 #, python-format
 msgid ""
 "Thank you for using %(site_name)s!\n"
 "%(site_domain)s"
 msgstr ""
+"شكرا لك على استخدام%(site_name)s!\n"
+"%(site_domain)s"
 
-#: .\templates\account\email\base_notification.txt:5
+#: .\templates\allauth\account\email\base_notification.txt:5
 msgid ""
 "You are receiving this mail because the following change was made to your "
 "account:"
-msgstr ""
+msgstr "تتلقى هذا البريد لأن التغيير التالي تم إجراؤه على حسابك:"
 
-#: .\templates\account\email\base_notification.txt:10
+#: .\templates\allauth\account\email\base_notification.txt:10
 #, python-format
 msgid ""
 "If you do not recognize this change then please take proper security "
@@ -251,472 +397,511 @@ msgid ""
 "- Browser: %(user_agent)s\n"
 "- Date: %(timestamp)s"
 msgstr ""
+"إذا لم تتعرف على هذا التغيير، فالرجاء اتخاذ الاحتياطات الأمنية المناسبة على "
+"الفور. هذا التغيير في حسابك مصدره:\n"
+"\n"
+"- عنوان IP: %(ip)s\n"
+"- المتصفح: %(user_agent)s\n"
+"- التاريخ: %(timestamp)s"
 
-#: .\templates\account\email\email_changed_message.txt:4
+#: .\templates\allauth\account\email\email_changed_message.txt:4
 #, python-format
 msgid "Your email has been changed from %(from_email)s to %(to_email)s."
-msgstr ""
+msgstr "تم تغيير بريدك الإلكتروني من%(from_email)sل%(to_email)s."
 
-#: .\templates\account\email\email_changed_subject.txt:3
+#: .\templates\allauth\account\email\email_changed_subject.txt:3
 msgid "Email Changed"
-msgstr ""
+msgstr "تم تغيير البريد الإلكتروني"
 
-#: .\templates\account\email\email_confirm_message.txt:4
+#: .\templates\allauth\account\email\email_confirm_message.txt:4
 msgid "Your email has been confirmed."
-msgstr ""
+msgstr "تم تأكيد بريدك الإلكتروني."
 
-#: .\templates\account\email\email_confirm_subject.txt:3
+#: .\templates\allauth\account\email\email_confirm_subject.txt:3
 msgid "Email Confirmation"
-msgstr ""
+msgstr "تأكيد البريد الإلكتروني"
 
-#: .\templates\account\email\email_confirmation_message.txt:5
+#: .\templates\allauth\account\email\email_confirmation_message.txt:5
 #, python-format
 msgid ""
 "You're receiving this email because user %(user_display)s has given your "
 "email address to register an account on %(site_domain)s."
 msgstr ""
+"أنت تتلقى هذا البريد الإلكتروني لأن المستخدم%(user_display)sأعطى عنوان بريدك "
+"الإلكتروني لتسجيل حساب على%(site_domain)s."
 
-#: .\templates\account\email\email_confirmation_message.txt:7
+#: .\templates\allauth\account\email\email_confirmation_message.txt:7
 msgid ""
 "Your email verification code is listed below. Please enter it in your open "
 "browser window."
 msgstr ""
+"رمز التحقق من البريد الإلكتروني الخاص بك مدرج أدناه. الرجاء إدخالها في نافذة "
+"المتصفح المفتوح."
 
-#: .\templates\account\email\email_confirmation_message.txt:9
+#: .\templates\allauth\account\email\email_confirmation_message.txt:9
 #, python-format
 msgid "To confirm this is correct, go to %(activate_url)s"
-msgstr ""
+msgstr "لتأكيد هذا صحيح ، انتقل إلى%(activate_url)s"
 
-#: .\templates\account\email\email_confirmation_subject.txt:3
+#: .\templates\allauth\account\email\email_confirmation_subject.txt:3
 msgid "Please Confirm Your Email Address"
-msgstr ""
+msgstr "يرجى تأكيد عنوان بريدك الإلكتروني"
 
-#: .\templates\account\email\email_deleted_message.txt:4
+#: .\templates\allauth\account\email\email_deleted_message.txt:4
 #, python-format
 msgid "Email address %(deleted_email)s has been removed from your account."
-msgstr ""
+msgstr "عنوان البريد الإلكتروني%(deleted_email)sتمت إزالته من حسابك."
 
-#: .\templates\account\email\email_deleted_subject.txt:3
+#: .\templates\allauth\account\email\email_deleted_subject.txt:3
 msgid "Email Removed"
-msgstr ""
+msgstr "تمت إزالة البريد الإلكتروني"
 
-#: .\templates\account\email\login_code_message.txt:5
+#: .\templates\allauth\account\email\login_code_message.txt:5
 msgid ""
 "Your sign-in code is listed below. Please enter it in your open browser "
 "window."
 msgstr ""
+"رمز تسجيل الدخول الخاص بك مدرج أدناه. الرجاء إدخالها في نافذة المتصفح "
+"المفتوح."
 
-#: .\templates\account\email\login_code_message.txt:9
-#: .\templates\account\email\password_reset_code_message.txt:9
-#: .\templates\account\email\unknown_account_message.txt:6
+#: .\templates\allauth\account\email\login_code_message.txt:9
+#: .\templates\allauth\account\email\password_reset_code_message.txt:9
+#: .\templates\allauth\account\email\unknown_account_message.txt:6
 msgid "This mail can be safely ignored if you did not initiate this action."
-msgstr ""
+msgstr "يمكن تجاهل هذا البريد بأمان إذا لم تبدأ هذا الإجراء."
 
-#: .\templates\account\email\login_code_subject.txt:3
+#: .\templates\allauth\account\email\login_code_subject.txt:3
 msgid "Sign-In Code"
-msgstr ""
+msgstr "رمز تسجيل الدخول"
 
-#: .\templates\account\email\password_changed_message.txt:4
+#: .\templates\allauth\account\email\password_changed_message.txt:4
 msgid "Your password has been changed."
-msgstr ""
+msgstr "تم تغيير كلمة المرور الخاصة بك."
 
-#: .\templates\account\email\password_changed_subject.txt:3
+#: .\templates\allauth\account\email\password_changed_subject.txt:3
 msgid "Password Changed"
-msgstr ""
+msgstr "تم تغيير كلمة المرور"
 
-#: .\templates\account\email\password_reset_code_message.txt:5
+#: .\templates\allauth\account\email\password_reset_code_message.txt:5
 msgid ""
 "Your password reset code is listed below. Please enter it in your open "
 "browser window."
 msgstr ""
+"رمز إعادة تعيين كلمة المرور الخاصة بك مدرج أدناه. الرجاء إدخالها في نافذة "
+"المتصفح المفتوح."
 
-#: .\templates\account\email\password_reset_code_subject.txt:3
+#: .\templates\allauth\account\email\password_reset_code_subject.txt:3
 msgid "Password Reset Code"
-msgstr ""
+msgstr "رمز إعادة تعيين كلمة المرور"
 
-#: .\templates\account\email\password_reset_key_message.txt:4
+#: .\templates\allauth\account\email\password_reset_key_message.txt:4
 msgid ""
 "You're receiving this email because you or someone else has requested a "
 "password reset for your user account.\n"
 "It can be safely ignored if you did not request a password reset. Click the "
 "link below to reset your password."
 msgstr ""
+"تتلقى هذا البريد الإلكتروني لأنك أو شخص آخر طلبت إعادة تعيين كلمة المرور "
+"لحساب المستخدم الخاص بك.\n"
+"يمكن تجاهله بأمان إذا لم تطلب إعادة تعيين كلمة المرور. انقر على الرابط أدناه "
+"لإعادة تعيين كلمة المرور الخاصة بك."
 
-#: .\templates\account\email\password_reset_key_message.txt:9
+#: .\templates\allauth\account\email\password_reset_key_message.txt:9
 #, python-format
 msgid "In case you forgot, your username is %(username)s."
-msgstr ""
+msgstr "في حال نسيت ، اسم المستخدم الخاص بك هو%(username)s."
 
-#: .\templates\account\email\password_reset_key_subject.txt:3
+#: .\templates\allauth\account\email\password_reset_key_subject.txt:3
 msgid "Password Reset Email"
-msgstr ""
+msgstr "إعادة تعيين كلمة المرور البريد الإلكتروني"
 
-#: .\templates\account\email\password_reset_message.txt:4
+#: .\templates\allauth\account\email\password_reset_message.txt:4
 msgid "Your password has been reset."
-msgstr ""
+msgstr "تمت إعادة تعيين كلمة المرور الخاصة بك."
 
-#: .\templates\account\email\password_set_message.txt:4
+#: .\templates\allauth\account\email\password_set_message.txt:4
 msgid "Your password has been set."
-msgstr ""
+msgstr "تم تعيين كلمة المرور الخاصة بك."
 
-#: .\templates\account\email\password_set_subject.txt:3
+#: .\templates\allauth\account\email\password_set_subject.txt:3
 msgid "Password Set"
-msgstr ""
+msgstr "مجموعة كلمة المرور"
 
-#: .\templates\account\email\unknown_account_message.txt:4
+#: .\templates\allauth\account\email\unknown_account_message.txt:4
 #, python-format
 msgid ""
 "You are receiving this email because you, or someone else, tried to access "
 "an account with email %(email)s. However, we do not have any record of such "
 "an account in our database."
 msgstr ""
+"تتلقى هذا البريد الإلكتروني لأنك ، أو أي شخص آخر ، حاولت الوصول إلى حساب مع "
+"البريد الإلكتروني%(email)s. ومع ذلك ، ليس لدينا أي سجل لمثل هذا الحساب في "
+"قاعدة البيانات الخاصة بنا."
 
-#: .\templates\account\email\unknown_account_message.txt:8
+#: .\templates\allauth\account\email\unknown_account_message.txt:8
 msgid "If it was you, you can sign up for an account using the link below."
-msgstr ""
+msgstr "إذا كان الأمر كذلك ، فيمكنك الاشتراك في حساب باستخدام الرابط أدناه."
 
-#: .\templates\account\email\unknown_account_subject.txt:3
+#: .\templates\allauth\account\email\unknown_account_subject.txt:3
 msgid "Unknown Account"
-msgstr ""
+msgstr "حساب غير معروف"
 
-#: .\templates\account\email_change.html:5
-#: .\templates\account\email_change.html:9
+#: .\templates\allauth\account\email_change.html:5
+#: .\templates\allauth\account\email_change.html:9
 msgid "Email Address"
-msgstr ""
+msgstr "عنوان البريد الإلكتروني"
 
-#: .\templates\account\email_change.html:21
-#: .\templates\account\email_change.html:29
+#: .\templates\allauth\account\email_change.html:21
+#: .\templates\allauth\account\email_change.html:29
 msgid "Current email"
-msgstr ""
+msgstr "البريد الإلكتروني الحالي"
 
-#: .\templates\account\email_change.html:31
+#: .\templates\allauth\account\email_change.html:31
 msgid "Changing to"
-msgstr ""
+msgstr "التغيير إلى"
 
-#: .\templates\account\email_change.html:35
+#: .\templates\allauth\account\email_change.html:35
 msgid "Your email address is still pending verification."
-msgstr ""
+msgstr "لا يزال عنوان بريدك الإلكتروني في انتظار التحقق."
 
-#: .\templates\account\email_change.html:41
+#: .\templates\allauth\account\email_change.html:41
 msgid "Cancel Change"
-msgstr ""
+msgstr "إلغاء التغيير"
 
-#: .\templates\account\email_change.html:49
-#: .\templates\account\phone_change.html:32
+#: .\templates\allauth\account\email_change.html:49
+#: .\templates\allauth\account\phone_change.html:32
 msgid "Change to"
-msgstr ""
+msgstr "التغيير إلى"
 
-#: .\templates\account\email_confirm.html:6
-#: .\templates\account\email_confirm.html:10
+#: .\templates\allauth\account\email_change.html:55
+#: .\templates\allauth\allauth\layouts\base.html:31
+msgid "Change Email"
+msgstr "تغيير البريد الإلكتروني"
+
+#: .\templates\allauth\account\email_confirm.html:6
+#: .\templates\allauth\account\email_confirm.html:10
 msgid "Confirm Email Address"
-msgstr ""
+msgstr "تأكيد عنوان البريد الإلكتروني"
 
-#: .\templates\account\email_confirm.html:16
+#: .\templates\allauth\account\email_confirm.html:16
 #, python-format
 msgid ""
 "Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an email "
 "address for user %(user_display)s."
 msgstr ""
+"يرجى تأكيد أن <a href = \"mailto:%(email)s\">%(email)s</a> هو عنوان بريد "
+"إلكتروني للمستخدم%(user_display)s."
 
-#: .\templates\account\email_confirm.html:30
-#: .\templates\account\messages\email_confirmation_failed.txt:2
+#: .\templates\allauth\account\email_confirm.html:30
+#: .\templates\allauth\account\messages\email_confirmation_failed.txt:2
 #, python-format
 msgid ""
 "Unable to confirm %(email)s because it is already confirmed by a different "
 "account."
-msgstr ""
+msgstr "غير قادر على التأكيد%(email)sلأنه تم تأكيده بالفعل من خلال حساب مختلف."
 
-#: .\templates\account\email_confirm.html:36
+#: .\templates\allauth\account\email_confirm.html:36
 #, python-format
 msgid ""
 "This email confirmation link expired or is invalid. Please <a "
 "href=\"%(email_url)s\">issue a new email confirmation request</a>."
 msgstr ""
+"انتهت صلاحية رابط تأكيد البريد الإلكتروني أو غير صالح. من فضلك <a href = "
+"\"%(email_url)s\"> إصدار طلب تأكيد بريد إلكتروني جديد </a>."
 
-#: .\templates\account\login.html:19
-#, python-format
-msgid ""
-"If you have not created an account yet, then please %(link)ssign "
-"up%(end_link)s first."
+#: .\templates\allauth\account\login.html:8
+msgid "Use your email and password or sign in with a social account."
 msgstr ""
+"استخدم بريدك الإلكتروني وكلمة المرور أو تسجيل الدخول باستخدام حساب اجتماعي."
 
-#: .\templates\account\login.html:42
-msgid "Sign in with a passkey"
-msgstr ""
+#: .\templates\allauth\account\login.html:23
+msgid "Create Account"
+msgstr "حسابي"
 
-#: .\templates\account\login.html:47
-#: .\templates\account\request_login_code.html:9
-msgid "Send me a sign-in code"
-msgstr ""
+#: .\templates\allauth\account\login.html:32
+msgid "or continue with"
+msgstr "أو متابعة"
 
-#: .\templates\account\logout.html:12
+#: .\templates\allauth\account\logout.html:4
+#: .\templates\allauth\account\logout.html:8
+#: .\templates\allauth\account\logout.html:21
+#: .\templates\allauth\allauth\layouts\base.html:61
+#: .\templates\allauth\usersessions\usersession_list.html:76
+msgid "Sign Out"
+msgstr "تسجيل الخروج"
+
+#: .\templates\allauth\account\logout.html:11
 msgid "Are you sure you want to sign out?"
-msgstr ""
+msgstr "هل أنت متأكد أنك تريد تسجيل الخروج؟"
 
-#: .\templates\account\messages\cannot_delete_primary_email.txt:2
+#: .\templates\allauth\account\messages\cannot_delete_primary_email.txt:2
 #, python-format
 msgid "You cannot remove your primary email address (%(email)s)."
-msgstr ""
+msgstr "لا يمكنك إزالة عنوان بريدك الإلكتروني الأساسي (%(email)s)."
 
-#: .\templates\account\messages\email_confirmation_sent.txt:2
+#: .\templates\allauth\account\messages\email_confirmation_sent.txt:2
 #, python-format
 msgid "Confirmation email sent to %(email)s."
-msgstr ""
+msgstr "تم إرسال بريد إلكتروني للتأكيد إلى%(email)s."
 
-#: .\templates\account\messages\email_confirmed.txt:2
+#: .\templates\allauth\account\messages\email_confirmed.txt:2
 #, python-format
 msgid "You have confirmed %(email)s."
-msgstr ""
+msgstr "لقد أكدت%(email)s."
 
-#: .\templates\account\messages\email_deleted.txt:2
+#: .\templates\allauth\account\messages\email_deleted.txt:2
 #, python-format
 msgid "Removed email address %(email)s."
-msgstr ""
+msgstr "تمت إزالة عنوان البريد الإلكتروني%(email)s."
 
-#: .\templates\account\messages\logged_in.txt:4
+#: .\templates\allauth\account\messages\logged_in.txt:4
 #, python-format
 msgid "Successfully signed in as %(name)s."
-msgstr ""
+msgstr "وقعت بنجاح في%(name)s."
 
-#: .\templates\account\messages\logged_out.txt:2
+#: .\templates\allauth\account\messages\logged_out.txt:2
 msgid "You have signed out."
-msgstr ""
+msgstr "لقد وقعت."
 
-#: .\templates\account\messages\login_code_sent.txt:2
+#: .\templates\allauth\account\messages\login_code_sent.txt:2
 #, python-format
 msgid "A sign-in code has been sent to %(recipient)s."
-msgstr ""
+msgstr "تم إرسال رمز تسجيل الدخول إلى%(recipient)s."
 
-#: .\templates\account\messages\password_changed.txt:2
+#: .\templates\allauth\account\messages\password_changed.txt:2
 msgid "Password successfully changed."
-msgstr ""
+msgstr "تم تغيير كلمة المرور بنجاح."
 
-#: .\templates\account\messages\password_set.txt:2
+#: .\templates\allauth\account\messages\password_set.txt:2
 msgid "Password successfully set."
-msgstr ""
+msgstr "تم تعيين كلمة المرور بنجاح."
 
-#: .\templates\account\messages\phone_verification_sent.txt:2
+#: .\templates\allauth\account\messages\phone_verification_sent.txt:2
 #, python-format
 msgid "A verification code has been sent to %(phone)s."
-msgstr ""
+msgstr "تم إرسال رمز التحقق إلى%(phone)s."
 
-#: .\templates\account\messages\phone_verified.txt:2
+#: .\templates\allauth\account\messages\phone_verified.txt:2
 #, python-format
 msgid "You have verified phone number %(phone)s."
-msgstr ""
+msgstr "لقد تم التحقق من رقم الهاتف%(phone)s."
 
-#: .\templates\account\messages\primary_email_set.txt:2
+#: .\templates\allauth\account\messages\primary_email_set.txt:2
 msgid "Primary email address set."
-msgstr ""
+msgstr "مجموعة عنوان البريد الإلكتروني الأساسية."
 
-#: .\templates\account\messages\unverified_primary_email.txt:2
+#: .\templates\allauth\account\messages\unverified_primary_email.txt:2
 msgid "Your primary email address must be verified."
-msgstr ""
+msgstr "يجب التحقق من عنوان بريدك الإلكتروني الأساسي."
 
-#: .\templates\account\password_change.html:22
+#: .\templates\allauth\account\password_change.html:22
 msgid "Forgot Password?"
-msgstr ""
+msgstr "هل نسيت كلمة السر؟"
 
-#: .\templates\account\password_reset.html:14
+#: .\templates\allauth\account\password_reset.html:14
 msgid ""
 "Forgotten your password? Enter your email address below, and we'll send you "
 "an email allowing you to reset it."
 msgstr ""
+"نسيت كلمة المرور الخاصة بك؟ أدخل عنوان بريدك الإلكتروني أدناه ، وسنرسل لك "
+"بريدًا إلكترونيًا يسمح لك بإعادة ضبطه."
 
-#: .\templates\account\password_reset.html:26
+#: .\templates\allauth\account\password_reset.html:26
 msgid "Reset My Password"
-msgstr ""
+msgstr "أعد تعيين كلمة المرور الخاصة بي"
 
-#: .\templates\account\password_reset.html:31
+#: .\templates\allauth\account\password_reset.html:31
 msgid "Please contact us if you have any trouble resetting your password."
 msgstr ""
+"يرجى الاتصال بنا إذا كان لديك أي مشكلة في إعادة تعيين كلمة المرور الخاصة بك."
 
-#: .\templates\account\password_reset_done.html:16
+#: .\templates\allauth\account\password_reset_done.html:16
 msgid ""
 "We have sent you an email. If you have not received it please check your "
 "spam folder. Otherwise contact us if you do not receive it in a few minutes."
 msgstr ""
+"لقد أرسلنا لك بريدًا إلكترونيًا. إذا لم تكن قد استلمتها ، فيرجى التحقق من مجلد "
+"البريد العشوائي. وإلا اتصل بنا إذا لم تستلمه في غضون دقائق قليلة."
 
-#: .\templates\account\password_reset_from_key.html:10
+#: .\templates\allauth\account\password_reset_from_key.html:10
 msgid "Bad Token"
-msgstr ""
+msgstr "رمز سيء"
 
-#: .\templates\account\password_reset_from_key.html:18
+#: .\templates\allauth\account\password_reset_from_key.html:18
 #, python-format
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
 "used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
 "a>."
 msgstr ""
+"كان رابط إعادة تعيين كلمة المرور غير صالح ، ربما لأنه تم استخدامه بالفعل.  "
+"يرجى طلب <a href = \"%(passwd_reset_url)s\"> إعادة تعيين كلمة المرور الجديدة "
+"</a>."
 
-#: .\templates\account\password_reset_from_key_done.html:12
+#: .\templates\allauth\account\password_reset_from_key_done.html:12
 msgid "Your password is now changed."
-msgstr ""
+msgstr "تم تغيير كلمة المرور الخاصة بك الآن."
 
-#: .\templates\account\password_set.html:5
-#: .\templates\account\password_set.html:9
-#: .\templates\account\password_set.html:21
+#: .\templates\allauth\account\password_set.html:5
+#: .\templates\allauth\account\password_set.html:9
+#: .\templates\allauth\account\password_set.html:21
 msgid "Set Password"
-msgstr ""
+msgstr "اضبط كلمة المرور"
 
-#: .\templates\account\phone_change.html:5
-#: .\templates\account\phone_change.html:9
-#: .\templates\account\phone_change.html:38
+#: .\templates\allauth\account\phone_change.html:5
+#: .\templates\allauth\account\phone_change.html:9
+#: .\templates\allauth\account\phone_change.html:38
 msgid "Change Phone"
-msgstr ""
+msgstr "تغيير الهاتف"
 
-#: .\templates\account\phone_change.html:18
+#: .\templates\allauth\account\phone_change.html:18
 msgid "Current phone"
-msgstr ""
+msgstr "الهاتف الحالي"
 
-#: .\templates\account\phone_change.html:22
+#: .\templates\allauth\account\phone_change.html:22
 msgid "Your phone number is still pending verification."
-msgstr ""
+msgstr "لا يزال رقم هاتفك في انتظار التحقق."
 
-#: .\templates\account\profile.html:3
-msgid "Profile"
-msgstr "الملف الشخصي"
-
-#: .\templates\account\profile.html:11
-msgid "Your Profile"
-msgstr "ملفك الشخصي"
-
-#: .\templates\account\profile.html:13
-msgid "Name"
-msgstr "الاسم"
-
-#: .\templates\account\profile.html:14
-msgid "Phone"
-msgstr "الهاتف"
-
-#: .\templates\account\profile.html:15
-msgid "Username"
-msgstr "اسم المستخدم"
-
-#: .\templates\account\profile.html:16
-msgid "Email"
-msgstr "البريد الإلكتروني"
-
-#: .\templates\account\profile.html:17
-msgid "Address"
-msgstr "العنوان"
-
-#: .\templates\account\profile.html:18
-msgid "Date Joined"
-msgstr "تاريخ الانضمام"
-
-#: .\templates\account\profile.html:19
-msgid "Orders"
-msgstr "الطلبات"
-
-#: .\templates\account\profile.html:23
-msgid "Manage Emails"
-msgstr ""
-
-#: .\templates\account\reauthenticate.html:6
+#: .\templates\allauth\account\reauthenticate.html:6
 msgid "Enter your password:"
-msgstr ""
+msgstr "أدخل كلمة المرور الخاصة بك:"
 
-#: .\templates\account\request_login_code.html:12
+#: .\templates\allauth\account\request_login_code.html:9
+msgid "Send me a sign-in code"
+msgstr "أرسل لي رمز تسجيل الدخول"
+
+#: .\templates\allauth\account\request_login_code.html:12
 msgid "You will receive a special code for a password-free sign-in."
-msgstr ""
+msgstr "ستتلقى رمزًا خاصًا لتوقيع خالي من كلمة المرور."
 
-#: .\templates\account\request_login_code.html:24
+#: .\templates\allauth\account\request_login_code.html:24
 msgid "Request Code"
-msgstr ""
+msgstr "طلب رمز"
 
-#: .\templates\account\request_login_code.html:30
+#: .\templates\allauth\account\request_login_code.html:30
 msgid "Other sign-in options"
-msgstr ""
+msgstr "خيارات تسجيل الدخول الأخرى"
 
-#: .\templates\account\signup.html:5
-#: .\templates\account\signup_by_passkey.html:4
-#: .\templates\socialaccount\signup.html:5
-msgid "Signup"
-msgstr ""
-
-#: .\templates\account\signup.html:9 .\templates\account\signup.html:31
-#: .\templates\account\signup_by_passkey.html:29
-#: .\templates\socialaccount\signup.html:9
-#: .\templates\socialaccount\signup.html:25
+#: .\templates\allauth\account\signup.html:4
+#: .\templates\allauth\account\signup.html:33
+#: .\templates\allauth\account\signup_by_passkey.html:29
+#: .\templates\allauth\allauth\layouts\base.html:74
 msgid "Sign Up"
-msgstr ""
+msgstr "اشتراك"
 
-#: .\templates\account\signup.html:18
-#: .\templates\account\signup_by_passkey.html:17
+#: .\templates\allauth\account\signup.html:5
+msgid "Create your account"
+msgstr "قم بإنشاء حسابك"
+
+#: .\templates\allauth\account\signup.html:18
+msgid "Show password rules"
+msgstr "إعادة تعيين كلمة المرور"
+
+#: .\templates\allauth\account\signup.html:23
+#: .\templates\allauth\socialaccount\signup.html:31
+msgid "Your password can’t be too similar to your other personal information."
+msgstr ""
+"لا يمكن أن تكون كلمة المرور الخاصة بك مشابهة جدًا لمعلوماتك الشخصية الأخرى."
+
+#: .\templates\allauth\account\signup.html:24
+#: .\templates\allauth\socialaccount\signup.html:32
+msgid "Your password must contain at least 8 characters."
+msgstr "يجب أن تحتوي كلمة المرور الخاصة بك على 8 أحرف على الأقل."
+
+#: .\templates\allauth\account\signup.html:25
+#: .\templates\allauth\socialaccount\signup.html:33
+msgid "Your password can’t be a commonly used password."
+msgstr "لا يمكن أن تكون كلمة المرور كلمة مرور شائعة الاستخدام."
+
+#: .\templates\allauth\account\signup.html:26
+#: .\templates\allauth\socialaccount\signup.html:34
+msgid "Your password can’t be entirely numeric."
+msgstr "تمت إعادة تعيين كلمة المرور الخاصة بك."
+
+#: .\templates\allauth\account\signup.html:37
+msgid "Already have an account?"
+msgstr "هل لديك بالفعل حساب؟"
+
+#: .\templates\allauth\account\signup.html:46
+msgid "or sign up with"
+msgstr "أو اشترك مع"
+
+#: .\templates\allauth\account\signup_by_passkey.html:4
+#: .\templates\allauth\socialaccount\signup.html:4
+msgid "Signup"
+msgstr "اشتراك"
+
+#: .\templates\allauth\account\signup_by_passkey.html:8
+msgid "Passkey Sign Up"
+msgstr "التسجيل"
+
+#: .\templates\allauth\account\signup_by_passkey.html:17
 #, python-format
 msgid "Already have an account? Then please %(link)ssign in%(end_link)s."
-msgstr ""
+msgstr "هل لديك بالفعل حساب؟ ثم من فضلك%(link)sتسجيل الدخول%(end_link)s."
 
-#: .\templates\account\signup.html:40
-msgid "Sign up using a passkey"
-msgstr ""
-
-#: .\templates\account\signup_by_passkey.html:8
-msgid "Passkey Sign Up"
-msgstr ""
-
-#: .\templates\account\signup_by_passkey.html:36
+#: .\templates\allauth\account\signup_by_passkey.html:36
 msgid "Other options"
-msgstr ""
+msgstr "خيارات أخرى"
 
-#: .\templates\account\signup_closed.html:5
-#: .\templates\account\signup_closed.html:9
+#: .\templates\allauth\account\signup_closed.html:5
+#: .\templates\allauth\account\signup_closed.html:9
 msgid "Sign Up Closed"
-msgstr ""
+msgstr "التسجيل مغلق"
 
-#: .\templates\account\signup_closed.html:12
+#: .\templates\allauth\account\signup_closed.html:12
 msgid "We are sorry, but the sign up is currently closed."
-msgstr ""
+msgstr "نحن آسفون ، لكن التسجيل مغلق حاليًا."
 
-#: .\templates\account\snippets\already_logged_in.html:7
+#: .\templates\allauth\account\snippets\already_logged_in.html:7
 msgid "Note"
-msgstr ""
+msgstr "ملحوظة"
 
-#: .\templates\account\snippets\already_logged_in.html:7
+#: .\templates\allauth\account\snippets\already_logged_in.html:7
 #, python-format
 msgid "You are already logged in as %(user_display)s."
-msgstr ""
+msgstr "لقد قمت بالفعل بتسجيل الدخول باسم%(user_display)s."
 
-#: .\templates\account\snippets\warn_no_email.html:3
+#: .\templates\allauth\account\snippets\warn_no_email.html:3
 msgid "Warning:"
-msgstr ""
+msgstr "تحذير:"
 
-#: .\templates\account\snippets\warn_no_email.html:3
+#: .\templates\allauth\account\snippets\warn_no_email.html:3
 msgid ""
 "You currently do not have any email address set up. You should really add an "
 "email address so you can receive notifications, reset your password, etc."
 msgstr ""
+"ليس لديك حاليًا أي عنوان بريد إلكتروني تم إعداده. يجب عليك حقًا إضافة عنوان "
+"بريد إلكتروني حتى تتمكن من تلقي الإخطارات وإعادة ضبط كلمة المرور الخاصة بك "
+"وما إلى ذلك."
 
-#: .\templates\account\verification_sent.html:5
-#: .\templates\account\verification_sent.html:9
-#: .\templates\account\verified_email_required.html:5
-#: .\templates\account\verified_email_required.html:9
+#: .\templates\allauth\account\verification_sent.html:5
+#: .\templates\allauth\account\verification_sent.html:9
+#: .\templates\allauth\account\verified_email_required.html:5
+#: .\templates\allauth\account\verified_email_required.html:9
 msgid "Verify Your Email Address"
-msgstr ""
+msgstr "تحقق من عنوان بريدك الإلكتروني"
 
-#: .\templates\account\verification_sent.html:12
+#: .\templates\allauth\account\verification_sent.html:12
 msgid ""
 "We have sent an email to you for verification. Follow the link provided to "
 "finalize the signup process. If you do not see the verification email in "
 "your main inbox, check your spam folder. Please contact us if you do not "
 "receive the verification email within a few minutes."
 msgstr ""
+"لقد أرسلنا بريدًا إلكترونيًا لك للتحقق. اتبع الرابط المقدم لإنهاء عملية "
+"التسجيل. إذا لم ترى البريد الإلكتروني للتحقق في صندوق الوارد الخاص بك ، "
+"فتحقق من مجلد البريد العشوائي الخاص بك. يرجى الاتصال بنا إذا لم تتلق البريد "
+"الإلكتروني للتحقق في غضون بضع دقائق."
 
-#: .\templates\account\verified_email_required.html:13
-#, fuzzy
-#| msgid ""
-#| "يتطلب تأكيد البريد الاكترونيThis part of the site requires us to verify "
-#| "that\n"
-#| "you are who you claim to be. For this purpose, we require that you\n"
-#| "verify ownership of your email address. "
+#: .\templates\allauth\account\verified_email_required.html:13
 msgid ""
 "This part of the site requires us to verify that\n"
 "you are who you claim to be. For this purpose, we require that you\n"
 "verify ownership of your email address. "
 msgstr "هذا القسم للتحقق من الشخصية لذلك يتوجب تأكيد البريد الالكرتوني"
 
-#: .\templates\account\verified_email_required.html:18
+#: .\templates\allauth\account\verified_email_required.html:18
 msgid ""
 "We have sent an email to you for\n"
 "verification. Please click on the link inside that email. If you do not see "
@@ -728,190 +913,764 @@ msgstr ""
 "على البريد في صندوق الوارد انظر في البريد الغير مرغوب. او تواصل معنا اذا لم "
 "تحصل على البريد الاكتروني"
 
-#: .\templates\account\verified_email_required.html:23
-#, fuzzy, python-format
-#| msgid ""
-#| "يتوجب تأكيد البريد<strong>Note:</strong> you can still <a "
-#| "href=\"%(email_url)s\">change your email address</a>."
+#: .\templates\allauth\account\verified_email_required.html:23
+#, python-format
 msgid ""
 "<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your "
 "email address</a>."
-msgstr "مازال بامكانك تغيير بريدك الالكتروني"
+msgstr ""
+"<strong>ملاحظة:</strong> لا يزال بإمكانك <a href=\"%(email_url)s\">تغيير "
+"عنوان بريدك الإلكتروني</a>."
 
-#: .\templates\base.html:10
-msgid "Your online flea market"
-msgstr "سوقك الحر"
+#: .\templates\allauth\allauth\layouts\base.html:18
+msgid "Messages:"
+msgstr "رسائل:"
 
-#: .\templates\pages\about.html:2 .\templates\pages\about.html:4
-#: .\templates\partials\footer.html:6 .\templates\partials\navbar.html:31
-msgid "About"
-msgstr "من نحن"
+#: .\templates\allauth\allauth\layouts\base.html:25
+msgid "Menu:"
+msgstr "قائمة طعام:"
 
-#: .\templates\pages\about.html:5
-msgid "We are a community-driven online flea market."
-msgstr "نحن سوق إلكتروني للسلع المستعملة يقوده المجتمع."
+#: .\templates\allauth\allauth\layouts\base.html:43
+#: .\templates\allauth\socialaccount\connections.html:5
+#: .\templates\allauth\socialaccount\connections.html:9
+msgid "Account Connections"
+msgstr "إعدادات الحساب"
 
-#: .\templates\pages\contact.html:2 .\templates\pages\contact.html:4
-#: .\templates\partials\footer.html:7 .\templates\partials\navbar.html:37
-msgid "Contact"
-msgstr "اتصل بنا"
+#: .\templates\allauth\allauth\layouts\base.html:49
+#: .\templates\allauth\mfa\authenticate.html:10
+#: .\templates\allauth\mfa\index.html:5 .\templates\allauth\mfa\index.html:9
+msgid "Two-Factor Authentication"
+msgstr "مصادقة ثنائية العوامل"
 
-#: .\templates\pages\contact.html:5
-msgid "Reach us via the form or email."
-msgstr "تواصل معنا عبر النموذج أو البريد الإلكتروني."
+#: .\templates\allauth\allauth\layouts\base.html:55
+#: .\templates\allauth\usersessions\usersession_list.html:6
+#: .\templates\allauth\usersessions\usersession_list.html:10
+msgid "Sessions"
+msgstr "جلسات"
 
-#: .\templates\partials\footer.html:4
-msgid "All rights reserved"
-msgstr "جميع الحقوق محفوظة"
+#: .\templates\allauth\base.html:17
+msgid "Account"
+msgstr "حسابي"
 
-#: .\templates\partials\footer.html:8
-msgid "Privacy"
-msgstr "الخصوصية"
+#: .\templates\allauth\base.html:20
+msgid "Please proceed to continue."
+msgstr "يرجى المتابعة للمتابعة."
 
-#: .\templates\partials\footer.html:9
+#: .\templates\allauth\base.html:28
+msgid "By continuing you agree to our"
+msgstr "من خلال الاستمرار توافق على"
+
+#: .\templates\allauth\base.html:29 .\templates\includes\footer.html:21
 msgid "Terms"
 msgstr "الشروط"
 
-#: .\templates\partials\navbar.html:8
-msgid "FloMarkt24"
-msgstr " فلوماركيت24 "
+#: .\templates\allauth\base.html:30
+msgid "and"
+msgstr "و"
 
-#: .\templates\partials\navbar.html:14
-msgid "Toggle navigation"
-msgstr "تبديل"
+#: .\templates\allauth\idp\oidc\authorization_form.html:5
+#: .\templates\allauth\idp\oidc\authorization_form.html:9
+#: .\templates\allauth\idp\oidc\authorization_form.html:23
+#: .\templates\allauth\idp\oidc\device_authorization_code_form.html:5
+#: .\templates\allauth\idp\oidc\device_authorization_confirm_form.html:5
+#: .\templates\allauth\idp\oidc\device_authorization_confirmed.html:5
+#: .\templates\allauth\idp\oidc\device_authorization_denied.html:5
+msgid "Authorize"
+msgstr "إذن"
 
-#: .\templates\partials\navbar.html:25
-msgid "Home"
-msgstr "الصفحة الرئيسية"
+#: .\templates\allauth\idp\oidc\authorization_form.html:12
+#, python-format
+msgid "%(client_name)s wants to access your %(site_name)s account."
+msgstr "%(client_name)sيريد الوصول%(site_name)sحساب."
 
-#: .\templates\partials\navbar.html:45
-msgid "Search our site"
-msgstr "ابحث في الموقع"
+#: .\templates\allauth\idp\oidc\device_authorization_code_form.html:9
+msgid "Enter Device Code"
+msgstr "أدخل رمز تسجيل الدخول"
 
-#: .\templates\partials\navbar.html:83
-msgid "My Account"
-msgstr "حسابي"
+#: .\templates\allauth\idp\oidc\device_authorization_code_form.html:12
+msgid "Enter the code displayed on your device."
+msgstr "أدخل الرمز المعروض على جهازك."
 
-#: .\templates\partials\navbar.html:88
-msgid "Product Management"
+#: .\templates\allauth\idp\oidc\device_authorization_code_form.html:21
+#: .\templates\allauth\socialaccount\login.html:21
+#: .\templates\allauth\socialaccount\login_redirect.html:10
+#: .\templates\allauth\socialaccount\signup.html:41
+msgid "Continue"
+msgstr "يكمل"
+
+#: .\templates\allauth\idp\oidc\device_authorization_confirm_form.html:9
+msgid "Confirm Device"
+msgstr "تأكيد الوصول"
+
+#: .\templates\allauth\idp\oidc\device_authorization_confirm_form.html:12
+#, python-format
+msgid ""
+"Please confirm the code shown on your %(client_name)s to authorize this "
+"device."
+msgstr "يرجى تأكيد الرمز المعروض على%(client_name)sلتصريح هذا الجهاز."
+
+#: .\templates\allauth\idp\oidc\device_authorization_confirm_form.html:16
+msgid "Code"
+msgstr "شفرة"
+
+#: .\templates\allauth\idp\oidc\device_authorization_confirm_form.html:29
+msgid "Deny"
+msgstr "ينكر"
+
+#: .\templates\allauth\idp\oidc\device_authorization_confirmed.html:9
+msgid "Device Authorized"
+msgstr "الجهاز معتمد"
+
+#: .\templates\allauth\idp\oidc\device_authorization_confirmed.html:12
+#, python-format
+msgid "You successfully authorized your %(client_name)s device."
+msgstr "لقد أذن بنجاح بك%(client_name)sجهاز."
+
+#: .\templates\allauth\idp\oidc\device_authorization_denied.html:9
+msgid "Device Denied"
+msgstr "تم رفض الجهاز"
+
+#: .\templates\allauth\idp\oidc\device_authorization_denied.html:12
+#, python-format
+msgid "Authorization for your %(client_name)s device has been denied."
+msgstr "إذن الخاص بك%(client_name)sتم رفض الجهاز."
+
+#: .\templates\allauth\idp\oidc\error.html:5
+#: .\templates\allauth\idp\oidc\error.html:9
+msgid "Error"
+msgstr "خطأ"
+
+#: .\templates\allauth\mfa\authenticate.html:13
+msgid ""
+"Your account is protected by two-factor authentication. Please enter an "
+"authenticator code:"
+msgstr "حسابك محمي من خلال المصادقة ثنائية العوامل. الرجاء إدخال رمز المصادقة:"
+
+#: .\templates\allauth\mfa\authenticate.html:41
+#: .\templates\allauth\mfa\webauthn\reauthenticate.html:15
+msgid "Use a security key"
+msgstr "استخدم مفتاح الأمان"
+
+#: .\templates\allauth\mfa\email\recovery_codes_generated_message.txt:4
+msgid ""
+"A new set of Two-Factor Authentication recovery codes has been generated."
+msgstr "تم إنشاء مجموعة جديدة من رموز استرداد المصادقة ثنائية العوامل."
+
+#: .\templates\allauth\mfa\email\recovery_codes_generated_subject.txt:3
+msgid "New Recovery Codes Generated"
+msgstr "تم إنشاء رموز استرداد جديدة"
+
+#: .\templates\allauth\mfa\email\totp_activated_message.txt:4
+#: .\templates\allauth\mfa\messages\totp_activated.txt:2
+msgid "Authenticator app activated."
+msgstr "تطبيق المصادقة المنشط."
+
+#: .\templates\allauth\mfa\email\totp_activated_subject.txt:3
+msgid "Authenticator App Activated"
+msgstr "تطبيق المصادقة المنشط"
+
+#: .\templates\allauth\mfa\email\totp_deactivated_message.txt:4
+#: .\templates\allauth\mfa\messages\totp_deactivated.txt:2
+msgid "Authenticator app deactivated."
+msgstr "Authenticator APP تم إلغاء تنشيطه."
+
+#: .\templates\allauth\mfa\email\totp_deactivated_subject.txt:3
+msgid "Authenticator App Deactivated"
+msgstr "Authenticator APP تم إلغاء تنشيطه"
+
+#: .\templates\allauth\mfa\email\webauthn_added_message.txt:4
+msgid "A new security key has been added."
+msgstr "تمت إضافة مفتاح أمان جديد."
+
+#: .\templates\allauth\mfa\email\webauthn_added_subject.txt:3
+msgid "Security Key Added"
+msgstr "أضاف مفتاح الأمان"
+
+#: .\templates\allauth\mfa\email\webauthn_removed_message.txt:4
+msgid "A security key has been removed."
+msgstr "تم تأكيد بريدك الإلكتروني."
+
+#: .\templates\allauth\mfa\email\webauthn_removed_subject.txt:3
+msgid "Security Key Removed"
+msgstr "إزالتها مفتاح الأمان"
+
+#: .\templates\allauth\mfa\index.html:14
+#: .\templates\allauth\mfa\totp\base.html:4
+msgid "Authenticator App"
+msgstr "تطبيق المصادقة"
+
+#: .\templates\allauth\mfa\index.html:19
+msgid "Authentication using an authenticator app is active."
+msgstr "المصادقة باستخدام تطبيق المصادقة نشط."
+
+#: .\templates\allauth\mfa\index.html:23
+msgid "An authenticator app is not active."
+msgstr "تطبيق المصادقة غير نشط."
+
+#: .\templates\allauth\mfa\index.html:32
+#: .\templates\allauth\mfa\totp\deactivate_form.html:24
+msgid "Deactivate"
+msgstr "إلغاء تنشيط"
+
+#: .\templates\allauth\mfa\index.html:36
+#: .\templates\allauth\mfa\totp\activate_form.html:32
+msgid "Activate"
+msgstr "فعل"
+
+#: .\templates\allauth\mfa\index.html:45
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:8
+#: .\templates\allauth\mfa\webauthn\base.html:4
+msgid "Security Keys"
+msgstr "مفاتيح الأمن"
+
+#: .\templates\allauth\mfa\index.html:50
+#, python-format
+msgid "You have added %(count)s security key."
+msgid_plural "You have added %(count)s security keys."
+msgstr[0] "لقد أضفت%(count)sمفاتيح الأمن."
+msgstr[1] "لقد أضفت%(count)sمفاتيح الأمن."
+msgstr[2] "لقد أضفت%(count)sمفاتيح الأمن."
+msgstr[3] "لقد أضفت%(count)sمفاتيح الأمن."
+msgstr[4] "لقد أضفت%(count)sمفاتيح الأمن."
+msgstr[5] "لقد أضفت%(count)sمفاتيح الأمن."
+
+#: .\templates\allauth\mfa\index.html:54
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:12
+msgid "No security keys have been added."
+msgstr "لم تتم إضافة مفاتيح أمنية."
+
+#: .\templates\allauth\mfa\index.html:62
+msgid "Manage"
+msgstr "إدارة رسائل البريد الإلكتروني"
+
+#: .\templates\allauth\mfa\index.html:67
+#: .\templates\allauth\mfa\webauthn\add_form.html:18
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:70
+msgid "Add"
+msgstr "العنوان"
+
+#: .\templates\allauth\mfa\index.html:77
+#: .\templates\allauth\mfa\recovery_codes\base.html:4
+#: .\templates\allauth\mfa\recovery_codes\generate.html:6
+#: .\templates\allauth\mfa\recovery_codes\index.html:6
+msgid "Recovery Codes"
+msgstr "طلب رمز"
+
+#: .\templates\allauth\mfa\index.html:82
+#: .\templates\allauth\mfa\recovery_codes\index.html:9
+#, python-format
+msgid ""
+"There is %(unused_count)s out of %(total_count)s recovery codes available."
+msgid_plural ""
+"There are %(unused_count)s out of %(total_count)s recovery codes available."
+msgstr[0] "هناك%(unused_count)sخارج%(total_count)sرموز الاسترداد المتاحة."
+msgstr[1] "هناك%(unused_count)sخارج%(total_count)sرموز الاسترداد المتاحة."
+msgstr[2] "هناك%(unused_count)sخارج%(total_count)sرموز الاسترداد المتاحة."
+msgstr[3] "هناك%(unused_count)sخارج%(total_count)sرموز الاسترداد المتاحة."
+msgstr[4] "هناك%(unused_count)sخارج%(total_count)sرموز الاسترداد المتاحة."
+msgstr[5] "هناك%(unused_count)sخارج%(total_count)sرموز الاسترداد المتاحة."
+
+#: .\templates\allauth\mfa\index.html:86
+msgid "No recovery codes set up."
+msgstr "لم يتم إعداد رموز الاسترداد."
+
+#: .\templates\allauth\mfa\index.html:96
+msgid "View"
+msgstr "منظر"
+
+#: .\templates\allauth\mfa\index.html:102
+msgid "Download"
+msgstr "تحميل"
+
+#: .\templates\allauth\mfa\index.html:110
+#: .\templates\allauth\mfa\recovery_codes\generate.html:29
+msgid "Generate"
+msgstr "يولد"
+
+#: .\templates\allauth\mfa\messages\recovery_codes_generated.txt:2
+msgid "A new set of recovery codes has been generated."
+msgstr "تم إنشاء مجموعة جديدة من رموز الاسترداد."
+
+#: .\templates\allauth\mfa\messages\webauthn_added.txt:2
+msgid "Security key added."
+msgstr "أضاف مفتاح الأمان."
+
+#: .\templates\allauth\mfa\messages\webauthn_removed.txt:2
+msgid "Security key removed."
+msgstr "إزالتها مفتاح الأمان."
+
+#: .\templates\allauth\mfa\reauthenticate.html:6
+msgid "Enter an authenticator code:"
+msgstr "أدخل رمز التحقق من البريد الإلكتروني"
+
+#: .\templates\allauth\mfa\recovery_codes\generate.html:9
+msgid "You are about to generate a new set of recovery codes for your account."
+msgstr "أنت على وشك إنشاء مجموعة جديدة من رموز الاسترداد لحسابك."
+
+#: .\templates\allauth\mfa\recovery_codes\generate.html:11
+msgid "This action will invalidate your existing codes."
+msgstr "سيؤدي هذا الإجراء إلى إبطال رموزك الحالية."
+
+#: .\templates\allauth\mfa\recovery_codes\generate.html:13
+msgid "Are you sure?"
+msgstr "هل أنت متأكد؟"
+
+#: .\templates\allauth\mfa\recovery_codes\index.html:13
+msgid "Unused codes"
+msgstr "الرموز غير المستخدمة"
+
+#: .\templates\allauth\mfa\recovery_codes\index.html:25
+msgid "Download codes"
+msgstr "تنزيل الرموز"
+
+#: .\templates\allauth\mfa\recovery_codes\index.html:30
+msgid "Generate new codes"
+msgstr "طلب رمز جديد"
+
+#: .\templates\allauth\mfa\totp\activate_form.html:4
+#: .\templates\allauth\mfa\totp\activate_form.html:8
+msgid "Activate Authenticator App"
+msgstr "تنشيط تطبيق المصادقة"
+
+#: .\templates\allauth\mfa\totp\activate_form.html:11
+msgid ""
+"To protect your account with two-factor authentication, scan the QR code "
+"below with your authenticator app. Then, input the verification code "
+"generated by the app below."
 msgstr ""
+"لحماية حسابك من خلال المصادقة ثنائية العوامل ، قم بفحص رمز الاستجابة السريعة "
+"أدناه باستخدام تطبيق المصادقة الخاص بك. ثم ، أدخل رمز التحقق الذي تم إنشاؤه "
+"بواسطة التطبيق أدناه."
 
-#: .\templates\partials\navbar.html:93
-#, fuzzy
-#| msgid "Profile"
-msgid "My Profile"
-msgstr "الملف الشخصي"
+#: .\templates\allauth\mfa\totp\activate_form.html:21
+msgid "Authenticator secret"
+msgstr "سر المصادقة"
 
-#: .\templates\partials\navbar.html:98
-msgid "Logout"
+#: .\templates\allauth\mfa\totp\activate_form.html:24
+msgid ""
+"You can store this secret and use it to reinstall your authenticator app at "
+"a later time."
 msgstr ""
+"يمكنك تخزين هذا السر واستخدامه لإعادة تثبيت تطبيق المصادقة في وقت لاحق."
 
-#: .\templates\partials\navbar.html:101
-msgid "Login"
+#: .\templates\allauth\mfa\totp\deactivate_form.html:5
+#: .\templates\allauth\mfa\totp\deactivate_form.html:9
+msgid "Deactivate Authenticator App"
+msgstr "إلغاء تنشيط تطبيق المصادقة"
+
+#: .\templates\allauth\mfa\totp\deactivate_form.html:12
+msgid ""
+"You are about to deactivate authenticator app based authentication. Are you "
+"sure?"
 msgstr ""
+"أنت على وشك إلغاء تنشيط المصادقة المستندة إلى تطبيق Authenticator. هل أنت "
+"متأكد؟"
 
-#: .\templates\partials\navbar.html:102
-msgid "Register"
+#: .\templates\allauth\mfa\trust.html:4 .\templates\allauth\mfa\trust.html:8
+msgid "Trust this Browser?"
+msgstr "ثق بهذا المتصفح؟"
+
+#: .\templates\allauth\mfa\trust.html:11
+msgid ""
+"If you choose to trust this browser, you will not be asked for a "
+"verification code the next time you sign in."
 msgstr ""
+"إذا اخترت الوثوق بهذا المتصفح ، فلن يُطلب منك رمز التحقق في المرة القادمة "
+"التي تقوم فيها بتسجيل الدخول."
 
-#: .\templates\socialaccount\authentication_error.html:5
-#: .\templates\socialaccount\authentication_error.html:9
+#: .\templates\allauth\mfa\trust.html:23
+#, python-format
+msgid "Trust for %(period)s"
+msgstr "الثقة ل%(period)s"
+
+#: .\templates\allauth\mfa\trust.html:26
+msgid "Don't Trust"
+msgstr "لا تثق"
+
+#: .\templates\allauth\mfa\webauthn\add_form.html:7
+msgid "Add Security Key"
+msgstr "إضافة مفتاح الأمان"
+
+#: .\templates\allauth\mfa\webauthn\authenticator_confirm_delete.html:6
+msgid "Remove Security Key"
+msgstr "إزالة مفتاح الأمان"
+
+#: .\templates\allauth\mfa\webauthn\authenticator_confirm_delete.html:9
+msgid "Are you sure you want to remove this security key?"
+msgstr "هل أنت متأكد أنك تريد تسجيل الخروج؟"
+
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:18
+msgid "Key"
+msgstr "مفتاح"
+
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:21
+msgid "Usage"
+msgstr "الاستخدام"
+
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:33
+msgid "Passkey"
+msgstr "التسجيل"
+
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:37
+msgid "Security key"
+msgstr "مفتاح الأمن"
+
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:40
+msgid "This key does not indicate whether it is a passkey."
+msgstr "هذا المفتاح لا يشير إلى ما إذا كان مفتاح المرور."
+
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:41
+msgid "Unspecified"
+msgstr "لم يتم التحقق منه"
+
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:46
+#, python-format
+msgid "Added on %(created_at)s"
+msgstr "تمت إضافة على%(created_at)s"
+
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:48
+#, python-format
+msgid "Last used %(last_used)s"
+msgstr "آخر استخدام%(last_used)s"
+
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:56
+msgid "Edit"
+msgstr "يحرر"
+
+#: .\templates\allauth\mfa\webauthn\edit_form.html:7
+msgid "Edit Security Key"
+msgstr "تحرير مفتاح الأمان"
+
+#: .\templates\allauth\mfa\webauthn\edit_form.html:18
+msgid "Save"
+msgstr "يحفظ"
+
+#: .\templates\allauth\mfa\webauthn\signup_form.html:7
+msgid "Create Passkey"
+msgstr "إنشاء مفتاح المرور"
+
+#: .\templates\allauth\mfa\webauthn\signup_form.html:10
+msgid ""
+"You are about to create a passkey for your account. As you can add "
+"additional keys later on, you can use a descriptive name to tell the keys "
+"apart."
+msgstr ""
+"أنت على وشك إنشاء مفتاح المرور لحسابك. حيث يمكنك إضافة مفاتيح إضافية في وقت "
+"لاحق ، يمكنك استخدام اسم وصفي لتصرف المفاتيح."
+
+#: .\templates\allauth\mfa\webauthn\signup_form.html:21
+msgid "Create"
+msgstr "يخلق"
+
+#: .\templates\allauth\mfa\webauthn\snippets\scripts.html:2
+msgid "This functionality requires JavaScript."
+msgstr "هذه الوظيفة تتطلب javaScript."
+
+#: .\templates\allauth\socialaccount\authentication_error.html:5
+#: .\templates\allauth\socialaccount\authentication_error.html:9
 msgid "Third-Party Login Failure"
-msgstr ""
+msgstr "فشل تسجيل الدخول إلى الطرف الثالث"
 
-#: .\templates\socialaccount\authentication_error.html:12
+#: .\templates\allauth\socialaccount\authentication_error.html:12
 msgid ""
 "An error occurred while attempting to login via your third-party account."
-msgstr ""
+msgstr "حدث خطأ أثناء محاولة تسجيل الدخول عبر حساب الطرف الثالث."
 
-#: .\templates\socialaccount\connections.html:13
+#: .\templates\allauth\socialaccount\connections.html:13
 msgid ""
 "You can sign in to your account using any of the following third-party "
 "accounts:"
 msgstr ""
+"يمكنك تسجيل الدخول إلى حسابك باستخدام أي من حسابات الطرف الثالث التالي:"
 
-#: .\templates\socialaccount\connections.html:46
+#: .\templates\allauth\socialaccount\connections.html:46
 msgid "You currently have no third-party accounts connected to this account."
-msgstr ""
+msgstr "ليس لديك حاليًا أي حسابات تابعة لجهة خارجية متصلة بهذا الحساب."
 
-#: .\templates\socialaccount\connections.html:50
+#: .\templates\allauth\socialaccount\connections.html:50
 msgid "Add a Third-Party Account"
-msgstr ""
+msgstr "أضف حساب طرف ثالث"
 
-#: .\templates\socialaccount\email\account_connected_message.txt:4
+#: .\templates\allauth\socialaccount\email\account_connected_message.txt:4
 #, python-format
 msgid ""
 "A third-party account from %(provider)s has been connected to your account."
-msgstr ""
+msgstr "حساب جهة خارجية من%(provider)sتم توصيله بحسابك."
 
-#: .\templates\socialaccount\email\account_connected_subject.txt:3
+#: .\templates\allauth\socialaccount\email\account_connected_subject.txt:3
 msgid "Third-Party Account Connected"
-msgstr ""
+msgstr "حساب الطرف الثالث متصل"
 
-#: .\templates\socialaccount\email\account_disconnected_message.txt:4
+#: .\templates\allauth\socialaccount\email\account_disconnected_message.txt:4
 #, python-format
 msgid ""
 "A third-party account from %(provider)s has been disconnected from your "
 "account."
-msgstr ""
+msgstr "حساب جهة خارجية من%(provider)sتم فصله عن حسابك."
 
-#: .\templates\socialaccount\email\account_disconnected_subject.txt:3
+#: .\templates\allauth\socialaccount\email\account_disconnected_subject.txt:3
 msgid "Third-Party Account Disconnected"
-msgstr ""
+msgstr "حساب الطرف الثالث منفصل"
 
-#: .\templates\socialaccount\login.html:10
-#, python-format
-msgid "Connect %(provider)s"
-msgstr ""
+#: .\templates\allauth\socialaccount\login.html:5
+msgid "Continue with a Social Account"
+msgstr "استمر في حساب اجتماعي"
 
-#: .\templates\socialaccount\login.html:13
+#: .\templates\allauth\socialaccount\login.html:11
 #, python-format
 msgid "You are about to connect a new third-party account from %(provider)s."
-msgstr ""
+msgstr "أنت على وشك توصيل حساب جديد لجهة خارجية%(provider)s."
 
-#: .\templates\socialaccount\login.html:17
-#, python-format
-msgid "Sign In Via %(provider)s"
-msgstr ""
-
-#: .\templates\socialaccount\login.html:20
+#: .\templates\allauth\socialaccount\login.html:15
 #, python-format
 msgid "You are about to sign in using a third-party account from %(provider)s."
-msgstr ""
+msgstr "أنت على وشك تسجيل الدخول باستخدام حساب طرف ثالث من%(provider)s."
 
-#: .\templates\socialaccount\login.html:27
-#: .\templates\socialaccount\login_redirect.html:10
-msgid "Continue"
-msgstr ""
-
-#: .\templates\socialaccount\login_cancelled.html:5
-#: .\templates\socialaccount\login_cancelled.html:9
+#: .\templates\allauth\socialaccount\login_cancelled.html:5
+#: .\templates\allauth\socialaccount\login_cancelled.html:9
 msgid "Login Cancelled"
-msgstr ""
+msgstr "تم إلغاء تسجيل الدخول"
 
-#: .\templates\socialaccount\login_cancelled.html:13
+#: .\templates\allauth\socialaccount\login_cancelled.html:13
 #, python-format
 msgid ""
 "You decided to cancel logging in to our site using one of your existing "
 "accounts. If this was a mistake, please proceed to <a "
 "href=\"%(login_url)s\">sign in</a>."
 msgstr ""
+"قررت إلغاء تسجيل الدخول إلى موقعنا باستخدام أحد حساباتك الحالية. إذا كان هذا "
+"خطأ ، فيرجى المتابعة إلى <a href = \"%(login_url)s\"> تسجيل الدخول </a>."
 
-#: .\templates\socialaccount\messages\account_connected.txt:2
+#: .\templates\allauth\socialaccount\messages\account_connected.txt:2
 msgid "The third-party account has been connected."
-msgstr ""
+msgstr "تم توصيل حساب الطرف الثالث."
 
-#: .\templates\socialaccount\messages\account_connected_other.txt:2
+#: .\templates\allauth\socialaccount\messages\account_connected_other.txt:2
 msgid "The third-party account is already connected to a different account."
-msgstr ""
+msgstr "حساب الطرف الثالث متصل بالفعل بحساب مختلف."
 
-#: .\templates\socialaccount\messages\account_disconnected.txt:2
+#: .\templates\allauth\socialaccount\messages\account_disconnected.txt:2
 msgid "The third-party account has been disconnected."
-msgstr ""
+msgstr "تم فصل حساب الطرف الثالث."
 
-#: .\templates\socialaccount\signup.html:12
+#: .\templates\allauth\socialaccount\signup.html:5
+msgid "Complete your profile"
+msgstr "ملفك الشخصي"
+
+#: .\templates\allauth\socialaccount\signup.html:10
 #, python-format
 msgid ""
-"You are about to use your %(provider_name)s account to login to\n"
-"%(site_name)s. As a final step, please complete the following form:"
+"\n"
+"      You are about to use your %(provider_name)s account to login to "
+"%(site_name)s.\n"
+"      As a final step, please complete the following form:\n"
+"    "
 msgstr ""
+"\n"
+"      أنت على وشك استخدام حسابك في %(provider_name)s لتسجيل الدخول إلى "
+"%(site_name)s.\n"
+"      كخطوة أخيرة، يرجى إكمال النموذج التالي:\n"
+"    "
+
+#: .\templates\allauth\socialaccount\signup.html:44
+msgid "Back to Sign In"
+msgstr "تسجيل الدخول"
+
+#: .\templates\allauth\socialaccount\snippets\provider_list.html:16
+#, python-format
+msgid "Continue with %(name)s"
+msgstr "تواصل مع%(name)s"
+
+#: .\templates\allauth\usersessions\messages\sessions_logged_out.txt:2
+msgid "Signed out of all other sessions."
+msgstr "وقع الخروج من جميع الجلسات الأخرى."
+
+#: .\templates\allauth\usersessions\usersession_list.html:24
+msgid "Started At"
+msgstr "بدأت في"
+
+#: .\templates\allauth\usersessions\usersession_list.html:27
+msgid "IP Address"
+msgstr "العنوان"
+
+#: .\templates\allauth\usersessions\usersession_list.html:30
+msgid "Browser"
+msgstr "متصفح"
+
+#: .\templates\allauth\usersessions\usersession_list.html:34
+msgid "Last seen at"
+msgstr "آخر مرة في"
+
+#: .\templates\allauth\usersessions\usersession_list.html:59
+msgid "Current"
+msgstr "البريد الإلكتروني الحالي"
+
+#: .\templates\allauth\usersessions\usersession_list.html:72
+msgid "Sign Out Other Sessions"
+msgstr "تسجيل الخروج من الجلسات الأخرى"
+
+#: .\templates\base.html:10 .\templates\includes\footer.html:12
+msgid "Your online flea market"
+msgstr "سوقك الحر"
+
+#: .\templates\includes\footer.html:10
+#: .\templates\includes\navbar\navbar.html:15
+msgid "Flomarkt24"
+msgstr " فلوماركيت24 "
+
+#: .\templates\includes\footer.html:17
+msgid "Footer navigation"
+msgstr "تبديل"
+
+#: .\templates\includes\footer.html:20
+msgid "Privacy"
+msgstr "الخصوصية"
+
+#: .\templates\includes\footer.html:38
+msgid "All rights reserved"
+msgstr "جميع الحقوق محفوظة"
+
+#: .\templates\includes\footer.html:40
+msgid "Back to top"
+msgstr "العودة إلى الأعلى"
+
+#: .\templates\includes\navbar\account.html:15
+msgid "My Account"
+msgstr "حسابي"
+
+#: .\templates\includes\navbar\account.html:21
+msgid "Product Management"
+msgstr "إدارة المنتج"
+
+#: .\templates\includes\navbar\account.html:28
+msgid "Logout"
+msgstr "تسجيل الخروج"
+
+#: .\templates\includes\navbar\account.html:30
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+#: .\templates\includes\navbar\account.html:31
+msgid "Register"
+msgstr "يسجل"
+
+#: .\templates\includes\navbar\links.html:10
+msgid "Home"
+msgstr "الصفحة الرئيسية"
+
+#: .\templates\includes\navbar\links.html:35
+msgid "All Products"
+msgstr "جميع المنتجات"
+
+#: .\templates\includes\navbar\links.html:39
+msgid "Automotive"
+msgstr "السيارات"
+
+#: .\templates\includes\navbar\links.html:40
+msgid "Home & Tools"
+msgstr "أدوات منزلية "
+
+#: .\templates\includes\navbar\links.html:41
+msgid "Garden & Outdoors"
+msgstr "أدوات حدائق و خدمية"
+
+#: .\templates\includes\navbar\links.html:42
+msgid "Electronics"
+msgstr "الإلكترونيات"
+
+#: .\templates\includes\navbar\links.html:43
+msgid "Computers"
+msgstr "أجهزة الكمبيوتر"
+
+#: .\templates\includes\navbar\links.html:44
+msgid "Phones & Accessories"
+msgstr "الهواتف و مُكَمِّلات"
+
+#: .\templates\includes\navbar\links.html:45
+msgid "Fashion"
+msgstr "موضة"
+
+#: .\templates\includes\navbar\links.html:46
+msgid "Beauty & Personal Care"
+msgstr "الجمال و العناية الشخصية"
+
+#: .\templates\includes\navbar\links.html:47
+msgid "Health"
+msgstr "صحة"
+
+#: .\templates\includes\navbar\links.html:48
+msgid "Sports & Outdoors"
+msgstr "أدوات رياضية و ترفيهية"
+
+#: .\templates\includes\navbar\links.html:49
+msgid "Toys & Games"
+msgstr "دمى و ألعاب"
+
+#: .\templates\includes\navbar\links.html:50
+msgid "Baby"
+msgstr "طفل"
+
+#: .\templates\includes\navbar\links.html:51
+msgid "Pet Supplies"
+msgstr "إمدادات الحيوانات الأليفة"
+
+#: .\templates\includes\navbar\links.html:52
+msgid "Books"
+msgstr "كتب"
+
+#: .\templates\includes\navbar\links.html:53
+msgid "Music"
+msgstr "موسيقى"
+
+#: .\templates\includes\navbar\links.html:54
+msgid "Grocery"
+msgstr "خضروات"
+
+#: .\templates\includes\navbar\links.html:55
+msgid "Office Products"
+msgstr "منتجات المكاتب"
+
+#: .\templates\includes\navbar\navbar.html:58
+msgid "Toggle navigation"
+msgstr "تبديل"
+
+#: .\templates\includes\navbar\search.html:5
+msgid "Search our site"
+msgstr "ابحث في الموقع"
+
+#~ msgid "Profile updated successfully"
+#~ msgstr "تم تحديث ملف التعريف بنجاح"
+
+#, python-format
+#~ msgid ""
+#~ "If you have not created an account yet, then please %(link)ssign "
+#~ "up%(end_link)s first."
+#~ msgstr ""
+#~ "إذا لم تكن قد قمت بإنشاء حساب بعد ، فمن "
+#~ "فضلك%(link)sاشتراك%(end_link)sأولاً."
+
+#~ msgid "Sign in with a passkey"
+#~ msgstr "تسجيل الدخول مع مفتاح المرور"
+
+#~ msgid "Profile"
+#~ msgstr "الملف الشخصي"
+
+#~ msgid "Name"
+#~ msgstr "الاسم"
+
+#~ msgid "Phone"
+#~ msgstr "الهاتف"
+
+#~ msgid "Date Joined"
+#~ msgstr "تاريخ الانضمام"
+
+#~ msgid "Sign up using a passkey"
+#~ msgstr "اشترك باستخدام مفتاح المرور"
+
+#, python-format
+#~ msgid "Connect %(provider)s"
+#~ msgstr "يتصل%(provider)s"
+
+#, python-format
+#~ msgid "Sign In Via %(provider)s"
+#~ msgstr "تسجيل الدخول عبر%(provider)s"

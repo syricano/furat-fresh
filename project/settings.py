@@ -4,6 +4,7 @@ from urllib.parse import urlparse, parse_qsl
 from pathlib import Path
 import dj_database_url
 
+
 load_dotenv()
 
 # Load env.py if present
@@ -78,14 +79,14 @@ SITE_ID = int(os.environ.get("SITE_ID", 2))
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "django.middleware.locale.LocaleMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'allauth.account.middleware.AccountMiddleware',
-    "django.middleware.locale.LocaleMiddleware",
+    'allauth.account.middleware.AccountMiddleware',    
 ]
 
 # Socialaccount provider settings (Google; wired in step 2)

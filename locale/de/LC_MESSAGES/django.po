@@ -3,204 +3,350 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-13 03:40+0200\n"
+"POT-Creation-Date: 2025-08-18 01:06+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\home\templates\home\index.html:17
+#: .\home\templates\home\about.html:2 .\home\templates\home\about.html:4
+#: .\templates\includes\footer.html:18
+#: .\templates\includes\navbar\links.html:17
+msgid "About"
+msgstr "Über uns"
+
+#: .\home\templates\home\about.html:5
+msgid "We are a community-driven online flea market."
+msgstr "Wir sind ein gemeinschaftsgetriebener Online‑Flohmarkt."
+
+#: .\home\templates\home\contact.html:2 .\home\templates\home\contact.html:4
+#: .\templates\includes\footer.html:19
+#: .\templates\includes\navbar\links.html:24
+msgid "Contact"
+msgstr "Kontakt"
+
+#: .\home\templates\home\contact.html:5
+msgid "Reach us via the form or email."
+msgstr "Erreiche uns über das Formular oder per E‑Mail."
+
+#: .\home\templates\home\index.html:22
 msgid "Start shopping here"
-msgstr ""
+msgstr "Beginnen Sie hier einkaufen"
 
-#: .\home\templates\home\index.html:20
+#: .\home\templates\home\index.html:23
 msgid "Shop Now"
-msgstr ""
+msgstr "Jetzt einkaufen"
 
-#: .\home\views.py:21
-msgid "Profile updated successfully"
-msgstr ""
+#: .\home\templates\home\privacy.html:6 .\templates\allauth\base.html:31
+msgid "Privacy Policy"
+msgstr "Privatsphäre"
 
-#: .\templates\account\_settings_nav.html:3
-#: .\templates\account\email_change.html:55
-msgid "Change Email"
+#: .\home\templates\home\privacy.html:7
+msgid ""
+"Your privacy is important to us. Please read our privacy policy carefully."
 msgstr ""
+"Ihre Privatsphäre ist uns wichtig. Bitte lesen Sie unsere "
+"Datenschutzrichtlinie sorgfältig durch."
 
-#: .\templates\account\_settings_nav.html:4
-#: .\templates\account\password_change.html:4
-#: .\templates\account\password_change.html:8
-#: .\templates\account\password_change.html:20
-#: .\templates\account\password_reset_from_key.html:5
-#: .\templates\account\password_reset_from_key.html:12
-#: .\templates\account\password_reset_from_key.html:30
-#: .\templates\account\password_reset_from_key_done.html:5
-#: .\templates\account\password_reset_from_key_done.html:9
-#: .\templates\account\profile.html:24
+#: .\home\templates\home\terms.html:7
+msgid "Terms and Conditions"
+msgstr "Geschäftsbedingungen"
+
+#: .\home\templates\home\terms.html:8
+msgid ""
+"Please read these terms and conditions carefully before using our service."
+msgstr ""
+"Bitte lesen Sie diese Allgemeinen Geschäftsbedingungen sorgfältig durch, "
+"bevor Sie unseren Service nutzen."
+
+#: .\profiles\models.py:11
+#, fuzzy
+#| msgid "Username"
+msgid "User"
+msgstr "Benutzername"
+
+#: .\profiles\models.py:12
+msgid "First name"
+msgstr "Vorname"
+
+#: .\profiles\models.py:13
+#, fuzzy
+#| msgid "Last seen at"
+msgid "Last name"
+msgstr "Zuletzt gesehen bei"
+
+#: .\profiles\models.py:14
+msgid "Phone number"
+msgstr "Telefonnummer"
+
+#: .\profiles\models.py:15
+msgid "Email"
+msgstr "E‑Mail"
+
+#: .\profiles\models.py:17
+msgid "Postcode"
+msgstr "Postleitzahl"
+
+#: .\profiles\models.py:18
+msgid "Town or city"
+msgstr "Stadt oder Stadt"
+
+#: .\profiles\models.py:19
+#, fuzzy
+#| msgid "Update Address"
+msgid "Street address 1"
+msgstr "E-Mail-Adresse"
+
+#: .\profiles\models.py:20
+#, fuzzy
+#| msgid "Update Address"
+msgid "Street address 2"
+msgstr "E-Mail-Adresse"
+
+#: .\profiles\models.py:21
+#, fuzzy
+#| msgid "Account"
+msgid "County"
+msgstr "Mein Konto"
+
+#: .\profiles\models.py:22
+msgid "Country"
+msgstr "Land"
+
+#: .\profiles\models.py:22
+msgid "Country *"
+msgstr "Land *"
+
+#: .\profiles\templates\profiles\profile.html:26
+#: .\templates\includes\navbar\account.html:25
+msgid "My Profile"
+msgstr "Profil"
+
+#: .\profiles\templates\profiles\profile.html:36
+msgid "Account Settings"
+msgstr "Kontoverbindungen"
+
+#: .\profiles\templates\profiles\profile.html:48
+msgid "Update Account"
+msgstr "Mein Konto"
+
+#: .\profiles\templates\profiles\profile.html:57
+msgid "Security"
+msgstr "Sicherheit"
+
+#: .\profiles\templates\profiles\profile.html:59
+msgid "Manage your password and sign-in settings."
+msgstr "Ihr Passwort wurde festgelegt."
+
+#: .\profiles\templates\profiles\profile.html:63
+#: .\templates\allauth\account\password_change.html:4
+#: .\templates\allauth\account\password_change.html:8
+#: .\templates\allauth\account\password_change.html:20
+#: .\templates\allauth\account\password_reset_from_key.html:5
+#: .\templates\allauth\account\password_reset_from_key.html:12
+#: .\templates\allauth\account\password_reset_from_key.html:30
+#: .\templates\allauth\account\password_reset_from_key_done.html:5
+#: .\templates\allauth\account\password_reset_from_key_done.html:9
+#: .\templates\allauth\allauth\layouts\base.html:37
 msgid "Change Password"
-msgstr ""
+msgstr "Kennwort ändern"
 
-#: .\templates\account\_settings_nav.html:5 .\templates\account\profile.html:25
-#: .\templates\socialaccount\connections.html:5
-#: .\templates\socialaccount\connections.html:9
-msgid "Account Connections"
-msgstr ""
+#: .\profiles\templates\profiles\profile.html:67
+msgid "Reset Password"
+msgstr "Setzen Sie mein Passwort zurück"
 
-#: .\templates\account\_settings_nav.html:8 .\templates\account\logout.html:5
-#: .\templates\account\logout.html:9 .\templates\account\logout.html:22
-msgid "Sign Out"
-msgstr ""
+#: .\profiles\templates\profiles\profile.html:71
+msgid "Manage Email Addresses"
+msgstr "E -Mail -Adressen"
 
-#: .\templates\account\account_inactive.html:5
-#: .\templates\account\account_inactive.html:9
+#: .\profiles\templates\profiles\profile.html:79
+msgid "Address & Delivery"
+msgstr "Adresse & Lieferung"
+
+#: .\profiles\templates\profiles\profile.html:85
+msgid "Default Delivery Information"
+msgstr "Standard -Lieferungsinformationen"
+
+#: .\profiles\templates\profiles\profile.html:98
+msgid "Update Address"
+msgstr "E-Mail-Adresse"
+
+#: .\profiles\templates\profiles\profile.html:110
+msgid "Order History"
+msgstr "Bestellungen"
+
+#: .\templates\allauth\account\account_inactive.html:5
+#: .\templates\allauth\account\account_inactive.html:9
 msgid "Account Inactive"
-msgstr ""
+msgstr "Konto inaktiv"
 
-#: .\templates\account\account_inactive.html:12
+#: .\templates\allauth\account\account_inactive.html:12
 msgid "This account is inactive."
-msgstr ""
+msgstr "Dieses Konto ist inaktiv."
 
-#: .\templates\account\base_confirm_code.html:27
+#: .\templates\allauth\account\base_confirm_code.html:27
 #, python-format
 msgid ""
 "We've sent a code to %(recipient)s. The code expires shortly, so please "
 "enter it soon."
 msgstr ""
+"Wir haben einen Code an gesendet%(recipient)s. Der Code läuft in Kürze ab. "
+"Bitte geben Sie ihn bald ein."
 
-#: .\templates\account\base_confirm_code.html:39
-#: .\templates\account\email_confirm.html:24
-#: .\templates\account\reauthenticate.html:18
+#: .\templates\allauth\account\base_confirm_code.html:39
+#: .\templates\allauth\account\email_confirm.html:24
+#: .\templates\allauth\account\reauthenticate.html:18
+#: .\templates\allauth\idp\oidc\device_authorization_confirm_form.html:26
+#: .\templates\allauth\mfa\reauthenticate.html:18
 msgid "Confirm"
-msgstr ""
+msgstr "Bestätigen"
 
-#: .\templates\account\base_confirm_code.html:43
+#: .\templates\allauth\account\base_confirm_code.html:43
 msgid "Request new code"
-msgstr ""
+msgstr "Neuen Code anfordern"
 
-#: .\templates\account\base_confirm_code.html:48
-#: .\templates\account\base_confirm_code.html:52
-#: .\templates\account\password_reset_from_key.html:33
+#: .\templates\allauth\account\base_confirm_code.html:48
+#: .\templates\allauth\account\base_confirm_code.html:52
+#: .\templates\allauth\account\password_reset_from_key.html:33
+#: .\templates\allauth\idp\oidc\authorization_form.html:26
+#: .\templates\allauth\mfa\authenticate.html:28
+#: .\templates\allauth\mfa\authenticate.html:44
+#: .\templates\allauth\mfa\trust.html:29
+#: .\templates\allauth\mfa\webauthn\signup_form.html:26
 msgid "Cancel"
-msgstr ""
+msgstr "Stornieren"
 
-#: .\templates\account\base_reauthenticate.html:5
-#: .\templates\account\base_reauthenticate.html:9
+#: .\templates\allauth\account\base_reauthenticate.html:5
+#: .\templates\allauth\account\base_reauthenticate.html:9
 msgid "Confirm Access"
-msgstr ""
+msgstr "Zugriff bestätigen"
 
-#: .\templates\account\base_reauthenticate.html:12
+#: .\templates\allauth\account\base_reauthenticate.html:12
 msgid "Please reauthenticate to safeguard your account."
-msgstr ""
+msgstr "Bitte erneut authentifizieren, um Ihr Konto zu schützen."
 
-#: .\templates\account\base_reauthenticate.html:19
+#: .\templates\allauth\account\base_reauthenticate.html:19
+#: .\templates\allauth\mfa\authenticate.html:37
 msgid "Alternative options"
-msgstr ""
+msgstr "Alternative Optionen"
 
-#: .\templates\account\confirm_email_verification_code.html:5
+#: .\templates\allauth\account\confirm_email_verification_code.html:5
 msgid "Email Verification"
-msgstr ""
+msgstr "E -Mail -Überprüfung"
 
-#: .\templates\account\confirm_email_verification_code.html:8
+#: .\templates\allauth\account\confirm_email_verification_code.html:8
 msgid "Enter Email Verification Code"
-msgstr ""
+msgstr "Geben Sie den E -Mail -Überprüfungscode ein"
 
-#: .\templates\account\confirm_email_verification_code.html:16
+#: .\templates\allauth\account\confirm_email_verification_code.html:16
 msgid "Use a different email address"
-msgstr ""
+msgstr "Verwenden Sie eine andere E -Mail -Adresse"
 
-#: .\templates\account\confirm_login_code.html:5
-#: .\templates\account\login.html:5 .\templates\account\login.html:9
-#: .\templates\account\login.html:31
-#: .\templates\account\request_login_code.html:5
-#: .\templates\socialaccount\login.html:5
-#: .\templates\socialaccount\login_redirect.html:5
+#: .\templates\allauth\account\confirm_login_code.html:5
+#: .\templates\allauth\account\login.html:4
+#: .\templates\allauth\account\login.html:5
+#: .\templates\allauth\account\login.html:18
+#: .\templates\allauth\account\request_login_code.html:5
+#: .\templates\allauth\account\signup.html:38
+#: .\templates\allauth\allauth\layouts\base.html:68
+#: .\templates\allauth\mfa\authenticate.html:6
+#: .\templates\allauth\mfa\authenticate.html:24
+#: .\templates\allauth\openid\login.html:5
+#: .\templates\allauth\openid\login.html:9
+#: .\templates\allauth\openid\login.html:20
+#: .\templates\allauth\socialaccount\login.html:4
+#: .\templates\allauth\socialaccount\login_redirect.html:5
 msgid "Sign In"
-msgstr ""
+msgstr "Anmelden"
 
-#: .\templates\account\confirm_login_code.html:8
+#: .\templates\allauth\account\confirm_login_code.html:8
 msgid "Enter Sign-In Code"
-msgstr ""
+msgstr "Geben Sie Anmeldescode ein"
 
-#: .\templates\account\confirm_password_reset_code.html:5
-#: .\templates\account\email\password_reset_subject.txt:3
-#: .\templates\account\password_reset.html:4
-#: .\templates\account\password_reset.html:8
-#: .\templates\account\password_reset_done.html:6
-#: .\templates\account\password_reset_done.html:10
+#: .\templates\allauth\account\confirm_password_reset_code.html:5
+#: .\templates\allauth\account\email\password_reset_subject.txt:3
+#: .\templates\allauth\account\password_reset.html:4
+#: .\templates\allauth\account\password_reset.html:8
+#: .\templates\allauth\account\password_reset_done.html:6
+#: .\templates\allauth\account\password_reset_done.html:10
 msgid "Password Reset"
-msgstr ""
+msgstr "Passwort zurücksetzen"
 
-#: .\templates\account\confirm_password_reset_code.html:8
+#: .\templates\allauth\account\confirm_password_reset_code.html:8
 msgid "Enter Password Reset Code"
-msgstr ""
+msgstr "Geben Sie den Code des Passworts zurücksetzen"
 
-#: .\templates\account\confirm_phone_verification_code.html:5
+#: .\templates\allauth\account\confirm_phone_verification_code.html:5
 msgid "Phone Verification"
-msgstr ""
+msgstr "Telefonüberprüfung"
 
-#: .\templates\account\confirm_phone_verification_code.html:8
+#: .\templates\allauth\account\confirm_phone_verification_code.html:8
 msgid "Enter Phone Verification Code"
-msgstr ""
+msgstr "Geben Sie den Telefonüberprüfungscode ein"
 
-#: .\templates\account\confirm_phone_verification_code.html:15
+#: .\templates\allauth\account\confirm_phone_verification_code.html:15
 msgid "Use a different phone number"
-msgstr ""
+msgstr "Verwenden Sie eine andere Telefonnummer"
 
-#: .\templates\account\email.html:4 .\templates\account\email.html:8
+#: .\templates\allauth\account\email.html:4
+#: .\templates\allauth\account\email.html:8
 msgid "Email Addresses"
-msgstr ""
+msgstr "E -Mail -Adressen"
 
-#: .\templates\account\email.html:12
+#: .\templates\allauth\account\email.html:12
 msgid "The following email addresses are associated with your account:"
-msgstr ""
+msgstr "Die folgenden E -Mail -Adressen sind Ihrem Konto zugeordnet:"
 
-#: .\templates\account\email.html:25
+#: .\templates\allauth\account\email.html:25
 msgid "Verified"
-msgstr ""
+msgstr "Verifiziert"
 
-#: .\templates\account\email.html:29
+#: .\templates\allauth\account\email.html:29
 msgid "Unverified"
-msgstr ""
+msgstr "Nicht überprüft"
 
-#: .\templates\account\email.html:34
+#: .\templates\allauth\account\email.html:34
 msgid "Primary"
-msgstr ""
+msgstr "Primär"
 
-#: .\templates\account\email.html:44
+#: .\templates\allauth\account\email.html:44
 msgid "Make Primary"
-msgstr ""
+msgstr "Primär machen"
 
-#: .\templates\account\email.html:47 .\templates\account\email_change.html:37
-#: .\templates\account\phone_change.html:24
+#: .\templates\allauth\account\email.html:47
+#: .\templates\allauth\account\email_change.html:37
+#: .\templates\allauth\account\phone_change.html:24
 msgid "Re-send Verification"
-msgstr ""
+msgstr "Überprüfung neu sendieren"
 
-#: .\templates\account\email.html:50
-#: .\templates\socialaccount\connections.html:40
+#: .\templates\allauth\account\email.html:50
+#: .\templates\allauth\mfa\webauthn\authenticator_confirm_delete.html:16
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:60
+#: .\templates\allauth\socialaccount\connections.html:40
 msgid "Remove"
-msgstr ""
+msgstr "Entfernen"
 
-#: .\templates\account\email.html:59
+#: .\templates\allauth\account\email.html:59
 msgid "Add Email Address"
-msgstr ""
+msgstr "E -Mail -Adresse hinzufügen"
 
-#: .\templates\account\email.html:70
+#: .\templates\allauth\account\email.html:70
 msgid "Add Email"
-msgstr ""
+msgstr "E -Mail hinzufügen"
 
-#: .\templates\account\email.html:80
+#: .\templates\allauth\account\email.html:80
 msgid "Do you really want to remove the selected email address?"
-msgstr ""
+msgstr "Möchten Sie die ausgewählte E -Mail -Adresse wirklich entfernen?"
 
-#: .\templates\account\email\account_already_exists_message.txt:4
+#: .\templates\allauth\account\email\account_already_exists_message.txt:4
 #, python-format
 msgid ""
 "You are receiving this email because you or someone else tried to signup for "
@@ -217,30 +363,41 @@ msgid ""
 "\n"
 "%(password_reset_url)s"
 msgstr ""
+"Sie erhalten diese E -Mail, weil Sie oder jemand anderes versucht haben, "
+"sich für eine anzumelden\n"
+"Konto über E -Mail -Adresse:%(email)sEs gibt jedoch bereits ein Konto, das "
+"diese E -Mail -Adresse verwendet.  Falls Sie haben\n"
+"Vergessen dies, bitte verwenden Sie das Passwort vergessene Prozedur, um "
+"sich wiederherzustellen\n"
+"Ihr Konto:%(password_reset_url)s"
 
-#: .\templates\account\email\account_already_exists_subject.txt:3
+#: .\templates\allauth\account\email\account_already_exists_subject.txt:3
 msgid "Account Already Exists"
-msgstr ""
+msgstr "Konto existiert bereits"
 
-#: .\templates\account\email\base_message.txt:1
+#: .\templates\allauth\account\email\base_message.txt:1
 #, python-format
 msgid "Hello from %(site_name)s!"
-msgstr ""
+msgstr "Hallo aus%(site_name)s!"
 
-#: .\templates\account\email\base_message.txt:5
+#: .\templates\allauth\account\email\base_message.txt:5
 #, python-format
 msgid ""
 "Thank you for using %(site_name)s!\n"
 "%(site_domain)s"
 msgstr ""
+"Vielen Dank für die Verwendung%(site_name)s!\n"
+"%(site_domain)s"
 
-#: .\templates\account\email\base_notification.txt:5
+#: .\templates\allauth\account\email\base_notification.txt:5
 msgid ""
 "You are receiving this mail because the following change was made to your "
 "account:"
 msgstr ""
+"Sie erhalten diese E -Mail, da die folgende Änderung an Ihrem Konto "
+"vorgenommen wurde:"
 
-#: .\templates\account\email\base_notification.txt:10
+#: .\templates\allauth\account\email\base_notification.txt:10
 #, python-format
 msgid ""
 "If you do not recognize this change then please take proper security "
@@ -250,466 +407,523 @@ msgid ""
 "- Browser: %(user_agent)s\n"
 "- Date: %(timestamp)s"
 msgstr ""
+"Wenn Sie diese Änderung nicht erkennen, treffen Sie bitte sofort die "
+"richtigen Sicherheitsvorkehrungen. Die Änderung Ihres Kontos stammt aus:\n"
+"\n"
+"- IP -Adresse:%(ip)s- Browser:%(user_agent)s- Datum:%(timestamp)s"
 
-#: .\templates\account\email\email_changed_message.txt:4
+#: .\templates\allauth\account\email\email_changed_message.txt:4
 #, python-format
 msgid "Your email has been changed from %(from_email)s to %(to_email)s."
-msgstr ""
+msgstr "Ihre E -Mail wurde von geändert%(from_email)sZu%(to_email)s."
 
-#: .\templates\account\email\email_changed_subject.txt:3
+#: .\templates\allauth\account\email\email_changed_subject.txt:3
 msgid "Email Changed"
-msgstr ""
+msgstr "E -Mail geändert"
 
-#: .\templates\account\email\email_confirm_message.txt:4
+#: .\templates\allauth\account\email\email_confirm_message.txt:4
 msgid "Your email has been confirmed."
-msgstr ""
+msgstr "Ihre E -Mail wurde bestätigt."
 
-#: .\templates\account\email\email_confirm_subject.txt:3
+#: .\templates\allauth\account\email\email_confirm_subject.txt:3
 msgid "Email Confirmation"
-msgstr ""
+msgstr "E -Mail -Bestätigung"
 
-#: .\templates\account\email\email_confirmation_message.txt:5
+#: .\templates\allauth\account\email\email_confirmation_message.txt:5
 #, python-format
 msgid ""
 "You're receiving this email because user %(user_display)s has given your "
 "email address to register an account on %(site_domain)s."
 msgstr ""
+"Sie erhalten diese E -Mail, weil Benutzer%(user_display)shat Ihre E -Mail "
+"-Adresse gegeben, um ein Konto zu registrieren%(site_domain)s."
 
-#: .\templates\account\email\email_confirmation_message.txt:7
+#: .\templates\allauth\account\email\email_confirmation_message.txt:7
 msgid ""
 "Your email verification code is listed below. Please enter it in your open "
 "browser window."
 msgstr ""
+"Ihr E -Mail -Überprüfungscode ist unten aufgeführt. Bitte geben Sie es in "
+"Ihr offenes Browserfenster ein."
 
-#: .\templates\account\email\email_confirmation_message.txt:9
+#: .\templates\allauth\account\email\email_confirmation_message.txt:9
 #, python-format
 msgid "To confirm this is correct, go to %(activate_url)s"
-msgstr ""
+msgstr "Um zu bestätigen, dass dies korrekt ist, gehen Sie zu%(activate_url)s"
 
-#: .\templates\account\email\email_confirmation_subject.txt:3
+#: .\templates\allauth\account\email\email_confirmation_subject.txt:3
 msgid "Please Confirm Your Email Address"
-msgstr ""
+msgstr "Bitte bestätigen Sie Ihre E -Mail -Adresse"
 
-#: .\templates\account\email\email_deleted_message.txt:4
+#: .\templates\allauth\account\email\email_deleted_message.txt:4
 #, python-format
 msgid "Email address %(deleted_email)s has been removed from your account."
-msgstr ""
+msgstr "E-Mail-Adresse%(deleted_email)swurde aus Ihrem Konto entfernt."
 
-#: .\templates\account\email\email_deleted_subject.txt:3
+#: .\templates\allauth\account\email\email_deleted_subject.txt:3
 msgid "Email Removed"
-msgstr ""
+msgstr "E -Mail entfernt"
 
-#: .\templates\account\email\login_code_message.txt:5
+#: .\templates\allauth\account\email\login_code_message.txt:5
 msgid ""
 "Your sign-in code is listed below. Please enter it in your open browser "
 "window."
 msgstr ""
+"Ihr Anmeldecode ist unten aufgeführt. Bitte geben Sie es in Ihr offenes "
+"Browserfenster ein."
 
-#: .\templates\account\email\login_code_message.txt:9
-#: .\templates\account\email\password_reset_code_message.txt:9
-#: .\templates\account\email\unknown_account_message.txt:6
+#: .\templates\allauth\account\email\login_code_message.txt:9
+#: .\templates\allauth\account\email\password_reset_code_message.txt:9
+#: .\templates\allauth\account\email\unknown_account_message.txt:6
 msgid "This mail can be safely ignored if you did not initiate this action."
 msgstr ""
+"Diese Mail kann sicher ignoriert werden, wenn Sie diese Aktion nicht "
+"eingeleitet haben."
 
-#: .\templates\account\email\login_code_subject.txt:3
+#: .\templates\allauth\account\email\login_code_subject.txt:3
 msgid "Sign-In Code"
-msgstr ""
+msgstr "Anmeldecode"
 
-#: .\templates\account\email\password_changed_message.txt:4
+#: .\templates\allauth\account\email\password_changed_message.txt:4
 msgid "Your password has been changed."
-msgstr ""
+msgstr "Ihr Passwort wurde geändert."
 
-#: .\templates\account\email\password_changed_subject.txt:3
+#: .\templates\allauth\account\email\password_changed_subject.txt:3
 msgid "Password Changed"
-msgstr ""
+msgstr "Passwort geändert"
 
-#: .\templates\account\email\password_reset_code_message.txt:5
+#: .\templates\allauth\account\email\password_reset_code_message.txt:5
 msgid ""
 "Your password reset code is listed below. Please enter it in your open "
 "browser window."
 msgstr ""
+"Ihr Passwort -Reset -Code ist unten aufgeführt. Bitte geben Sie es in Ihr "
+"offenes Browserfenster ein."
 
-#: .\templates\account\email\password_reset_code_subject.txt:3
+#: .\templates\allauth\account\email\password_reset_code_subject.txt:3
 msgid "Password Reset Code"
-msgstr ""
+msgstr "Passwort Reset Code"
 
-#: .\templates\account\email\password_reset_key_message.txt:4
+#: .\templates\allauth\account\email\password_reset_key_message.txt:4
 msgid ""
 "You're receiving this email because you or someone else has requested a "
 "password reset for your user account.\n"
 "It can be safely ignored if you did not request a password reset. Click the "
 "link below to reset your password."
 msgstr ""
+"Sie erhalten diese E -Mail, da Sie oder jemand anderes ein Kennwortreset für "
+"Ihr Benutzerkonto angefordert haben.\n"
+"Es kann sicher ignoriert werden, wenn Sie keinen Passwort zurücksetzen. "
+"Klicken Sie auf den Link unten, um Ihr Passwort zurückzusetzen."
 
-#: .\templates\account\email\password_reset_key_message.txt:9
+#: .\templates\allauth\account\email\password_reset_key_message.txt:9
 #, python-format
 msgid "In case you forgot, your username is %(username)s."
-msgstr ""
+msgstr "Falls Sie es vergessen haben, ist Ihr Benutzername%(username)s."
 
-#: .\templates\account\email\password_reset_key_subject.txt:3
+#: .\templates\allauth\account\email\password_reset_key_subject.txt:3
 msgid "Password Reset Email"
-msgstr ""
+msgstr "E -Mail zurücksetzen Passwort zurücksetzen"
 
-#: .\templates\account\email\password_reset_message.txt:4
+#: .\templates\allauth\account\email\password_reset_message.txt:4
 msgid "Your password has been reset."
-msgstr ""
+msgstr "Ihr Passwort wurde zurückgesetzt."
 
-#: .\templates\account\email\password_set_message.txt:4
+#: .\templates\allauth\account\email\password_set_message.txt:4
 msgid "Your password has been set."
-msgstr ""
+msgstr "Ihr Passwort wurde festgelegt."
 
-#: .\templates\account\email\password_set_subject.txt:3
+#: .\templates\allauth\account\email\password_set_subject.txt:3
 msgid "Password Set"
-msgstr ""
+msgstr "Passwort festgelegt"
 
-#: .\templates\account\email\unknown_account_message.txt:4
+#: .\templates\allauth\account\email\unknown_account_message.txt:4
 #, python-format
 msgid ""
 "You are receiving this email because you, or someone else, tried to access "
 "an account with email %(email)s. However, we do not have any record of such "
 "an account in our database."
 msgstr ""
+"Sie erhalten diese E -Mail, weil Sie oder jemand anderes versucht haben, mit "
+"E -Mail auf ein Konto zuzugreifen%(email)s. Wir haben jedoch keine "
+"Aufzeichnung eines solchen Kontos in unserer Datenbank."
 
-#: .\templates\account\email\unknown_account_message.txt:8
+#: .\templates\allauth\account\email\unknown_account_message.txt:8
 msgid "If it was you, you can sign up for an account using the link below."
 msgstr ""
+"Wenn Sie es waren, können Sie sich für ein Konto über den folgenden Link "
+"anmelden."
 
-#: .\templates\account\email\unknown_account_subject.txt:3
+#: .\templates\allauth\account\email\unknown_account_subject.txt:3
 msgid "Unknown Account"
-msgstr ""
+msgstr "Unbekanntes Konto"
 
-#: .\templates\account\email_change.html:5
-#: .\templates\account\email_change.html:9
+#: .\templates\allauth\account\email_change.html:5
+#: .\templates\allauth\account\email_change.html:9
 msgid "Email Address"
-msgstr ""
+msgstr "E-Mail-Adresse"
 
-#: .\templates\account\email_change.html:21
-#: .\templates\account\email_change.html:29
+#: .\templates\allauth\account\email_change.html:21
+#: .\templates\allauth\account\email_change.html:29
 msgid "Current email"
-msgstr ""
+msgstr "Aktuelle E -Mail"
 
-#: .\templates\account\email_change.html:31
+#: .\templates\allauth\account\email_change.html:31
 msgid "Changing to"
-msgstr ""
+msgstr "Wechseln zu"
 
-#: .\templates\account\email_change.html:35
+#: .\templates\allauth\account\email_change.html:35
 msgid "Your email address is still pending verification."
-msgstr ""
+msgstr "Ihre E -Mail -Adresse steht noch aus."
 
-#: .\templates\account\email_change.html:41
+#: .\templates\allauth\account\email_change.html:41
 msgid "Cancel Change"
-msgstr ""
+msgstr "Änderung abbrechen"
 
-#: .\templates\account\email_change.html:49
-#: .\templates\account\phone_change.html:32
+#: .\templates\allauth\account\email_change.html:49
+#: .\templates\allauth\account\phone_change.html:32
 msgid "Change to"
-msgstr ""
+msgstr "Wechseln zu"
 
-#: .\templates\account\email_confirm.html:6
-#: .\templates\account\email_confirm.html:10
+#: .\templates\allauth\account\email_change.html:55
+#: .\templates\allauth\allauth\layouts\base.html:31
+msgid "Change Email"
+msgstr "E -Mail ändern"
+
+#: .\templates\allauth\account\email_confirm.html:6
+#: .\templates\allauth\account\email_confirm.html:10
 msgid "Confirm Email Address"
-msgstr ""
+msgstr "e-Mail-Adresse bestätigen"
 
-#: .\templates\account\email_confirm.html:16
+#: .\templates\allauth\account\email_confirm.html:16
 #, python-format
 msgid ""
 "Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an email "
 "address for user %(user_display)s."
 msgstr ""
+"Bitte bestätigen Sie, dass <a href = \"Mailto:%(email)s\">%(email)s</a> ist "
+"eine E -Mail -Adresse für den Benutzer%(user_display)s."
 
-#: .\templates\account\email_confirm.html:30
-#: .\templates\account\messages\email_confirmation_failed.txt:2
+#: .\templates\allauth\account\email_confirm.html:30
+#: .\templates\allauth\account\messages\email_confirmation_failed.txt:2
 #, python-format
 msgid ""
 "Unable to confirm %(email)s because it is already confirmed by a different "
 "account."
 msgstr ""
+"Nicht zu bestätigen%(email)sWeil es bereits durch ein anderes Konto "
+"bestätigt wird."
 
-#: .\templates\account\email_confirm.html:36
+#: .\templates\allauth\account\email_confirm.html:36
 #, python-format
 msgid ""
 "This email confirmation link expired or is invalid. Please <a "
 "href=\"%(email_url)s\">issue a new email confirmation request</a>."
 msgstr ""
+"Dieser E -Mail -Bestätigungslink ist abgelaufen oder ist ungültig. Bitte <a "
+"href = \"%(email_url)s\"> Ausgeben eine neue E -Mail -Bestätigungsanfrage </"
+"a>."
 
-#: .\templates\account\login.html:19
-#, python-format
-msgid ""
-"If you have not created an account yet, then please %(link)ssign "
-"up%(end_link)s first."
+#: .\templates\allauth\account\login.html:8
+msgid "Use your email and password or sign in with a social account."
 msgstr ""
+"Verwenden Sie Ihre E -Mail und Ihr Passwort oder melden Sie sich bei einem "
+"sozialen Konto an."
 
-#: .\templates\account\login.html:42
-msgid "Sign in with a passkey"
-msgstr ""
+#: .\templates\allauth\account\login.html:23
+msgid "Create Account"
+msgstr "Mein Konto"
 
-#: .\templates\account\login.html:47
-#: .\templates\account\request_login_code.html:9
-msgid "Send me a sign-in code"
-msgstr ""
+#: .\templates\allauth\account\login.html:32
+msgid "or continue with"
+msgstr "oder weiter mit"
 
-#: .\templates\account\logout.html:12
+#: .\templates\allauth\account\logout.html:4
+#: .\templates\allauth\account\logout.html:8
+#: .\templates\allauth\account\logout.html:21
+#: .\templates\allauth\allauth\layouts\base.html:61
+#: .\templates\allauth\usersessions\usersession_list.html:76
+msgid "Sign Out"
+msgstr "Abmelden"
+
+#: .\templates\allauth\account\logout.html:11
 msgid "Are you sure you want to sign out?"
-msgstr ""
+msgstr "Sind Sie sicher, dass Sie sich anmelden möchten?"
 
-#: .\templates\account\messages\cannot_delete_primary_email.txt:2
+#: .\templates\allauth\account\messages\cannot_delete_primary_email.txt:2
 #, python-format
 msgid "You cannot remove your primary email address (%(email)s)."
-msgstr ""
+msgstr "Sie können Ihre primäre E -Mail -Adresse nicht entfernen (%(email)s)."
 
-#: .\templates\account\messages\email_confirmation_sent.txt:2
+#: .\templates\allauth\account\messages\email_confirmation_sent.txt:2
 #, python-format
 msgid "Confirmation email sent to %(email)s."
-msgstr ""
+msgstr "Bestätigungs -E -Mail gesendet an%(email)s."
 
-#: .\templates\account\messages\email_confirmed.txt:2
+#: .\templates\allauth\account\messages\email_confirmed.txt:2
 #, python-format
 msgid "You have confirmed %(email)s."
-msgstr ""
+msgstr "Sie haben bestätigt%(email)s."
 
-#: .\templates\account\messages\email_deleted.txt:2
+#: .\templates\allauth\account\messages\email_deleted.txt:2
 #, python-format
 msgid "Removed email address %(email)s."
-msgstr ""
+msgstr "E -Mail -Adresse entfernt%(email)s."
 
-#: .\templates\account\messages\logged_in.txt:4
+#: .\templates\allauth\account\messages\logged_in.txt:4
 #, python-format
 msgid "Successfully signed in as %(name)s."
-msgstr ""
+msgstr "Erfolgreich unterschrieben in als%(name)s."
 
-#: .\templates\account\messages\logged_out.txt:2
+#: .\templates\allauth\account\messages\logged_out.txt:2
 msgid "You have signed out."
-msgstr ""
+msgstr "Sie haben sich angemeldet."
 
-#: .\templates\account\messages\login_code_sent.txt:2
+#: .\templates\allauth\account\messages\login_code_sent.txt:2
 #, python-format
 msgid "A sign-in code has been sent to %(recipient)s."
-msgstr ""
+msgstr "Ein Anmeldecode wurde an gesendet%(recipient)s."
 
-#: .\templates\account\messages\password_changed.txt:2
+#: .\templates\allauth\account\messages\password_changed.txt:2
 msgid "Password successfully changed."
-msgstr ""
+msgstr "Passwort erfolgreich geändert."
 
-#: .\templates\account\messages\password_set.txt:2
+#: .\templates\allauth\account\messages\password_set.txt:2
 msgid "Password successfully set."
-msgstr ""
+msgstr "Passwort erfolgreich eingestellt."
 
-#: .\templates\account\messages\phone_verification_sent.txt:2
+#: .\templates\allauth\account\messages\phone_verification_sent.txt:2
 #, python-format
 msgid "A verification code has been sent to %(phone)s."
-msgstr ""
+msgstr "Ein Verifizierungscode wurde an gesendet an gesendet%(phone)s."
 
-#: .\templates\account\messages\phone_verified.txt:2
+#: .\templates\allauth\account\messages\phone_verified.txt:2
 #, python-format
 msgid "You have verified phone number %(phone)s."
-msgstr ""
+msgstr "Sie haben die Telefonnummer überprüft%(phone)s."
 
-#: .\templates\account\messages\primary_email_set.txt:2
+#: .\templates\allauth\account\messages\primary_email_set.txt:2
 msgid "Primary email address set."
-msgstr ""
+msgstr "Primärer E -Mail -Adresse gesetzt."
 
-#: .\templates\account\messages\unverified_primary_email.txt:2
+#: .\templates\allauth\account\messages\unverified_primary_email.txt:2
 msgid "Your primary email address must be verified."
-msgstr ""
+msgstr "Ihre primäre E -Mail -Adresse muss überprüft werden."
 
-#: .\templates\account\password_change.html:22
+#: .\templates\allauth\account\password_change.html:22
 msgid "Forgot Password?"
-msgstr ""
+msgstr "Passwort vergessen?"
 
-#: .\templates\account\password_reset.html:14
+#: .\templates\allauth\account\password_reset.html:14
 msgid ""
 "Forgotten your password? Enter your email address below, and we'll send you "
 "an email allowing you to reset it."
 msgstr ""
+"Ihr Passwort vergessen? Geben Sie unten Ihre E -Mail -Adresse ein und wir "
+"senden Ihnen eine E -Mail, mit der Sie sie zurücksetzen können."
 
-#: .\templates\account\password_reset.html:26
+#: .\templates\allauth\account\password_reset.html:26
 msgid "Reset My Password"
-msgstr ""
+msgstr "Setzen Sie mein Passwort zurück"
 
-#: .\templates\account\password_reset.html:31
+#: .\templates\allauth\account\password_reset.html:31
 msgid "Please contact us if you have any trouble resetting your password."
 msgstr ""
+"Bitte kontaktieren Sie uns, wenn Sie Probleme haben, Ihr Passwort "
+"zurückzusetzen."
 
-#: .\templates\account\password_reset_done.html:16
+#: .\templates\allauth\account\password_reset_done.html:16
 msgid ""
 "We have sent you an email. If you have not received it please check your "
 "spam folder. Otherwise contact us if you do not receive it in a few minutes."
 msgstr ""
+"Wir haben Ihnen eine E -Mail geschickt. Wenn Sie es nicht erhalten haben, "
+"überprüfen Sie bitte Ihren Spam -Ordner. Andernfalls kontaktieren Sie uns, "
+"wenn Sie es nicht in wenigen Minuten erhalten."
 
-#: .\templates\account\password_reset_from_key.html:10
+#: .\templates\allauth\account\password_reset_from_key.html:10
 msgid "Bad Token"
-msgstr ""
+msgstr "Schlechtes Token"
 
-#: .\templates\account\password_reset_from_key.html:18
+#: .\templates\allauth\account\password_reset_from_key.html:18
 #, python-format
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
 "used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
 "a>."
 msgstr ""
+"Der Link zum Zurücksetzen des Kennworts war ungültig, möglicherweise weil er "
+"bereits verwendet wurde.  Bitte fordern Sie ein <a href = "
+"\"%(passwd_reset_url)s\"> Neues Passwort Reset </a>."
 
-#: .\templates\account\password_reset_from_key_done.html:12
+#: .\templates\allauth\account\password_reset_from_key_done.html:12
 msgid "Your password is now changed."
-msgstr ""
+msgstr "Ihr Passwort wird jetzt geändert."
 
-#: .\templates\account\password_set.html:5
-#: .\templates\account\password_set.html:9
-#: .\templates\account\password_set.html:21
+#: .\templates\allauth\account\password_set.html:5
+#: .\templates\allauth\account\password_set.html:9
+#: .\templates\allauth\account\password_set.html:21
 msgid "Set Password"
-msgstr ""
+msgstr "Passwort festlegen"
 
-#: .\templates\account\phone_change.html:5
-#: .\templates\account\phone_change.html:9
-#: .\templates\account\phone_change.html:38
+#: .\templates\allauth\account\phone_change.html:5
+#: .\templates\allauth\account\phone_change.html:9
+#: .\templates\allauth\account\phone_change.html:38
 msgid "Change Phone"
-msgstr ""
+msgstr "Telefon ändern"
 
-#: .\templates\account\phone_change.html:18
+#: .\templates\allauth\account\phone_change.html:18
 msgid "Current phone"
-msgstr ""
+msgstr "Aktuelles Telefon"
 
-#: .\templates\account\phone_change.html:22
+#: .\templates\allauth\account\phone_change.html:22
 msgid "Your phone number is still pending verification."
-msgstr ""
+msgstr "Ihre Telefonnummer steht noch aus."
 
-#: .\templates\account\profile.html:3
-msgid "Profile"
-msgstr "Profil"
-
-#: .\templates\account\profile.html:11
-msgid "Your Profile"
-msgstr "Dein Profil"
-
-#: .\templates\account\profile.html:13
-msgid "Name"
-msgstr "Name"
-
-#: .\templates\account\profile.html:14
-msgid "Phone"
-msgstr "Telefon"
-
-#: .\templates\account\profile.html:15
-msgid "Username"
-msgstr "Benutzername"
-
-#: .\templates\account\profile.html:16
-msgid "Email"
-msgstr "E‑Mail"
-
-#: .\templates\account\profile.html:17
-msgid "Address"
-msgstr "Adresse"
-
-#: .\templates\account\profile.html:18
-msgid "Date Joined"
-msgstr "Beitrittsdatum"
-
-#: .\templates\account\profile.html:19
-msgid "Orders"
-msgstr "Bestellungen"
-
-#: .\templates\account\profile.html:23
-msgid "Manage Emails"
-msgstr ""
-
-#: .\templates\account\reauthenticate.html:6
+#: .\templates\allauth\account\reauthenticate.html:6
 msgid "Enter your password:"
-msgstr ""
+msgstr "Geben Sie Ihr Passwort ein:"
 
-#: .\templates\account\request_login_code.html:12
+#: .\templates\allauth\account\request_login_code.html:9
+msgid "Send me a sign-in code"
+msgstr "Senden Sie mir einen Anmeldecode"
+
+#: .\templates\allauth\account\request_login_code.html:12
 msgid "You will receive a special code for a password-free sign-in."
-msgstr ""
+msgstr "Sie erhalten einen speziellen Code für eine passwortfreie Anmeldung."
 
-#: .\templates\account\request_login_code.html:24
+#: .\templates\allauth\account\request_login_code.html:24
 msgid "Request Code"
-msgstr ""
+msgstr "Anforderungscode"
 
-#: .\templates\account\request_login_code.html:30
+#: .\templates\allauth\account\request_login_code.html:30
 msgid "Other sign-in options"
-msgstr ""
+msgstr "Andere Anmeldeoptionen"
 
-#: .\templates\account\signup.html:5
-#: .\templates\account\signup_by_passkey.html:4
-#: .\templates\socialaccount\signup.html:5
-msgid "Signup"
-msgstr ""
-
-#: .\templates\account\signup.html:9 .\templates\account\signup.html:31
-#: .\templates\account\signup_by_passkey.html:29
-#: .\templates\socialaccount\signup.html:9
-#: .\templates\socialaccount\signup.html:25
+#: .\templates\allauth\account\signup.html:4
+#: .\templates\allauth\account\signup.html:33
+#: .\templates\allauth\account\signup_by_passkey.html:29
+#: .\templates\allauth\allauth\layouts\base.html:74
 msgid "Sign Up"
-msgstr ""
+msgstr "Melden Sie sich an"
 
-#: .\templates\account\signup.html:18
-#: .\templates\account\signup_by_passkey.html:17
+#: .\templates\allauth\account\signup.html:5
+msgid "Create your account"
+msgstr "Erstellen Sie Ihr Konto"
+
+#: .\templates\allauth\account\signup.html:18
+msgid "Show password rules"
+msgstr "Passwort zurücksetzen"
+
+#: .\templates\allauth\account\signup.html:23
+#: .\templates\allauth\socialaccount\signup.html:31
+msgid "Your password can’t be too similar to your other personal information."
+msgstr ""
+"Ihr Passwort kann Ihren anderen persönlichen Daten nicht zu ähnlich sein."
+
+#: .\templates\allauth\account\signup.html:24
+#: .\templates\allauth\socialaccount\signup.html:32
+msgid "Your password must contain at least 8 characters."
+msgstr "Ihr Passwort muss mindestens 8 Zeichen enthalten."
+
+#: .\templates\allauth\account\signup.html:25
+#: .\templates\allauth\socialaccount\signup.html:33
+msgid "Your password can’t be a commonly used password."
+msgstr "Ihr Passwort kann kein häufig verwendetes Passwort sein."
+
+#: .\templates\allauth\account\signup.html:26
+#: .\templates\allauth\socialaccount\signup.html:34
+msgid "Your password can’t be entirely numeric."
+msgstr "Ihr Passwort wurde zurückgesetzt."
+
+#: .\templates\allauth\account\signup.html:37
+msgid "Already have an account?"
+msgstr "Haben Sie bereits ein Konto?"
+
+#: .\templates\allauth\account\signup.html:46
+msgid "or sign up with"
+msgstr "oder a&en mit"
+
+#: .\templates\allauth\account\signup_by_passkey.html:4
+#: .\templates\allauth\socialaccount\signup.html:4
+msgid "Signup"
+msgstr "Melden Sie sich an"
+
+#: .\templates\allauth\account\signup_by_passkey.html:8
+msgid "Passkey Sign Up"
+msgstr "PassKey melden sich an"
+
+#: .\templates\allauth\account\signup_by_passkey.html:17
 #, python-format
 msgid "Already have an account? Then please %(link)ssign in%(end_link)s."
-msgstr ""
+msgstr "Haben &ereits ein Konto? Dann bitte%(link)sanmelden%(end_link)s."
 
-#: .\templates\account\signup.html:40
-msgid "Sign up using a passkey"
-msgstr ""
-
-#: .\templates\account\signup_by_passkey.html:8
-msgid "Passkey Sign Up"
-msgstr ""
-
-#: .\templates\account\signup_by_passkey.html:36
+#: .\templates\allauth\account\signup_by_passkey.html:36
 msgid "Other options"
-msgstr ""
+msgstr "Andere Optionen"
 
-#: .\templates\account\signup_closed.html:5
-#: .\templates\account\signup_closed.html:9
+#: .\templates\allauth\account\signup_closed.html:5
+#: .\templates\allauth\account\signup_closed.html:9
 msgid "Sign Up Closed"
-msgstr ""
+msgstr "Melden Sie sich geschlossen an"
 
-#: .\templates\account\signup_closed.html:12
+#: .\templates\allauth\account\signup_closed.html:12
 msgid "We are sorry, but the sign up is currently closed."
-msgstr ""
+msgstr "Es tut uns leid, aber die Anmeldung ist derzeit geschlossen."
 
-#: .\templates\account\snippets\already_logged_in.html:7
+#: .\templates\allauth\account\snippets\already_logged_in.html:7
 msgid "Note"
-msgstr ""
+msgstr "Notiz"
 
-#: .\templates\account\snippets\already_logged_in.html:7
+#: .\templates\allauth\account\snippets\already_logged_in.html:7
 #, python-format
 msgid "You are already logged in as %(user_display)s."
-msgstr ""
+msgstr "Sie sind bereits angemeldet wie%(user_display)s."
 
-#: .\templates\account\snippets\warn_no_email.html:3
+#: .\templates\allauth\account\snippets\warn_no_email.html:3
 msgid "Warning:"
-msgstr ""
+msgstr "Warnung:"
 
-#: .\templates\account\snippets\warn_no_email.html:3
+#: .\templates\allauth\account\snippets\warn_no_email.html:3
 msgid ""
 "You currently do not have any email address set up. You should really add an "
 "email address so you can receive notifications, reset your password, etc."
 msgstr ""
+"Sie haben derzeit keine E -Mail -Adresse eingerichtet. Sie sollten wirklich "
+"eine E -Mail -Adresse hinzufügen, damit Sie Benachrichtigungen erhalten, Ihr "
+"Passwort zurücksetzen können."
 
-#: .\templates\account\verification_sent.html:5
-#: .\templates\account\verification_sent.html:9
-#: .\templates\account\verified_email_required.html:5
-#: .\templates\account\verified_email_required.html:9
+#: .\templates\allauth\account\verification_sent.html:5
+#: .\templates\allauth\account\verification_sent.html:9
+#: .\templates\allauth\account\verified_email_required.html:5
+#: .\templates\allauth\account\verified_email_required.html:9
 msgid "Verify Your Email Address"
-msgstr ""
+msgstr "Überprüfen Sie Ihre E -Mail -Adresse"
 
-#: .\templates\account\verification_sent.html:12
+#: .\templates\allauth\account\verification_sent.html:12
 msgid ""
 "We have sent an email to you for verification. Follow the link provided to "
 "finalize the signup process. If you do not see the verification email in "
 "your main inbox, check your spam folder. Please contact us if you do not "
 "receive the verification email within a few minutes."
 msgstr ""
+"Wir haben Ihnen eine E -Mail zur Überprüfung gesendet. Befolgen Sie den "
+"Link, der bereitgestellt wurde, um den Anmeldungsprozess abzuschließen. Wenn "
+"Sie die Überprüfungs -E -Mail in Ihrem Haupt -Posteingang nicht sehen, "
+"überprüfen Sie Ihren Spam -Ordner. Bitte kontaktieren Sie uns, wenn Sie die "
+"Überprüfungs -E -Mail nicht innerhalb weniger Minuten erhalten."
 
-#: .\templates\account\verified_email_required.html:13
+#: .\templates\allauth\account\verified_email_required.html:13
 msgid ""
 "This part of the site requires us to verify that\n"
 "you are who you claim to be. For this purpose, we require that you\n"
 "verify ownership of your email address. "
 msgstr ""
+"In diesem Teil der Website müssen wir dies überprüfen\n"
+"Sie sind der, der Sie behaupten. Zu diesem Zweck verlangen wir, dass Sie\n"
+"Überprüfen Sie den Eigentum an Ihrer E -Mail -Adresse."
 
-#: .\templates\account\verified_email_required.html:18
+#: .\templates\allauth\account\verified_email_required.html:18
 msgid ""
 "We have sent an email to you for\n"
 "verification. Please click on the link inside that email. If you do not see "
@@ -717,189 +931,785 @@ msgid ""
 "Otherwise\n"
 "contact us if you do not receive it within a few minutes."
 msgstr ""
+"Wir haben Ihnen eine E -Mail gesendet\n"
+"Überprüfung. Bitte klicken Sie in dieser E -Mail auf den Link. Wenn Sie die "
+"Überprüfungs -E -Mail in Ihrem Haupt -Posteingang nicht sehen, überprüfen "
+"Sie Ihren Spam -Ordner. Ansonsten\n"
+"Kontaktieren Sie uns, wenn Sie es nicht innerhalb weniger Minuten erhalten."
 
-#: .\templates\account\verified_email_required.html:23
+#: .\templates\allauth\account\verified_email_required.html:23
 #, python-format
 msgid ""
 "<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your "
 "email address</a>."
 msgstr ""
+"<strong> Hinweis: </strong> Sie können immer noch <a href = "
+"\"%(email_url)s\"> Ändern Sie Ihre E -Mail -Adresse </a>."
 
-#: .\templates\base.html:10
-msgid "Your online flea market"
-msgstr ""
+#: .\templates\allauth\allauth\layouts\base.html:18
+msgid "Messages:"
+msgstr "Nachrichten:"
 
-#: .\templates\pages\about.html:2 .\templates\pages\about.html:4
-#: .\templates\partials\footer.html:6 .\templates\partials\navbar.html:31
-msgid "About"
-msgstr "Über uns"
+#: .\templates\allauth\allauth\layouts\base.html:25
+msgid "Menu:"
+msgstr "Speisekarte:"
 
-#: .\templates\pages\about.html:5
-msgid "We are a community-driven online flea market."
-msgstr "Wir sind ein gemeinschaftsgetriebener Online‑Flohmarkt."
+#: .\templates\allauth\allauth\layouts\base.html:43
+#: .\templates\allauth\socialaccount\connections.html:5
+#: .\templates\allauth\socialaccount\connections.html:9
+msgid "Account Connections"
+msgstr "Kontoverbindungen"
 
-#: .\templates\pages\contact.html:2 .\templates\pages\contact.html:4
-#: .\templates\partials\footer.html:7 .\templates\partials\navbar.html:37
-msgid "Contact"
-msgstr "Kontakt"
+#: .\templates\allauth\allauth\layouts\base.html:49
+#: .\templates\allauth\mfa\authenticate.html:10
+#: .\templates\allauth\mfa\index.html:5 .\templates\allauth\mfa\index.html:9
+msgid "Two-Factor Authentication"
+msgstr "Zwei-Faktor-Authentifizierung"
 
-#: .\templates\pages\contact.html:5
-msgid "Reach us via the form or email."
-msgstr "Erreiche uns über das Formular oder per E‑Mail."
+#: .\templates\allauth\allauth\layouts\base.html:55
+#: .\templates\allauth\usersessions\usersession_list.html:6
+#: .\templates\allauth\usersessions\usersession_list.html:10
+msgid "Sessions"
+msgstr "Sitzungen"
 
-#: .\templates\partials\footer.html:4
-msgid "All rights reserved"
-msgstr "Alle Rechte vorbehalten"
-
-#: .\templates\partials\footer.html:8
-msgid "Privacy"
-msgstr ""
-
-#: .\templates\partials\footer.html:9
-msgid "Terms"
-msgstr ""
-
-#: .\templates\partials\navbar.html:8
-msgid "FloMarkt24"
-msgstr ""
-
-#: .\templates\partials\navbar.html:14
-msgid "Toggle navigation"
-msgstr ""
-
-#: .\templates\partials\navbar.html:25
-msgid "Home"
-msgstr ""
-
-#: .\templates\partials\navbar.html:45
-msgid "Search our site"
-msgstr ""
-
-#: .\templates\partials\navbar.html:83
-msgid "My Account"
+#: .\templates\allauth\base.html:17
+msgid "Account"
 msgstr "Mein Konto"
 
-#: .\templates\partials\navbar.html:88
-msgid "Product Management"
-msgstr "Produktmanagement"
+#: .\templates\allauth\base.html:20
+msgid "Please proceed to continue."
+msgstr "Bitte fahren Sie fort, um weiterzumachen."
 
-#: .\templates\partials\navbar.html:93
-#, fuzzy
-#| msgid "Profile"
-msgid "My Profile"
-msgstr "Profil"
+#: .\templates\allauth\base.html:28
+msgid "By continuing you agree to our"
+msgstr "Wenn Sie fortfahren, stimmen Sie unserem zu"
 
-#: .\templates\partials\navbar.html:98
-msgid "Logout"
-msgstr "Abmelden"
+#: .\templates\allauth\base.html:29 .\templates\includes\footer.html:21
+msgid "Terms"
+msgstr "Bedingungen"
 
-#: .\templates\partials\navbar.html:101
-msgid "Login"
-msgstr "Anmelden"
+#: .\templates\allauth\base.html:30
+msgid "and"
+msgstr "Und"
 
-#: .\templates\partials\navbar.html:102
-msgid "Register"
-msgstr "Registrieren"
+#: .\templates\allauth\idp\oidc\authorization_form.html:5
+#: .\templates\allauth\idp\oidc\authorization_form.html:9
+#: .\templates\allauth\idp\oidc\authorization_form.html:23
+#: .\templates\allauth\idp\oidc\device_authorization_code_form.html:5
+#: .\templates\allauth\idp\oidc\device_authorization_confirm_form.html:5
+#: .\templates\allauth\idp\oidc\device_authorization_confirmed.html:5
+#: .\templates\allauth\idp\oidc\device_authorization_denied.html:5
+msgid "Authorize"
+msgstr "Autorisieren"
 
-#: .\templates\socialaccount\authentication_error.html:5
-#: .\templates\socialaccount\authentication_error.html:9
-msgid "Third-Party Login Failure"
+#: .\templates\allauth\idp\oidc\authorization_form.html:12
+#, python-format
+msgid "%(client_name)s wants to access your %(site_name)s account."
+msgstr "%(client_name)swill auf deine zugreifen%(site_name)sKonto."
+
+#: .\templates\allauth\idp\oidc\device_authorization_code_form.html:9
+msgid "Enter Device Code"
+msgstr "Geben Sie Anmeldescode ein"
+
+#: .\templates\allauth\idp\oidc\device_authorization_code_form.html:12
+msgid "Enter the code displayed on your device."
+msgstr "Geben Sie den auf Ihrem Gerät angezeigten Code ein."
+
+#: .\templates\allauth\idp\oidc\device_authorization_code_form.html:21
+#: .\templates\allauth\socialaccount\login.html:21
+#: .\templates\allauth\socialaccount\login_redirect.html:10
+#: .\templates\allauth\socialaccount\signup.html:41
+msgid "Continue"
+msgstr "Weitermachen"
+
+#: .\templates\allauth\idp\oidc\device_authorization_confirm_form.html:9
+msgid "Confirm Device"
+msgstr "Zugriff bestätigen"
+
+#: .\templates\allauth\idp\oidc\device_authorization_confirm_form.html:12
+#, python-format
+msgid ""
+"Please confirm the code shown on your %(client_name)s to authorize this "
+"device."
+msgstr ""
+"Bitte bestätigen Sie den in Ihrem angegebenen Code%(client_name)sum dieses "
+"Gerät zu autorisieren."
+
+#: .\templates\allauth\idp\oidc\device_authorization_confirm_form.html:16
+msgid "Code"
 msgstr ""
 
-#: .\templates\socialaccount\authentication_error.html:12
+#: .\templates\allauth\idp\oidc\device_authorization_confirm_form.html:29
+msgid "Deny"
+msgstr "Leugnen"
+
+#: .\templates\allauth\idp\oidc\device_authorization_confirmed.html:9
+msgid "Device Authorized"
+msgstr "Gerät autorisiert"
+
+#: .\templates\allauth\idp\oidc\device_authorization_confirmed.html:12
+#, python-format
+msgid "You successfully authorized your %(client_name)s device."
+msgstr "Sie haben Ihre erfolgreich autorisiert%(client_name)sGerät."
+
+#: .\templates\allauth\idp\oidc\device_authorization_denied.html:9
+msgid "Device Denied"
+msgstr "Gerät verweigert"
+
+#: .\templates\allauth\idp\oidc\device_authorization_denied.html:12
+#, python-format
+msgid "Authorization for your %(client_name)s device has been denied."
+msgstr "Autorisierung für Ihre%(client_name)sDas Gerät wurde abgelehnt."
+
+#: .\templates\allauth\idp\oidc\error.html:5
+#: .\templates\allauth\idp\oidc\error.html:9
+msgid "Error"
+msgstr "Fehler"
+
+#: .\templates\allauth\mfa\authenticate.html:13
+msgid ""
+"Your account is protected by two-factor authentication. Please enter an "
+"authenticator code:"
+msgstr ""
+"Ihr Konto ist durch die Zwei-Faktor-Authentifizierung geschützt. Bitte geben "
+"Sie einen Authentikatorcode ein:"
+
+#: .\templates\allauth\mfa\authenticate.html:41
+#: .\templates\allauth\mfa\webauthn\reauthenticate.html:15
+msgid "Use a security key"
+msgstr "Verwenden Sie einen Sicherheitsschlüssel"
+
+#: .\templates\allauth\mfa\email\recovery_codes_generated_message.txt:4
+msgid ""
+"A new set of Two-Factor Authentication recovery codes has been generated."
+msgstr ""
+"Es wurde ein neuer Satz von Zwei-Faktor-Authentifizierungs-"
+"Wiederherstellungscodes generiert."
+
+#: .\templates\allauth\mfa\email\recovery_codes_generated_subject.txt:3
+msgid "New Recovery Codes Generated"
+msgstr "Neue Wiederherstellungscodes erzeugt"
+
+#: .\templates\allauth\mfa\email\totp_activated_message.txt:4
+#: .\templates\allauth\mfa\messages\totp_activated.txt:2
+msgid "Authenticator app activated."
+msgstr "Authenticator App aktiviert."
+
+#: .\templates\allauth\mfa\email\totp_activated_subject.txt:3
+msgid "Authenticator App Activated"
+msgstr "Authenticator App aktiviert"
+
+#: .\templates\allauth\mfa\email\totp_deactivated_message.txt:4
+#: .\templates\allauth\mfa\messages\totp_deactivated.txt:2
+msgid "Authenticator app deactivated."
+msgstr "Authentikator -App deaktiviert."
+
+#: .\templates\allauth\mfa\email\totp_deactivated_subject.txt:3
+msgid "Authenticator App Deactivated"
+msgstr "Authentikator -App deaktiviert"
+
+#: .\templates\allauth\mfa\email\webauthn_added_message.txt:4
+msgid "A new security key has been added."
+msgstr "Ein neuer Sicherheitsschlüssel wurde hinzugefügt."
+
+#: .\templates\allauth\mfa\email\webauthn_added_subject.txt:3
+msgid "Security Key Added"
+msgstr "Sicherheitsschlüssel hinzugefügt"
+
+#: .\templates\allauth\mfa\email\webauthn_removed_message.txt:4
+msgid "A security key has been removed."
+msgstr "Ihre E -Mail wurde bestätigt."
+
+#: .\templates\allauth\mfa\email\webauthn_removed_subject.txt:3
+msgid "Security Key Removed"
+msgstr "Sicherheitsschlüssel entfernt"
+
+#: .\templates\allauth\mfa\index.html:14
+#: .\templates\allauth\mfa\totp\base.html:4
+msgid "Authenticator App"
+msgstr ""
+
+#: .\templates\allauth\mfa\index.html:19
+msgid "Authentication using an authenticator app is active."
+msgstr "Die Authentifizierung mit einer Authentikatoren -App ist aktiv."
+
+#: .\templates\allauth\mfa\index.html:23
+msgid "An authenticator app is not active."
+msgstr "Eine Authentikatoren -App ist nicht aktiv."
+
+#: .\templates\allauth\mfa\index.html:32
+#: .\templates\allauth\mfa\totp\deactivate_form.html:24
+msgid "Deactivate"
+msgstr "Deaktivieren"
+
+#: .\templates\allauth\mfa\index.html:36
+#: .\templates\allauth\mfa\totp\activate_form.html:32
+msgid "Activate"
+msgstr "Aktivieren"
+
+#: .\templates\allauth\mfa\index.html:45
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:8
+#: .\templates\allauth\mfa\webauthn\base.html:4
+msgid "Security Keys"
+msgstr "Sicherheitsschlüssel"
+
+#: .\templates\allauth\mfa\index.html:50
+#, python-format
+msgid "You have added %(count)s security key."
+msgid_plural "You have added %(count)s security keys."
+msgstr[0] "Sie haben hinzugefügt%(count)sSicherheitsschlüssel."
+msgstr[1] "Sie haben hinzugefügt%(count)sSicherheitsschlüssel."
+
+#: .\templates\allauth\mfa\index.html:54
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:12
+msgid "No security keys have been added."
+msgstr "Es wurden keine Sicherheitsschlüssel hinzugefügt."
+
+#: .\templates\allauth\mfa\index.html:62
+msgid "Manage"
+msgstr "E -Mails verwalten"
+
+#: .\templates\allauth\mfa\index.html:67
+#: .\templates\allauth\mfa\webauthn\add_form.html:18
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:70
+msgid "Add"
+msgstr "Adresse"
+
+#: .\templates\allauth\mfa\index.html:77
+#: .\templates\allauth\mfa\recovery_codes\base.html:4
+#: .\templates\allauth\mfa\recovery_codes\generate.html:6
+#: .\templates\allauth\mfa\recovery_codes\index.html:6
+msgid "Recovery Codes"
+msgstr "Anforderungscode"
+
+#: .\templates\allauth\mfa\index.html:82
+#: .\templates\allauth\mfa\recovery_codes\index.html:9
+#, python-format
+msgid ""
+"There is %(unused_count)s out of %(total_count)s recovery codes available."
+msgid_plural ""
+"There are %(unused_count)s out of %(total_count)s recovery codes available."
+msgstr[0] ""
+"Es gibt%(unused_count)svon%(total_count)sWiederherstellungscodes verfügbar."
+msgstr[1] ""
+"Es gibt%(unused_count)svon%(total_count)sWiederherstellungscodes verfügbar."
+
+#: .\templates\allauth\mfa\index.html:86
+msgid "No recovery codes set up."
+msgstr "Keine Wiederherstellungscodes eingerichtet."
+
+#: .\templates\allauth\mfa\index.html:96
+msgid "View"
+msgstr "Sicht"
+
+#: .\templates\allauth\mfa\index.html:102
+msgid "Download"
+msgstr "Herunterladen"
+
+#: .\templates\allauth\mfa\index.html:110
+#: .\templates\allauth\mfa\recovery_codes\generate.html:29
+msgid "Generate"
+msgstr "Erzeugen"
+
+#: .\templates\allauth\mfa\messages\recovery_codes_generated.txt:2
+msgid "A new set of recovery codes has been generated."
+msgstr "Es wurde ein neuer Satz von Wiederherstellungscodes generiert."
+
+#: .\templates\allauth\mfa\messages\webauthn_added.txt:2
+msgid "Security key added."
+msgstr "Sicherheitsschlüssel hinzugefügt."
+
+#: .\templates\allauth\mfa\messages\webauthn_removed.txt:2
+msgid "Security key removed."
+msgstr "Sicherheitsschlüssel entfernt."
+
+#: .\templates\allauth\mfa\reauthenticate.html:6
+msgid "Enter an authenticator code:"
+msgstr "Geben Sie den E -Mail -Überprüfungscode ein"
+
+#: .\templates\allauth\mfa\recovery_codes\generate.html:9
+msgid "You are about to generate a new set of recovery codes for your account."
+msgstr ""
+"Sie sind kurz davor, einen neuen Satz von Wiederherstellungscodes für Ihr "
+"Konto zu generieren."
+
+#: .\templates\allauth\mfa\recovery_codes\generate.html:11
+msgid "This action will invalidate your existing codes."
+msgstr "Diese Aktion wird Ihre vorhandenen Codes ungültig machen."
+
+#: .\templates\allauth\mfa\recovery_codes\generate.html:13
+msgid "Are you sure?"
+msgstr "Bist du sicher?"
+
+#: .\templates\allauth\mfa\recovery_codes\index.html:13
+msgid "Unused codes"
+msgstr "Nicht verwendete Codes"
+
+#: .\templates\allauth\mfa\recovery_codes\index.html:25
+msgid "Download codes"
+msgstr "Laden Sie Codes herunter"
+
+#: .\templates\allauth\mfa\recovery_codes\index.html:30
+msgid "Generate new codes"
+msgstr "Neuen Code anfordern"
+
+#: .\templates\allauth\mfa\totp\activate_form.html:4
+#: .\templates\allauth\mfa\totp\activate_form.html:8
+msgid "Activate Authenticator App"
+msgstr "Aktivieren Sie die Authenticator -App"
+
+#: .\templates\allauth\mfa\totp\activate_form.html:11
+msgid ""
+"To protect your account with two-factor authentication, scan the QR code "
+"below with your authenticator app. Then, input the verification code "
+"generated by the app below."
+msgstr ""
+"Um Ihr Konto mit einer Zwei-Faktor-Authentifizierung zu schützen, scannen "
+"Sie den folgenden QR-Code mit Ihrer Authenticator-App. Geben Sie dann den "
+"von der App unten generierten Überprüfcode ein."
+
+#: .\templates\allauth\mfa\totp\activate_form.html:21
+msgid "Authenticator secret"
+msgstr "Authentikatorgeheimnis"
+
+#: .\templates\allauth\mfa\totp\activate_form.html:24
+msgid ""
+"You can store this secret and use it to reinstall your authenticator app at "
+"a later time."
+msgstr ""
+"Sie können dieses Geheimnis speichern und Ihre Authentikator -App zu einem "
+"späteren Zeitpunkt neu installieren."
+
+#: .\templates\allauth\mfa\totp\deactivate_form.html:5
+#: .\templates\allauth\mfa\totp\deactivate_form.html:9
+msgid "Deactivate Authenticator App"
+msgstr "Deaktivieren Sie die Authentikatoren -App"
+
+#: .\templates\allauth\mfa\totp\deactivate_form.html:12
+msgid ""
+"You are about to deactivate authenticator app based authentication. Are you "
+"sure?"
+msgstr ""
+"Sie sind kurz davor, die Authentikator -App -basierte Authentifizierung zu "
+"deaktivieren. Bist du sicher?"
+
+#: .\templates\allauth\mfa\trust.html:4 .\templates\allauth\mfa\trust.html:8
+msgid "Trust this Browser?"
+msgstr "Vertrauen Sie diesem Browser?"
+
+#: .\templates\allauth\mfa\trust.html:11
+msgid ""
+"If you choose to trust this browser, you will not be asked for a "
+"verification code the next time you sign in."
+msgstr ""
+"Wenn Sie diesem Browser vertrauen, werden Sie bei der nächsten Anmeldung "
+"nicht nach einem Bestätigungscode gefragt."
+
+#: .\templates\allauth\mfa\trust.html:23
+#, python-format
+msgid "Trust for %(period)s"
+msgstr "Vertrauen für%(period)s"
+
+#: .\templates\allauth\mfa\trust.html:26
+msgid "Don't Trust"
+msgstr "Vertraue nicht"
+
+#: .\templates\allauth\mfa\webauthn\add_form.html:7
+msgid "Add Security Key"
+msgstr "Sicherheitsschlüssel hinzufügen"
+
+#: .\templates\allauth\mfa\webauthn\authenticator_confirm_delete.html:6
+msgid "Remove Security Key"
+msgstr "Sicherheitsschlüssel entfernen"
+
+#: .\templates\allauth\mfa\webauthn\authenticator_confirm_delete.html:9
+msgid "Are you sure you want to remove this security key?"
+msgstr "Sind Sie sicher, dass Sie sich anmelden möchten?"
+
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:18
+msgid "Key"
+msgstr "Schlüssel"
+
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:21
+msgid "Usage"
+msgstr "Verwendung"
+
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:33
+msgid "Passkey"
+msgstr "PassKey melden sich an"
+
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:37
+msgid "Security key"
+msgstr "Sicherheitsschlüssel"
+
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:40
+msgid "This key does not indicate whether it is a passkey."
+msgstr "Dieser Schlüssel zeigt nicht an, ob es sich um einen Passkey handelt."
+
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:41
+msgid "Unspecified"
+msgstr "Nicht überprüft"
+
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:46
+#, python-format
+msgid "Added on %(created_at)s"
+msgstr "Hinzugefügt%(created_at)s"
+
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:48
+#, python-format
+msgid "Last used %(last_used)s"
+msgstr "Zuletzt benutzt%(last_used)s"
+
+#: .\templates\allauth\mfa\webauthn\authenticator_list.html:56
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: .\templates\allauth\mfa\webauthn\edit_form.html:7
+msgid "Edit Security Key"
+msgstr "Sicherheitsschlüssel bearbeiten"
+
+#: .\templates\allauth\mfa\webauthn\edit_form.html:18
+msgid "Save"
+msgstr "Speichern"
+
+#: .\templates\allauth\mfa\webauthn\signup_form.html:7
+msgid "Create Passkey"
+msgstr "PassKey erstellen"
+
+#: .\templates\allauth\mfa\webauthn\signup_form.html:10
+msgid ""
+"You are about to create a passkey for your account. As you can add "
+"additional keys later on, you can use a descriptive name to tell the keys "
+"apart."
+msgstr ""
+"Sie sind kurz davor, einen Passkey für Ihr Konto zu erstellen. Da Sie später "
+"zusätzliche Schlüssel hinzufügen können, können Sie einen beschreibenden "
+"Namen verwenden, um die Schlüssel auseinander zu untersuchen."
+
+#: .\templates\allauth\mfa\webauthn\signup_form.html:21
+msgid "Create"
+msgstr "Erstellen"
+
+#: .\templates\allauth\mfa\webauthn\snippets\scripts.html:2
+msgid "This functionality requires JavaScript."
+msgstr "Diese Funktionalität erfordert JavaScript."
+
+#: .\templates\allauth\socialaccount\authentication_error.html:5
+#: .\templates\allauth\socialaccount\authentication_error.html:9
+msgid "Third-Party Login Failure"
+msgstr "Anmeldesausfall von Drittanbietern"
+
+#: .\templates\allauth\socialaccount\authentication_error.html:12
 msgid ""
 "An error occurred while attempting to login via your third-party account."
 msgstr ""
+"Beim Versuch, sich über Ihr Konto von Drittanbietern anzumelden, trat ein "
+"Fehler auf."
 
-#: .\templates\socialaccount\connections.html:13
+#: .\templates\allauth\socialaccount\connections.html:13
 msgid ""
 "You can sign in to your account using any of the following third-party "
 "accounts:"
 msgstr ""
+"Sie können sich mit einem der folgenden Konten von Drittanbietern in Ihrem "
+"Konto anmelden:"
 
-#: .\templates\socialaccount\connections.html:46
+#: .\templates\allauth\socialaccount\connections.html:46
 msgid "You currently have no third-party accounts connected to this account."
 msgstr ""
+"Sie haben derzeit keine Konten von Drittanbietern, die mit diesem Konto "
+"verbunden sind."
 
-#: .\templates\socialaccount\connections.html:50
+#: .\templates\allauth\socialaccount\connections.html:50
 msgid "Add a Third-Party Account"
-msgstr ""
+msgstr "Fügen Sie ein Account von Drittanbietern hinzu"
 
-#: .\templates\socialaccount\email\account_connected_message.txt:4
+#: .\templates\allauth\socialaccount\email\account_connected_message.txt:4
 #, python-format
 msgid ""
 "A third-party account from %(provider)s has been connected to your account."
 msgstr ""
+"Ein Account von Drittanbietern von%(provider)swurde mit Ihrem Konto "
+"verbunden."
 
-#: .\templates\socialaccount\email\account_connected_subject.txt:3
+#: .\templates\allauth\socialaccount\email\account_connected_subject.txt:3
 msgid "Third-Party Account Connected"
-msgstr ""
+msgstr "Drittanbieterkonto angeschlossen"
 
-#: .\templates\socialaccount\email\account_disconnected_message.txt:4
+#: .\templates\allauth\socialaccount\email\account_disconnected_message.txt:4
 #, python-format
 msgid ""
 "A third-party account from %(provider)s has been disconnected from your "
 "account."
 msgstr ""
+"Ein Account von Drittanbietern von%(provider)swurde von Ihrem Konto getrennt."
 
-#: .\templates\socialaccount\email\account_disconnected_subject.txt:3
+#: .\templates\allauth\socialaccount\email\account_disconnected_subject.txt:3
 msgid "Third-Party Account Disconnected"
-msgstr ""
+msgstr "Account von Drittanbietern getrennt"
 
-#: .\templates\socialaccount\login.html:10
-#, python-format
-msgid "Connect %(provider)s"
-msgstr ""
+#: .\templates\allauth\socialaccount\login.html:5
+msgid "Continue with a Social Account"
+msgstr "Fahren Sie mit einem sozialen Konto fort"
 
-#: .\templates\socialaccount\login.html:13
+#: .\templates\allauth\socialaccount\login.html:11
 #, python-format
 msgid "You are about to connect a new third-party account from %(provider)s."
 msgstr ""
+"Sie sind kurz davor, einen neuen Account von Drittanbietern zu "
+"verbinden%(provider)s."
 
-#: .\templates\socialaccount\login.html:17
-#, python-format
-msgid "Sign In Via %(provider)s"
-msgstr ""
-
-#: .\templates\socialaccount\login.html:20
+#: .\templates\allauth\socialaccount\login.html:15
 #, python-format
 msgid "You are about to sign in using a third-party account from %(provider)s."
-msgstr ""
+msgstr "Sie sind dabei%(provider)s."
 
-#: .\templates\socialaccount\login.html:27
-#: .\templates\socialaccount\login_redirect.html:10
-msgid "Continue"
-msgstr ""
-
-#: .\templates\socialaccount\login_cancelled.html:5
-#: .\templates\socialaccount\login_cancelled.html:9
+#: .\templates\allauth\socialaccount\login_cancelled.html:5
+#: .\templates\allauth\socialaccount\login_cancelled.html:9
 msgid "Login Cancelled"
-msgstr ""
+msgstr "Anmeldung abgesagt"
 
-#: .\templates\socialaccount\login_cancelled.html:13
+#: .\templates\allauth\socialaccount\login_cancelled.html:13
 #, python-format
 msgid ""
 "You decided to cancel logging in to our site using one of your existing "
 "accounts. If this was a mistake, please proceed to <a "
 "href=\"%(login_url)s\">sign in</a>."
 msgstr ""
+"Sie haben beschlossen, die Protokollierung auf unserer Website mit einem "
+"Ihrer vorhandenen Konten zu kündigen. Wenn dies ein Fehler war, fahren Sie "
+"bitte mit <a href = fort. \"%(login_url)s\"> Anmelden in </a>."
 
-#: .\templates\socialaccount\messages\account_connected.txt:2
+#: .\templates\allauth\socialaccount\messages\account_connected.txt:2
 msgid "The third-party account has been connected."
-msgstr ""
+msgstr "Das Account von Drittanbietern wurde angeschlossen."
 
-#: .\templates\socialaccount\messages\account_connected_other.txt:2
+#: .\templates\allauth\socialaccount\messages\account_connected_other.txt:2
 msgid "The third-party account is already connected to a different account."
 msgstr ""
+"Das Konto von Drittanbietern ist bereits mit einem anderen Konto verbunden."
 
-#: .\templates\socialaccount\messages\account_disconnected.txt:2
+#: .\templates\allauth\socialaccount\messages\account_disconnected.txt:2
 msgid "The third-party account has been disconnected."
-msgstr ""
+msgstr "Das Account von Drittanbietern wurde getrennt."
 
-#: .\templates\socialaccount\signup.html:12
+#: .\templates\allauth\socialaccount\signup.html:5
+msgid "Complete your profile"
+msgstr "Dein Profil"
+
+#: .\templates\allauth\socialaccount\signup.html:10
 #, python-format
 msgid ""
-"You are about to use your %(provider_name)s account to login to\n"
-"%(site_name)s. As a final step, please complete the following form:"
+"\n"
+"      You are about to use your %(provider_name)s account to login to "
+"%(site_name)s.\n"
+"      As a final step, please complete the following form:\n"
+"    "
+msgstr ""
+"\n"
+"Sie sind kurz davor, Ihre zu verwenden%(provider_name)sKonto "
+"anmelden%(site_name)s. Bitte füllen Sie als letzter Schritt das folgende "
+"Formular aus:"
+
+#: .\templates\allauth\socialaccount\signup.html:44
+msgid "Back to Sign In"
+msgstr "Anmelden"
+
+#: .\templates\allauth\socialaccount\snippets\provider_list.html:16
+#, python-format
+msgid "Continue with %(name)s"
+msgstr "Weiter mit%(name)s"
+
+#: .\templates\allauth\usersessions\messages\sessions_logged_out.txt:2
+msgid "Signed out of all other sessions."
+msgstr "Von allen anderen Sitzungen unterschrieben."
+
+#: .\templates\allauth\usersessions\usersession_list.html:24
+msgid "Started At"
+msgstr "Begann bei"
+
+#: .\templates\allauth\usersessions\usersession_list.html:27
+msgid "IP Address"
+msgstr "Adresse"
+
+#: .\templates\allauth\usersessions\usersession_list.html:30
+msgid "Browser"
 msgstr ""
 
+#: .\templates\allauth\usersessions\usersession_list.html:34
+msgid "Last seen at"
+msgstr "Zuletzt gesehen bei"
+
+#: .\templates\allauth\usersessions\usersession_list.html:59
+msgid "Current"
+msgstr "Aktuelle E -Mail"
+
+#: .\templates\allauth\usersessions\usersession_list.html:72
+msgid "Sign Out Other Sessions"
+msgstr "Andere Sitzungen anmelden"
+
+#: .\templates\base.html:10 .\templates\includes\footer.html:12
+msgid "Your online flea market"
+msgstr "Ihr Online -Flohmarkt"
+
+#: .\templates\includes\footer.html:10
+#: .\templates\includes\navbar\navbar.html:15
+msgid "Flomarkt24"
+msgstr "Flomarkt24"
+
+#: .\templates\includes\footer.html:17
+msgid "Footer navigation"
+msgstr "Navigation umschalten"
+
+#: .\templates\includes\footer.html:20
+msgid "Privacy"
+msgstr "Privatsphäre"
+
+#: .\templates\includes\footer.html:38
+msgid "All rights reserved"
+msgstr "Alle Rechte vorbehalten"
+
+#: .\templates\includes\footer.html:40
+msgid "Back to top"
+msgstr "Zurück nach oben"
+
+#: .\templates\includes\navbar\account.html:15
+msgid "My Account"
+msgstr "Mein Konto"
+
+#: .\templates\includes\navbar\account.html:21
+msgid "Product Management"
+msgstr "Produktmanagement"
+
+#: .\templates\includes\navbar\account.html:28
+msgid "Logout"
+msgstr "Abmelden"
+
+#: .\templates\includes\navbar\account.html:30
+msgid "Login"
+msgstr "Anmelden"
+
+#: .\templates\includes\navbar\account.html:31
+msgid "Register"
+msgstr "Registrieren"
+
+#: .\templates\includes\navbar\links.html:10
+msgid "Home"
+msgstr "Start Seite"
+
+#: .\templates\includes\navbar\links.html:35
+msgid "All Products"
+msgstr "Alle Produkte"
+
+#: .\templates\includes\navbar\links.html:39
+msgid "Automotive"
+msgstr "Automobil"
+
+#: .\templates\includes\navbar\links.html:40
+msgid "Home & Tools"
+msgstr "Home &  Werkzeuge"
+
+#: .\templates\includes\navbar\links.html:41
+msgid "Garden & Outdoors"
+msgstr "Garten &  Draußen"
+
+#: .\templates\includes\navbar\links.html:42
+msgid "Electronics"
+msgstr "Elektronik"
+
+#: .\templates\includes\navbar\links.html:43
+msgid "Computers"
+msgstr "Computer"
+
+#: .\templates\includes\navbar\links.html:44
+msgid "Phones & Accessories"
+msgstr "Telefone &  Zubehör"
+
+#: .\templates\includes\navbar\links.html:45
+msgid "Fashion"
+msgstr "Mode"
+
+#: .\templates\includes\navbar\links.html:46
+msgid "Beauty & Personal Care"
+msgstr "Schönheit &  Persönliche Fürsorge"
+
+#: .\templates\includes\navbar\links.html:47
+msgid "Health"
+msgstr "Gesundheit"
+
+#: .\templates\includes\navbar\links.html:48
+msgid "Sports & Outdoors"
+msgstr "Sport &  Draußen"
+
+#: .\templates\includes\navbar\links.html:49
+msgid "Toys & Games"
+msgstr "Spielzeug &  Spiele"
+
+#: .\templates\includes\navbar\links.html:50
+msgid "Baby"
+msgstr ""
+
+#: .\templates\includes\navbar\links.html:51
+msgid "Pet Supplies"
+msgstr "Haustierbedarf"
+
+#: .\templates\includes\navbar\links.html:52
+msgid "Books"
+msgstr "Bücher"
+
+#: .\templates\includes\navbar\links.html:53
+msgid "Music"
+msgstr "Musik"
+
+#: .\templates\includes\navbar\links.html:54
+msgid "Grocery"
+msgstr "Lebensmittelgeschäft"
+
+#: .\templates\includes\navbar\links.html:55
+msgid "Office Products"
+msgstr "Büroprodukte"
+
+#: .\templates\includes\navbar\navbar.html:58
+msgid "Toggle navigation"
+msgstr "Navigation umschalten"
+
+#: .\templates\includes\navbar\search.html:5
+msgid "Search our site"
+msgstr "Suchen Sie unsere Website"
+
+#~ msgid "Profile updated successfully"
+#~ msgstr "Profil erfolgreich aktualisiert"
+
+#, python-format
+#~ msgid ""
+#~ "If you have not created an account yet, then please %(link)ssign "
+#~ "up%(end_link)s first."
+#~ msgstr ""
+#~ "Wenn Sie noch kein Konto erstellt haben, dann bitte%(link)sMelden Sie "
+#~ "sich an%(end_link)sErste."
+
+#~ msgid "Sign in with a passkey"
+#~ msgstr "Melden Sie sich mit einem Passkey an"
+
+#~ msgid "Profile"
+#~ msgstr "Profil"
+
+#~ msgid "Name"
+#~ msgstr "Name"
+
+#~ msgid "Phone"
+#~ msgstr "Telefon"
+
+#~ msgid "Date Joined"
+#~ msgstr "Beitrittsdatum"
+
+#~ msgid "Sign up using a passkey"
+#~ msgstr "Melden Sie sich mit einem PassKey an"
+
+#, python-format
+#~ msgid "Connect %(provider)s"
+#~ msgstr "Verbinden%(provider)s"
+
+#, python-format
+#~ msgid "Sign In Via %(provider)s"
+#~ msgstr "Melden Sie sich an%(provider)s"

@@ -1,10 +1,16 @@
 {% load i18n %}
+
 <div class="dropdown">
   <a class="nav-link dropdown-toggle d-flex align-items-center gap-2"
      href="#" id="userOptions" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <i class="bi bi-person-circle fs-5"></i>
     {% if request.user.is_authenticated %}
-      <span class="username-mobile">{{ request.user.username }}</span>
+      {% with raw_name=request.user.first_name|default:request.user.username %}
+        <span class="username-mobile d-inline-block text-truncate" style="max-width:10rem;">
+          {{ raw_name|lower|title }}
+        </span>
+      {% endwith %}
+
     {% else %}
       {% trans 'My Account' %}
     {% endif %}

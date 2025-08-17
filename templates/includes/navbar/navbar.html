@@ -1,6 +1,7 @@
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
 
+
 <nav class="navbar navbar-light border-bottom w-100">
   <div class="container-fluid px-3">
 
@@ -73,7 +74,7 @@
 
       <!-- Desktop: Primary links (left) + spacer -->
       <div class="col-12 col-lg-6 d-none d-lg-block">
-        <div id="primaryNav" class="collapse d-lg-block">
+        <div id="primaryNavDesktop" class="collapse d-lg-block">
           {% include "includes/navbar/links.html" %}
         </div>
       </div>
@@ -81,7 +82,7 @@
 
       <!-- Mobile: Collapsed primary links full width -->
       <div class="col-12 d-lg-none">
-        <div id="primaryNav" class="collapse">
+        <div id="primaryNav" class="collapse d-lg-block">
           <div class="py-1">
             {% include "includes/navbar/links.html" %}
           </div>

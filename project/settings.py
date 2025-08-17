@@ -19,11 +19,13 @@ DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'false'
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
+    '.onrender.com',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',
     'http://127.0.0.1:8000',
+    'https://*.onrender.com',
 ]
 
 # Authentication backends
